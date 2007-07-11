@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\GeolabVirtualMaps\", "GeolabVirtualMaps\", "{BB4FBCA8-137D-4EC7-931B-AE55104735A4}"
+	ProjectSection(WebsiteProperties) = preProject
+		ProjectReferences = "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}|VELibrary.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/GeolabVirtualMaps"
+		Debug.AspNetCompiler.PhysicalPath = "GeolabVirtualMaps\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GeolabVirtualMaps\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/GeolabVirtualMaps"
+		Release.AspNetCompiler.PhysicalPath = "GeolabVirtualMaps\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\GeolabVirtualMaps\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3259"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VELibrary", "VELibrary\VELibrary.csproj", "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEDisplay", "VEDisplay\VEDisplay.csproj", "{70896310-5699-43B3-94DF-AF8D93CFA7F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|.NET.ActiveCfg = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|.NET.Build.0 = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|.NET.ActiveCfg = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|.NET.Build.0 = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Release|.NET.ActiveCfg = Release|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|.NET.ActiveCfg = Release|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

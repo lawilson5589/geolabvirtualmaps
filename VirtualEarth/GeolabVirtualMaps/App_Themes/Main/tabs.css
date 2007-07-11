@@ -1,0 +1,46 @@
+/* Menu Tabs*/
+
+#tabs{
+	background-color: #F4F7FB;
+	border-bottom: 1px solid #BCD2E6;
+	float: right;
+	font-size: 93%;
+	line-height: normal;
+	width: 100%;
+}
+
+#tabs ul{
+	list-style: none;
+	margin: 0 0 0 0;
+	/* */
+	padding: 0px 10px 0 550px;
+}
+
+#tabs a{
+	background: url("/geolab_mdt2_cape/images/tabs/tableft.gif") no-repeat left top;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 4px;
+	text-decoration: none;
+}
+
+#tabs a span{
+	background: url("/geolab_mdt2_cape/images/tabs/tabright.gif") no-repeat right top;
+	color: #627EB7;
+	display: block;
+	float: left;
+	padding: 5px 15px 4px 6px;
+}
+
+
+#tabs a:hover span,#tabs a:hover span,#tabs #current a span{
+	background-position: 100% -42px;
+}
+
+
+#tabs li{
+	display: inline;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+

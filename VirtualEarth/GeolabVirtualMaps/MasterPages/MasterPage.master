@@ -1,0 +1,65 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPages_MasterPage" %>
+<%@ Register Src="WebControls/WebUserControl_MenuTabs.ascx" TagName="WebUserControl_MenuTabs" TagPrefix="geolab" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BSC Georaphics Lab -</title>
+</head>
+<body>
+    <form runat="server" enctype="application/x-www-form-urlencoded" id="mainForm" method="post" >
+        <div class="body">
+            <table class="body" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="line">
+                        <!-- BEGIN: Header Container -->
+                        <hr class="line" />
+                        <!-- END -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="headerimage">
+                        <!-- BEGIN: Header Container -->
+                        <img src="/geolab_mdt2_cape/images/geolablogo_header.png" alt="" height="95" width="655" />
+                        <!-- END -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabs">
+                        <!--BEGIN: Tab Container  -->
+                        <geolab:WebUserControl_MenuTabs ID="WebUserControl_MenuTabs1" runat="server" />
+                        <!-- END -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="menucolumn">
+                            <asp:ContentPlaceHolder ID="MenuPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="contentcolumn">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="footercopyright">
+                        <!--BEGIN: Footer Copy Right Container  -->
+                        This site is maintained by the <a href="http://geolab.bridgew.edu/">GeoGraphics Lab</a> at the <a href="http://www.bridgew.edu/">
+                            Bridgewater State College</a>, Bridgewater, MA 02325, Phone: 508-531-6137 Email:<a href="mailto:geomaster@bridgew.edu"
+                                class="footer">admin@geographicslab.org</a>
+                        <!-- END -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="line">
+                        <!-- BEGIN: Foorer line Container -->
+                        <hr class="line" />
+                        <!-- END -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

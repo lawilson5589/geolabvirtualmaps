@@ -1,0 +1,81 @@
+/**/
+/* Main layout and header */
+
+html, body{
+	/*background: url(../images/bg.gif) repeat-y top center ;*/
+	color: #283769;
+	font: 76% Verdana,Geneva,Arial,Helvetica,sans-serif;
+	height: auto;
+	margin: 0 auto 0 auto;
+	padding: 0px 0px 0px 0px;
+	background-color: #ECEEF6;
+}
+
+div.body{
+	background: transparent;
+	border: none;
+	color: #303030;
+	margin: 0px auto 0px auto;
+	padding: 0px 10px 0px 0px;
+	
+}
+
+div.body table.body{
+	background-color: #F6F7FB;
+	border: 1px solid #6678B8;
+	margin: 0px auto 0px auto;
+	width: 920px;
+}
+
+div.header{
+	text-align: center;
+}
+
+
+td.headerimage{
+	text-align: center;
+	padding: 10px 0px 10px 0;
+}
+
+td.tabs{
+	text-align: right;
+}
+td.footercopyright{
+	text-align: center;
+}
+
+td.footercopyright{
+	text-align: center;
+	border-top: 1px solid #BCD2E6;
+	height: 30px;
+}
+
+hr.line{
+	width: 100%;
+}
+
+td.line{
+	background-color: #6678B8;
+}
+
+
+img{
+	border: none;
+}
+
+div.menucolumn{
+	width: 200px;
+	height: auto;
+	border-right: 1px solid #BCD2E6;
+	float: left;
+}
+div.contentcolumn{
+	width: auto;
+	height: auto;
+	float: none;
+}
+h2.links
+{
+	font-size:14pt;
+	font-family:Verdana;
+}
