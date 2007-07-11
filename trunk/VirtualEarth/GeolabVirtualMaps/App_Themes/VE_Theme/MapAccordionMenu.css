@@ -1,0 +1,41 @@
+/* Author: JBaltikauskas */
+/* Accordion */
+div#accordionmenu{
+	color: #0066CC;
+	font-size: 12pt;
+	height: 500px;
+	visibility: visible;
+	width: 240px;
+	z-index: 450;
+}
+.accordioncontent {
+	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	color: #0066CC;
+	font-size: 12pt;
+}
+.accordionheader {
+	background-color: #F3FBFD;
+	border: 1px solid #A8DEFD;
+	border-left: none;
+	border-right: none;
+	color: #3399FF;
+	font-family: Arial, Sans-Serif;
+	font-size: 10pt;
+	font-weight: bold;
+	margin: 0px 0px 2px 0px;
+	padding: 5px;
+	z-index: 90;
+	text-align: center;
+}
+.accordionheader a {
+	background: none;
+	color: #3399FF;
+	text-decoration: none;
+}
+.accordionheader a:hover {
+	background: none;
+	text-decoration: none;
+}
+.accordionheader:hover {
+	background-color: #D5EEFA;
+}

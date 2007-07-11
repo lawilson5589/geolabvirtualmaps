@@ -1,0 +1,44 @@
+/* Author: JBaltikauskas */
+html,body{
+	height: 100%;
+	width: 100%;
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+div#geoMap{
+	border: 1px solid #87CEFA;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	position:relative;
+}
+div#MapHelp {
+	top: 0px;
+	left:0px;
+	border: 1px solid #87CEFA;
+	float: left;
+	height: 230px;
+	position: absolute;
+	width: 240px;
+	overflow: hidden;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	z-index:1000;
+	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	display:none;
+	background-color :#D9F1F9;
+}
+div#Parent{
+	border: 1px solid #87CEFA;		
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 3px 2px 3px 3px;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+

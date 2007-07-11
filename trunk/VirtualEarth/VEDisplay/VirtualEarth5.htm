@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+    	<title></title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<script type="text/javascript" src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=5"></script>
+    	<script type="text/javascript">
+    	var map = null;
+    	var selStyle = "a";
+    	var selMode = VEMapMode.Mode2D;
+        var zoom = 4;
+
+            function update_map(e)
+            {
+                try{
+                var center = map.GetCenter();
+                
+               // window.external.mapPositionChange(center.Latitude , center.Longitude, map.GetZoomLevel() );
+                window.external.Latitude = center.Latitude;
+                window.external.Longitude = center.Longitude;
+                window.external.ZoomLevel = map.GetZoomLevel();
+                //alert(center.Latitude + " " + center.Longitude + map.GetZoomLevel());
+                }catch(e){
+                 alert(e);
+                }
+            }
+            function update_map_position()
+            {
+                var center = map.GetCenter();
+                
+                //window.external.mapPositionChange(center.Latitude , center.Longitude, map.GetZoomLevel() );
+                window.external.Latitude = center.Latitude;
+                window.external.Longitude = center.Longitude;
+                window.external.ZoomLevel = map.GetZoomLevel();
+            }
+    	
+	    // Demonstrate LoadMap, with a UI for trying out all of the parameters.
+    	function GetMap()
+    	{
+    	try{
+     	   map = new VEMap('myMap'); 
+     	   
+     	   var latLon = new VELatLong(txtLat.value, txtLong.value); 
+     	      	   
+     	   if (txtZoom.value > 0 && txtZoom.value <= 19) zoom = txtZoom.value;
+     	   else alert("Enter a value between 1 and 19.");
+     	   
+     	   if (chkFixed.checked) fixed=1
+     	   else fixed=0;
+     	   
+     	   if (chkShowSwitch.checked) showSwitch=1
+     	   else showSwitch=0; 
+
+     	   map.LoadMap(latLon, zoom, selStyle, fixed, selMode, showSwitch);
+
+           map.AttachEvent("onobliqueenter", SetObliqueRadio);
+           map.AttachEvent("onobliqueleave", SetObliqueRadio);
+           
+           map.AttachEvent("onendpan", update_map);
+           map.AttachEvent("onstartpan", update_map);
+           map.AttachEvent("onmouseup", update_map);
+map.AttachEvent("onclick", update_map);
+
+            map.AttachEvent("onendcontinuouspan", update_map);
+            map.AttachEvent("onendzoom", update_map);
+            if(window.external)    
+            window.external.scriptLoadCompleted();
+            setInterval("update_map_position()", 1000);
+            }catch(e)
+            {
+              alert(e);
+            }
+    	}   
+    	
+    	function SetStyle(s)
+    	{
+    	    selStyle = s;
+    	}
+    	
+    	function SetMode(m)
+    	{
+    	    if (modeRadios.mode[0].Checked) selMode = VEMapMode.Mode2D;
+    	    else selMode = VEMapMode.Mode3D;
+    	}
+    	
+    	function SetObliqueRadio(event)
+    	{
+    	    if (event.eventName == "onobliqueenter") styleRadios.style[3].disabled=null;
+    	    else if (event.eventName == "onobliqueleave") styleRadios.style[3].disabled="disabled";
+    	}
+        </script>
+    </head>
+<body onload="GetMap();" style="font-family:Arial">
+<div>
+    <div id='myMap' style="position: relative; width: 400px; height: 400px;">
+    </div>
+    <input id="btnLoad" type="button" onclick="GetMap()" value="Load A Map" /><br />
+    Lat: <input id="txtLat" value="36.13371559517861" /><br />
+    Lon: <input id="txtLong" value="-115.16238212585449" /><br />
+    Zoom Level (1-19): <input id="txtZoom" value="9" style="width: 50px" /><br />
+    Fixed: <input id="chkFixed" type="checkbox" /> (check to prevent user interaction)<br />
+    Show Switch: <input id="chkShowSwitch" type="checkbox" checked="checked"/> 
+    (show the map mode switch on the dashboard control)
+    <table width="400px">
+    <tr>
+    <td align="left" width="60%">
+        <form id="styleRadios">
+        Road: <input name="style" type="radio" onclick="SetStyle('r')" /> | 
+        Aerial: <input name="style" type="radio" onclick="SetStyle('a')" checked="checked" /><br />
+        Hybrid: <input name="style" type="radio" onclick="SetStyle('h')" /> | 
+        Oblique: <input name="style" type="radio" onclick="SetStyle('o')" disabled="disabled"/>
+        </form>
+    </td>
+    <td align="left">
+        <form id="modeRadios">
+        2D: <input name="mode" type="radio" onclick="SetMode()" checked="checked" /><br />
+        3D: <input name="mode" type="radio" onclick="SetMode()" />
+        </form>
+    </td>
+    </tr>
+    </table>
+    </div>
+</body>
+</html>
+

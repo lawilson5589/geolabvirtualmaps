@@ -1,0 +1,91 @@
+﻿/* Author: JBaltikauskas */
+table.vehicle, table.vehicle td
+{
+	font-size: 9pt;
+	font-family: Verdana;
+}
+table.vehicle td b
+{
+	font-size: 8pt;
+	color: navy;
+}
+table.vehicle td ul, table.vehicle td ul li
+{
+	font-size: 8pt;
+	margin: 0px 0px 0px 0px;
+}
+
+/*Overide VE default pushpin pop-up style*/
+div.VE_Pushpin_Popup_Title
+{
+	text-align: center;
+	font-size: 12pt;
+	font-family: Verdana;
+}
+div.firstChild, .ero-body
+{
+	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	margin: 0px 0px 0px 0px !important;
+	padding: 0px 0px 0px 0px !important;
+}
+.ero-body
+{
+	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+}
+
+.ero
+{
+	z-index: 2500 !important;
+}
+
+.VE_Pushpin_Popup_Body
+{
+}
+
+.VE_Pushpin_Popup_Body p
+{
+	text-align: center;
+	color: navy !important;
+}
+.VEAPI_Pushpin
+{
+	text-decoration: none;
+}
+
+
+div.pinStyle1
+{
+	position: relative;
+	background: url( 'pin1.gif' ) no-repeat 0 0;
+	height: 30px;
+	width: 25px;
+	top: -15px;
+	color: #fff;
+	text-align: center;
+	font: bold 12px Arial;
+	cursor: pointer;
+}
+div.text
+{
+	position: relative;
+	top: 2px;
+}
+
+div.pinStyle
+{
+	position: relative;
+	height: 29px;
+	width: 25px;
+	top: -14px;
+	color: #fff;
+	text-align: center;
+	font: bold 12px Arial;
+	cursor: pointer;
+	/*background: url(/GeolabVirtualMaps/images/PushPins/25x29/pin3.gif) no-repeat 0 0; */
+	background-color: transparent;
+}
+
+div.pinStyle4
+{
+	background: url( 'pin4.gif' ) no-repeat 0 0;
+}
