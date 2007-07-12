@@ -14,8 +14,8 @@
             ,"Lon" : -70.96
             ,"MapStyle" : 'r'
             ,"MapZoom" : 10
-            ,"VehicleIcon" : '/GeolabVirtualMaps/images/map_icons/default.gif'
-            ,"VehicleWebServicePath" : '/GeolabVirtualMaps/AVL_webservices/LiveData.ashx?ID=GeoLab'
+            ,"VehicleIcon" : '/images/map_icons/default.gif'
+            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=GeoLab'
             ,"VehiclePinTitles" : 'GeoGraphics Lab'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true

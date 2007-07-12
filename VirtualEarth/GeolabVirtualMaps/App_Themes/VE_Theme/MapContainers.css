@@ -25,7 +25,7 @@ div#MapHelp {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	z-index:1000;
-	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	background: url(/images/map_icons/bg_image.png) repeat-y;
 	display:none;
 	background-color :#D9F1F9;
 }

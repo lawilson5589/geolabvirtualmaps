@@ -16,8 +16,8 @@
             ,"Lon" : -70.288338
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/GeolabVirtualMaps/images/map_vehicles/bus_024.gif'
-            ,"VehicleWebServicePath" : '/GeolabVirtualMaps/AVL_webservices/LiveDataCapeCodePartners.ashx?ID=CapeCodePartners'
+            ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
+            ,"VehicleWebServicePath" : '/AVL_webservices/LiveDataCapeCodePartners.ashx?ID=CapeCodePartners'
             ,"VehiclePinTitles" : 'Haynnis Transportation'
             ,"DataRefreshRate" : 10000
             ,"GeoCoding" : false

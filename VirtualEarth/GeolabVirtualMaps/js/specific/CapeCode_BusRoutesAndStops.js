@@ -48,7 +48,7 @@ if(Dashboard){
         CapeCodeRoutes.Woosh =  function(){CapeCodStops['Whoosh'].Invoke('Whoosh');CapeCodeRoutes.Invoke('Whoosh');}
         CapeCodeRoutes.Yarmouth =  function(){CapeCodStops['Yarmouth'].Invoke('Yarmouth');CapeCodeRoutes.Invoke('Yarmouth');}
 
-        var img = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+        var img = "/images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', CapeCodeRoutes.{Function});
         this.CreateElement('Barnstable', 'Barnstable', CapeCodeRoutes.Barnstable, 'Barnstable route', img);
         this.CreateElement('Flex', 'Flex', CapeCodeRoutes.Flex, 'Flex route', img);

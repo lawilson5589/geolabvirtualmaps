@@ -15,8 +15,8 @@
             ,"Lon" : -70.732356
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/GeolabVirtualMaps/images/map_vehicles/ambulance_024.gif'
-            ,"VehicleWebServicePath" : '/GeolabVirtualMaps/AVL_webservices/LiveData.ashx?ID=SouthEastern'
+            ,"VehicleIcon" : '/images/map_vehicles/ambulance_024.gif'
+            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=SouthEastern'
             ,"VehiclePinTitles" : 'Brewster'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true

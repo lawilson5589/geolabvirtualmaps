@@ -35,11 +35,11 @@ namespace Geolab
                         case "CapeCodPartners":
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             storedProcedureName = "sp_SelectAVL_CapeCodePartners";
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
                             break;
                         case "CapeCod":
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_CapeCod";

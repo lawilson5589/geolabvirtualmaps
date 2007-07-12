@@ -24,13 +24,13 @@ div.VE_Pushpin_Popup_Title
 }
 div.firstChild, .ero-body
 {
-	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	background: url(/images/map_icons/bg_image.png) repeat-y;
 	margin: 0px 0px 0px 0px !important;
 	padding: 0px 0px 0px 0px !important;
 }
 .ero-body
 {
-	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	background: url(/images/map_icons/bg_image.png) repeat-y;
 }
 
 .ero
@@ -81,7 +81,7 @@ div.pinStyle
 	text-align: center;
 	font: bold 12px Arial;
 	cursor: pointer;
-	/*background: url(/GeolabVirtualMaps/images/PushPins/25x29/pin3.gif) no-repeat 0 0; */
+	/*background: url(/images/PushPins/25x29/pin3.gif) no-repeat 0 0; */
 	background-color: transparent;
 }
 

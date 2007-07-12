@@ -17,8 +17,8 @@
             ,"Lon" : -71.551208
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/GeolabVirtualMaps/images/map_vehicles/bus_024.gif'
-            ,"VehicleWebServicePath" : '/GeolabVirtualMaps/AVL_webservices/LiveData.ashx?ID=Framingham'
+            ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
+            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Framingham'
             ,"VehiclePinTitles" : 'Framingham'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true
