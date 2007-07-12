@@ -17,8 +17,8 @@
             ,"Lon" : -70.98
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/GeolabVirtualMaps/images/map_vehicles/bus_024.gif'
-            ,"VehicleWebServicePath" : '/GeolabVirtualMaps/AVL_webservices/LiveData.ashx?ID=Bridgew'
+            ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
+            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Bridgew'
             ,"VehiclePinTitles" : 'Bridgewater Transit'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true

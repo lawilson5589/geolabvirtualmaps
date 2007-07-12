@@ -9,7 +9,7 @@ div#accordionmenu{
 	z-index: 450;
 }
 .accordioncontent {
-	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	background: url(/images/map_icons/bg_image.png) repeat-y;
 	color: #0066CC;
 	font-size: 12pt;
 }

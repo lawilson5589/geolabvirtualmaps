@@ -40,7 +40,7 @@ if(Dashboard){
 
         // Dashboard.CreateElement('{ID}', '{Title}', BSCRoutes.{Function});
         this.CreateElement('BSC', 'Routes'); 
-        var img = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+        var img = "/images/map_vehicles/bus_024.gif";
         this.CreateElement('Route1', 'Route 1', BSCRoutes.BSCRoute1, 'BSC Route 1', img);
         this.CreateElement('Route2', 'Route 2', BSCRoutes.BSCRoute2, 'BSC Route 2', img);
         this.CreateElement('Route28', 'Route 28', BSCRoutes.BSCRoute28, 'BSC Route 28', img);

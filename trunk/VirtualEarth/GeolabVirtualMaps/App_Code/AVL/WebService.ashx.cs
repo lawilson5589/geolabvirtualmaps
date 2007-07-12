@@ -32,33 +32,33 @@ namespace Geolab
                     {
                         // Valid names
                         case "CapeCod": 
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_CapeCod";
                             break;
                         case "Bridgew":
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Bridgewater Transit";
                             this.storedProcedureName = "sp_SelectAVL_Bridgew";
                             break;
                         case "GeoLab":
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "GeoGraphics Lab";
                             this.storedProcedureName = "sp_SelectAVL_GeoLab";
                             break;
                         case "SouthEastern":
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/ambulance_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/ambulance_024.gif";
                             this.info.Title = "South Eastern MA Emergency";
                             this.storedProcedureName = "sp_SelectAVL_SouthEastern";
                             break;
                         case "Framingham":
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Framingham Transportation";
                             this.storedProcedureName = "sp_SelectAVL_Framingham";
                             break;
                         case "Ferries":
-                            this.info.CustomIcon = "/GeolabVirtualMaps/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Framingham Transportation";
                             this.storedProcedureName = "sp_SelectAVL_Framingham";
                             break;

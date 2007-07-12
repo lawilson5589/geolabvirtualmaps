@@ -8,7 +8,7 @@ div#MapHelp table
 }
 
 th.MapInfoHeader, th.lg_header{
-	background: url(/GeolabVirtualMaps/images/map_icons/maptoolbar_bg.gif) #D9F1F9 center repeat-x;
+	background: url(/images/map_icons/maptoolbar_bg.gif) #D9F1F9 center repeat-x;
 	border-bottom: 1px solid #A8DEFD;
 	color: #3399FF;
 	font-family: Arial, Sans-Serif;
@@ -32,7 +32,7 @@ td.MapInfoIcon img{
 table.legend
 {
 	color: #0066CC;
-	background: url(/GeolabVirtualMaps/images/map_icons/bg_image.png) repeat-y;
+	background: url(/images/map_icons/bg_image.png) repeat-y;
 	border: 1px solid #A8DEFD;
 	font-weight:bold;
 }

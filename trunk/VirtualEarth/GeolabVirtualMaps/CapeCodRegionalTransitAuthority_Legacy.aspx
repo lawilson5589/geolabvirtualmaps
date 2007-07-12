@@ -16,8 +16,8 @@
             ,"Lon" : -70.732356
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/GeolabVirtualMaps/images/map_vehicles/bus_024.gif'
-            ,"VehicleWebServicePath" : '/GeolabVirtualMaps/AVL_webservices/LiveDataCapeCodePartners.ashx?ID=CapeCodePartners'
+            ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
+            ,"VehicleWebServicePath" : '/AVL_webservices/LiveDataCapeCodePartners.ashx?ID=CapeCodePartners'
             ,"VehiclePinTitles" : ' Cape Cod RTA '
             ,"DataRefreshRate" : 10000
             ,"GeoCoding" : true
