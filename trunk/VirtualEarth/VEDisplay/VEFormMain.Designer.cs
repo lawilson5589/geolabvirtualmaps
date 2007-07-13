@@ -140,7 +140,7 @@ namespace VEDisplay
             // 
             this.toolStripTextBoxURL.Name = "toolStripTextBoxURL";
             this.toolStripTextBoxURL.Size = new System.Drawing.Size(400, 25);
-            this.toolStripTextBoxURL.Text = "http://207.206.224.39/geolabvirtualmaps/HaynnisDemo.aspx";
+            this.toolStripTextBoxURL.Text = "http://www.geolabvirtualmaps.com/HaynnisDemo.aspx";
             // 
             // toolStripButtonGo
             // 
@@ -229,7 +229,7 @@ namespace VEDisplay
             this.veMapControl.Name = "veMapControl";
             this.veMapControl.Size = new System.Drawing.Size(826, 585);
             this.veMapControl.TabIndex = 0;
-            this.veMapControl.Url = new System.Uri("http://207.206.224.39/geolabvirtualmaps/HaynnisDemo.aspx", System.UriKind.Absolute);
+            this.veMapControl.Url = new System.Uri("http://www.geolabvirtualmaps.com/HaynnisDemo.aspx", System.UriKind.Absolute);
             this.veMapControl.ZoomLevel = 9;
             // 
             // toolStripButton1
