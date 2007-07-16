@@ -1,15 +1,19 @@
 ﻿var haynnispin;
 var haynnislatlon = new VELatLong(41.65588797740388,-70.28833866119386);
-function AddPin()
+function AddPin(lat, long, title, description)
 {
-    haynnispin = map.AddPushpin(haynnislatlon) ; 
-    haynnispin.SetTitle('Haynnis'); 
-    haynnispin.SetDescription('Haynnis Transportation center');
+    var pinlatlong = new VELatLong(lat, long);
+    //haynnispin = map.AddPushpin(haynnislatlon) ; 
+    //haynnispin.SetTitle('Haynnis'); 
+    //haynnispin.SetDescription('Haynnis Transportation center');
+    haynnispin = map.AddPushpin(pinlatlong) ; 
+    haynnispin.SetTitle(title); 
+    haynnispin.SetDescription(description);
 }
 function step1(){
     var t = 5000; // loading time
     map.SetMapStyle("r");
-    AddPin();
+    AddPin( 41.65588797740388, -70.28833866119386, "Haynnis", "Big Test");
     map.SetCenterAndZoom(haynnislatlon, 9);
     setTimeout("map.SetMapStyle('a')", 5000);
     setTimeout("map.SetMapStyle('h')", 10000);
@@ -26,9 +30,9 @@ function step2(){
     setTimeout("map.ZoomIn()",6000);
     setTimeout("map.ZoomIn()",7500);
 
-    setTimeout("map.AddShape(polyline['Orange']);map.SetMapView(polyline['Orange'].GetPoints());",11000);
+    setTimeout("map.AddShape(polyline['Orange']);map.SetMapView(polyline['Orange'].GetPoints());map.ShowInfoBox(polyline['Orange'])",11000);
     setTimeout("map.AddShape(polyline['PTown']);map.SetMapView(polyline['PTown'].GetPoints());",17000);
     setTimeout("map.DeleteShape(polyline['Orange'])",16000);
-    setTimeout("map.DeleteShape(polyline['PTown'])",23000);
+    setTimeout("map.HideInfoBox(polyline['Orange']);map.DeleteShape(polyline['PTown'])",23000);
 }
 
