@@ -1,0 +1,11 @@
+bin\Debug\VirtualEarth5.htm
+bin\Debug\VEDisplay.exe
+bin\Debug\VEDisplay.pdb
+bin\Debug\VELibrary.dll
+bin\Debug\VELibrary.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\VEDisplay.Properties.Resources.resources
+obj\Debug\VEDisplay.VEFormMain.resources
+obj\Debug\VEDisplay.csproj.GenerateResource.Cache
+obj\Debug\VEDisplay.exe
+obj\Debug\VEDisplay.pdb
