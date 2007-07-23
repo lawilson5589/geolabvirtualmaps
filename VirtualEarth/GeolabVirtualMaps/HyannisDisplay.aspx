@@ -18,22 +18,21 @@ function TABLE1_onclick() {
 <body style="position: static; text-align: center"><center>
     <form id="form1" runat="server">
     <div>
-        <div style="text-align: center">
-            <table style="width: 1024px; font-size: small; left: 50%; margin-left: -512px; position: absolute; height: 80px;" id="TABLE1" onclick="return TABLE1_onclick()">
-                <tr>
-                    <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
-                        <img src="js/images/ccrta.jpg" style="width: 118px; height: 94px" /></td>
-                    <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
-                        <span style="font-size: large; font-family: Verdana">Visit Cape Cod Transportation Partners
-                            AVL at www.geolabvirtualmaps.com</span></td>
-                    <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
-                        <img height="118" src="js/images/BSC1.jpg" width="105" /></td>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                </tr>
-            </table>
+        <div style="text-align: center;">
+            <div style="text-align: center">
+                <table style="width: 100%">
+                    <tr>
+                        <td align="center" style="width: 100px">
+                            <img src="images/ccrta.jpg" /></td>
+                        <td align="center">
+                            <span style="font-size: 24pt; font-family: Verdana">Visit GeoGraphics Lab Online at
+                                www.geolabvirtualmaps.com for real time AVL</span></td>
+                        <td align="center" style="width: 100px">
+                            <img src="images/BSC1.jpg" style="vertical-align: top; position: static;" /></td>
+                    </tr>
+                </table>
+            </div>
+  
         </div>
     
     </div>
