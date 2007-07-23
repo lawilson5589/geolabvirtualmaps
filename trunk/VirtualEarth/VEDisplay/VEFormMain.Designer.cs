@@ -65,13 +65,13 @@ namespace VEDisplay
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -81,7 +81,7 @@ namespace VEDisplay
             this.showMiniMapToolStripMenuItem,
             this.showDashBoradToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // showMiniMapToolStripMenuItem
@@ -89,14 +89,14 @@ namespace VEDisplay
             this.showMiniMapToolStripMenuItem.Checked = true;
             this.showMiniMapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showMiniMapToolStripMenuItem.Name = "showMiniMapToolStripMenuItem";
-            this.showMiniMapToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.showMiniMapToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.showMiniMapToolStripMenuItem.Text = "Show &Mini Map";
             this.showMiniMapToolStripMenuItem.Click += new System.EventHandler(this.showMiniMapToolStripMenuItem_Click);
             // 
             // showDashBoradToolStripMenuItem
             // 
             this.showDashBoradToolStripMenuItem.Name = "showDashBoradToolStripMenuItem";
-            this.showDashBoradToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.showDashBoradToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.showDashBoradToolStripMenuItem.Text = "Show &DashBorad";
             this.showDashBoradToolStripMenuItem.Click += new System.EventHandler(this.showDashBoradToolStripMenuItem_Click);
             // 
@@ -201,7 +201,7 @@ namespace VEDisplay
             this.veMapControl.MiniMapSize = VELibrary.VEMiniMapSize.Small;
             this.veMapControl.MiniMapVisible = true;
             this.veMapControl.Name = "veMapControl";
-            this.veMapControl.Padding = new System.Windows.Forms.Padding(0, 80, 0, 0);
+            this.veMapControl.Padding = new System.Windows.Forms.Padding(0, 110, 0, 0);
             this.veMapControl.Size = new System.Drawing.Size(826, 610);
             this.veMapControl.TabIndex = 0;
             this.veMapControl.Url = new System.Uri("http://www.geolabvirtualmaps.com/HaynnisDemo.aspx", System.UriKind.Absolute);
@@ -217,7 +217,7 @@ namespace VEDisplay
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(826, 80);
+            this.webBrowser1.Size = new System.Drawing.Size(826, 120);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://www.geolabvirtualmaps.com/hyannisdisplay.aspx", System.UriKind.Absolute);
             // 

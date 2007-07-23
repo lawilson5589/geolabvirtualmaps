@@ -62,9 +62,9 @@ function step3(){
     //setTimeout("map.ZoomIn();map.PanToLatLong(new VELatLong(41.722110,-70.118581));",14500);
     setTimeout("map.ZoomIn();map.PanToLatLong(new VELatLong(41.722110,-70.15));",14500);
     setTimeout("map.AddShape(polyline['H20']);map.SetMapView(polyline['H20'].GetPoints());",15500);
-    setTimeout("map.ShowInfoBox(polyline['H20']);",17500);
-    setTimeout("map.HideInfoBox(polyline['H20']);map.DeleteShape(polyline['H20']);",22500);
-    setTimeout("step4()",23500);
+    setTimeout("map.ShowInfoBox(polyline['H20']);",18000);
+    setTimeout("map.HideInfoBox(polyline['H20']);map.DeleteShape(polyline['H20']);",23000);
+    setTimeout("step4()",24000);
       
 }
 function step4(){
