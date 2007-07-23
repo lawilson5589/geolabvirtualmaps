@@ -44,7 +44,7 @@ function step2(){
     setTimeout("map.HideInfoBox(polyline['Orange']);map.DeleteShape(polyline['Orange']);",16000);
     setTimeout("map.AddShape(polyline['PTown']);map.SetMapView(polyline['PTown'].GetPoints());",17000);
     setTimeout("map.ShowInfoBox(polyline['PTown']);",18000);
-    setTimeout("map.DeleteShape(polyline['PTown']);",23000);
+    setTimeout("map.HideInfoBox(polyline['PTown']);map.DeleteShape(polyline['PTown']);",23000);
     setTimeout("step3()",24000);
     
 }
@@ -59,11 +59,12 @@ function step3(){
     setTimeout("map.HideInfoBox(polyline['Flex']);map.DeleteShape(polyline['Flex']);",13500);
     
     //H20 Route Procedure
-    setTimeout("map.ZoomIn();map.PanToLatLong(new VELatLong(41.722110,-70.118581));",14500);
+    //setTimeout("map.ZoomIn();map.PanToLatLong(new VELatLong(41.722110,-70.118581));",14500);
+    setTimeout("map.ZoomIn();map.PanToLatLong(new VELatLong(41.722110,-70.15));",14500);
     setTimeout("map.AddShape(polyline['H20']);map.SetMapView(polyline['H20'].GetPoints());",15500);
-    setTimeout("map.ShowInfoBox(polyline['H20']);",16500);
-    setTimeout("map.HideInfoBox(polyline['H20']);map.DeleteShape(polyline['H20']);",21500);
-    setTimeout("step4()",22500);
+    setTimeout("map.ShowInfoBox(polyline['H20']);",17500);
+    setTimeout("map.HideInfoBox(polyline['H20']);map.DeleteShape(polyline['H20']);",22500);
+    setTimeout("step4()",23500);
       
 }
 function step4(){
@@ -77,12 +78,13 @@ function step4(){
     setTimeout("map.HideInfoBox(polyline['Yarmouth']);map.DeleteShape(polyline['Yarmouth']);",12000);
     
     //Woosh Procedure
-    setTimeout("map.PanToLatLong(new VELatLong(41.6,-70.4));",12500);
-    setTimeout("map.PanToLatLong(new VELatLong(41.541994,-70.636582));",13000);
-    setTimeout("map.AddShape(polyline['Whoosh']);map.SetMapView(polyline['Whoosh'].GetPoints());",16000);
-    setTimeout("map.ShowInfoBox(polyline['Whoosh']);",17000);
-    setTimeout("map.HideInfoBox(polyline['Whoosh']);map.DeleteShape(polyline['Whoosh']);",22000);
-    setTimeout("step5()",23000);
+    setTimeout("map.ZoomOut();",12500);
+    setTimeout("map.PanToLatLong(new VELatLong(41.639052070137204,-70.52295684814453));",13000);
+    setTimeout("map.PanToLatLong(new VELatLong(41.541994,-70.636582));",13500);
+    setTimeout("map.AddShape(polyline['Whoosh']);map.SetMapView(polyline['Whoosh'].GetPoints());",16500);
+    setTimeout("map.ShowInfoBox(polyline['Whoosh']);",17500);
+    setTimeout("map.HideInfoBox(polyline['Whoosh']);map.DeleteShape(polyline['Whoosh']);",22500);
+    setTimeout("step5()",23500);
     
 }
 function step5(){
