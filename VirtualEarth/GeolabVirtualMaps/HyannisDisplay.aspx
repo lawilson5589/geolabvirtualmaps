@@ -5,19 +5,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Untitled Page</title>
+<script language="javascript" type="text/javascript">
+// <!CDATA[
+
+function TABLE1_onclick() {
+
+}
+
+// ]]>
+</script>
 </head>
-<body>
+<body style="position: static; text-align: center"><center>
     <form id="form1" runat="server">
     <div>
         <div style="text-align: center">
-            <table style="width: 1078px">
+            <table style="width: 800px; font-size: small; left: 50%; margin-left: -400px; position: absolute;" id="TABLE1" onclick="return TABLE1_onclick()">
                 <tr>
-                    <td rowspan="3" style="width: 32px; height: 120px">
+                    <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
                         <img src="js/images/ccrta.jpg" style="width: 118px; height: 94px" /></td>
-                    <td rowspan="3" style="width: 100px; height: 120px">
-                        <span style="font-size: 24pt; font-family: Verdana">Visit Cape Cod Transportation Partners
-                            at www.geolabvirtualmaps.com</span></td>
-                    <td rowspan="3" style="width: 100px; height: 120px">
+                    <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
+                        <span style="font-size: x-large; font-family: Verdana">Visit Cape Cod Transportation Partners AVL at www.geolabvirtualmaps.com</span></td>
+                    <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
                         <img height="118" src="js/images/BSC1.jpg" width="105" /></td>
                 </tr>
                 <tr>
@@ -28,6 +36,6 @@
         </div>
     
     </div>
-    </form>
+    </form></center>
 </body>
 </html>
