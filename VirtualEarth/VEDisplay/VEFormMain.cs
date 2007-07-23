@@ -29,6 +29,7 @@ namespace VEDisplay
             // Start the load of VirtualEarth.html into the WebBrowser.
             // When done, the callback below (DocumentedCompleted) gets called.
             this.veMapControl.Url = new Uri("http://www.geolabvirtualmaps.com/HaynnisDemo.aspx");
+ 
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,17 +93,17 @@ namespace VEDisplay
             this.veMapControl.MoveMapRight();
         }
 
-        private void toolStripButtonGo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.veMapControl.Url = new Uri(this.toolStripTextBoxURL.Text);
-            }
-            catch (Exception ex)
-            {
-                ex.ToString();
-            }
-        }
+        //private void toolStripButtonGo_Click(object sender, EventArgs e)
+        //{
+         //   try
+          //  {
+           //     this.veMapControl.Url = new Uri(this.toolStripTextBoxURL.Text);
+           // }
+            //catch (Exception ex)
+            //{
+            //    ex.ToString();
+            //}
+        //}
 
         private readonly VELatLong haynniscenter = new VELatLong(41.65588797740388, -70.28833866119386);
 
@@ -114,6 +115,11 @@ namespace VEDisplay
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.veMapControl.Eval("step1()");
+
+        }
+
+        private void veMapControl_Load(object sender, EventArgs e)
+        {
 
         }
 

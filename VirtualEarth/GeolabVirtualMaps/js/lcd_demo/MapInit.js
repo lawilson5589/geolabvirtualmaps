@@ -17,6 +17,7 @@ var GeolabMap = {
         map.LoadMap(new VELatLong(Settings.Lat, Settings.Lon), Settings.MapZoom, Settings.MapStyle , false);
         map.SetCenter(new VELatLong(Settings.Lat, Settings.Lon));
         setRoutes();
+        map.ShowMiniMap();
         //setTimeout("step1()", 1000);
     }
 };
