@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\GeolabVirtualMaps\", "GeolabVirtualMaps\", "{BB4FBCA8-137D-4EC7-931B-AE55104735A4}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\GeolabVirtualMaps\", "GeolabVirtualMaps\", "{BB4FBCA8-137D-4EC7-931B-AE55104735A4}"
 	ProjectSection(WebsiteProperties) = preProject
 		ProjectReferences = "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}|VELibrary.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/GeolabVirtualMaps"
@@ -18,12 +18,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\GeolabVirtualMaps\",
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "3259"
+		VWDPort = "65282"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VELibrary", "VELibrary\VELibrary.csproj", "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEDisplay", "VEDisplay\VEDisplay.csproj", "{70896310-5699-43B3-94DF-AF8D93CFA7F5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

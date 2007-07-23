@@ -19,12 +19,13 @@ function TABLE1_onclick() {
     <form id="form1" runat="server">
     <div>
         <div style="text-align: center">
-            <table style="width: 800px; font-size: small; left: 50%; margin-left: -400px; position: absolute;" id="TABLE1" onclick="return TABLE1_onclick()">
+            <table style="width: 1024px; font-size: small; left: 50%; margin-left: -512px; position: absolute; height: 80px;" id="TABLE1" onclick="return TABLE1_onclick()">
                 <tr>
                     <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
                         <img src="js/images/ccrta.jpg" style="width: 118px; height: 94px" /></td>
                     <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
-                        <span style="font-size: x-large; font-family: Verdana">Visit Cape Cod Transportation Partners AVL at www.geolabvirtualmaps.com</span></td>
+                        <span style="font-size: large; font-family: Verdana">Visit Cape Cod Transportation Partners
+                            AVL at www.geolabvirtualmaps.com</span></td>
                     <td rowspan="3" style="width: 100px; height: 73px; text-align: center;">
                         <img height="118" src="js/images/BSC1.jpg" width="105" /></td>
                 </tr>
