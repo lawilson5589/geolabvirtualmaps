@@ -9,3 +9,7 @@ obj\Debug\VEDisplay.VEFormMain.resources
 obj\Debug\VEDisplay.csproj.GenerateResource.Cache
 obj\Debug\VEDisplay.exe
 obj\Debug\VEDisplay.pdb
+bin\Debug\VEDisplay.exe.manifest
+bin\Debug\VEDisplay.application
+obj\Debug\VEDisplay.exe.manifest
+obj\Debug\VEDisplay.application
