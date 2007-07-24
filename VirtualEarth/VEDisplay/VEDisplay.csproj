@@ -14,10 +14,14 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>60A0E7BA90BAEFE450C69DAB22D71901A1B97149</ManifestCertificateThumbprint>
+    <ManifestKeyFile>VEDisplay_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>http://localhost/VEDisplay/</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
+    <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -25,6 +29,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://207.206.224.39/VEDisplay/</InstallUrl>
+    <ProductName>VE Display</ProductName>
+    <PublisherName>GeoGraphics Lab</PublisherName>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -129,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mapleft_panel_off.gif" />
+    <None Include="VEDisplay_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="VirtualEarth5.htm">

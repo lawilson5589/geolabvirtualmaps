@@ -132,11 +132,12 @@ function step7(){
     setTimeout("AddPin( 41.65602625413811,-70.2798843383789, 'Hyannis', 'Hyannis Transportation Center');",11000);
     setTimeout("map.SetCenterAndZoom(new VELatLong(41.65602625413811,-70.2798843383789), 18);",12000);
     setTimeout("map.ShowInfoBox(shape)",13000);
-    setTimeout("map.HideInfoBox(shape);map.DeleteShape(shape);",23000);
-    setTimeout("map.ZoomOut();",25000);
-    setTimeout("map.ZoomOut();",27000);
-    setTimeout("map.ZoomOut();",30000);
-    setTimeout("step8()",31000);
+    setTimeout("map.SetMapStyle('o');",18000);
+    setTimeout("map.HideInfoBox(shape);map.DeleteShape(shape);map.SetMapStyle('h');",27000);
+    setTimeout("map.ZoomOut();",29000);
+    setTimeout("map.ZoomOut();",31000);
+    setTimeout("map.ZoomOut();",34000);
+    setTimeout("step8()",34500);
     
 }
 function step8(){

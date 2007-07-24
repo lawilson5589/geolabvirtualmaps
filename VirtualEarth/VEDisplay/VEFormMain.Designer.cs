@@ -56,7 +56,7 @@ namespace VEDisplay
             this.optionsToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(826, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(804, 24);
             this.menuStripMain.TabIndex = 1;
             this.menuStripMain.Text = "menuStripMain";
             // 
@@ -112,7 +112,7 @@ namespace VEDisplay
             this.toolStripButton1});
             this.toolStripMain.Location = new System.Drawing.Point(0, 24);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(826, 25);
+            this.toolStripMain.Size = new System.Drawing.Size(804, 25);
             this.toolStripMain.TabIndex = 2;
             this.toolStripMain.Text = "toolStripMain";
             // 
@@ -202,7 +202,7 @@ namespace VEDisplay
             this.veMapControl.MiniMapVisible = true;
             this.veMapControl.Name = "veMapControl";
             this.veMapControl.Padding = new System.Windows.Forms.Padding(0, 110, 0, 0);
-            this.veMapControl.Size = new System.Drawing.Size(826, 610);
+            this.veMapControl.Size = new System.Drawing.Size(804, 536);
             this.veMapControl.TabIndex = 0;
             this.veMapControl.Url = new System.Uri("http://www.geolabvirtualmaps.com/HaynnisDemo.aspx", System.UriKind.Absolute);
             this.veMapControl.ZoomLevel = 9;
@@ -217,7 +217,7 @@ namespace VEDisplay
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(826, 120);
+            this.webBrowser1.Size = new System.Drawing.Size(804, 120);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://www.geolabvirtualmaps.com/hyannisdisplay.aspx", System.UriKind.Absolute);
             // 
@@ -225,7 +225,7 @@ namespace VEDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 659);
+            this.ClientSize = new System.Drawing.Size(804, 585);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.veMapControl);
             this.Controls.Add(this.toolStripMain);

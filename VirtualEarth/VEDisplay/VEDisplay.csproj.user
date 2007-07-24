@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>D:\HTTP\VEDisplay\|http://localhost/VEDisplay/</PublishUrlHistory>
+    <PublishUrlHistory>http://localhost/VEDisplay/|D:\HTTP\VEDisplay\</PublishUrlHistory>
     <InstallUrlHistory>http://207.206.224.39/VEDisplay/|http://localhost/VEDisplay/</InstallUrlHistory>
     <SupportUrlHistory>
     </SupportUrlHistory>
@@ -8,7 +8,7 @@
     </UpdateUrlHistory>
     <BootstrapperUrlHistory>
     </BootstrapperUrlHistory>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>true</VerifyUploadedFiles>
   </PropertyGroup>
