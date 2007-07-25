@@ -1,4 +1,4 @@
-﻿/* Author: JBaltikauskas */
+﻿/* Author: JBaltikauskas, D. Fitch */
 var GeolabMap = {
     GetMap : function()
     {
