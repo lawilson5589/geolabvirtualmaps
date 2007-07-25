@@ -25,7 +25,8 @@ function TABLE1_onclick() {
                         <td align="center" style="width: 100px">
                             <img src="images/ccrta.jpg" /></td>
                         <td align="center">
-                            <span style="font-size: 24pt; font-family: Verdana">Visit GeoGraphics Lab Online at
+                            <span style="font-size: 23px; font-family: Verdana">Visit Cape Cod Transportation Partners
+                                Online at
                                 www.geolabvirtualmaps.com for real time AVL</span></td>
                         <td align="center" style="width: 100px">
                             <img src="images/BSC1.jpg" style="vertical-align: top; position: static;" /></td>

@@ -54,7 +54,7 @@
 			</services>
         </asp:ScriptManager>
         
-        <asp:Panel ID="geoMap" runat="server" Height="1050px" Width="1680px" />
+        <asp:Panel ID="geoMap" runat="server" Height="910px" Width="1776px" />
     </form>
 </body>
 </html>
