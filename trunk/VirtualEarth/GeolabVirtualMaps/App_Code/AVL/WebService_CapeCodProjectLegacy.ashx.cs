@@ -34,14 +34,19 @@ namespace Geolab
                         // Valid names
                         case "CapeCodPartners":
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
-                            storedProcedureName = "sp_SelectAVL_CapeCodePartners";
+                            this.storedProcedureName = "sp_SelectAVL_CapeCodePartners";
                             this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
+                            break;
+                        case "CapeCodFerries":
+                            this.info.CustomIcon = "/images/map_vehicles/intercity_bus.gif";
+                            this.info.Title = "Cape Cod Transportation";
+                            // Here sp_SelectAVL_ is prefix for every AVL stored procedure
+                            this.storedProcedureName = "sp_SelectAVL_CapeCodFerries";
                             break;
                         case "CapeCod":
                             this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
-                            // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_CapeCod";
                             break;
                         default:
@@ -73,8 +78,15 @@ namespace Geolab
                 this.StoredProcedureName = "CapeCodPartners";
                 this.connectionString = ConnectionString.CapeCodLegacy;
                 this.RetrieveData(ref sb);
+                this.StoredProcedureName = String.Empty;
 
                 this.StoredProcedureName = "CapeCod";
+                this.connectionString = ConnectionString.Geolab_mdt2_cape;
+                this.RetrieveData(ref sb);
+                this.StoredProcedureName = String.Empty;
+
+
+                this.StoredProcedureName = "CapeCodFerries";
                 this.connectionString = ConnectionString.Geolab_mdt2_cape;
                 this.RetrieveData(ref sb);
 

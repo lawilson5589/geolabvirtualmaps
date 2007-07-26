@@ -17,12 +17,13 @@
             ,"Lon" : -71.551208
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/images/map_vehicles/tooltip_bus.png'
+            ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
             ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Framingham'
             ,"VehiclePinTitles" : 'Framingham'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true
         }; 
+        //CHANGE ICON SETTINGS IN AVL_webservices/LiveData.ashx
         var Screen = {
              'offsetX' : 10
             ,'offsetY' : 10
