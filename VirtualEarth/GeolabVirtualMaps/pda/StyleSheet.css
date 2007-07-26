@@ -1,0 +1,28 @@
+﻿body {
+}
+p
+{
+    font-size: smaller;
+    color: gray;
+    font-family: Verdana;
+}
+h1
+{
+    font-size: larger;
+    color: black;
+    font-family: Verdana;
+    text-align: right;
+}
+TD
+{
+    font-size: smaller;
+    font-family: Verdana;
+    text-align: center;
+}
+TH
+{
+    font-size: smaller;
+    text-transform: none;
+    font-family: Verdana;
+    font-variant: small-caps;
+}
