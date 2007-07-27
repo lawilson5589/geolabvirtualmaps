@@ -1,7 +1,10 @@
-﻿body {
+﻿body
+{
+	text-align: center;
 }
 p
 {
+	text-align: center;
     font-size: smaller;
     color: gray;
     font-family: Verdana;
@@ -25,4 +28,8 @@ TH
     text-transform: none;
     font-family: Verdana;
     font-variant: small-caps;
+}
+div
+{
+	text-align: center;
 }
