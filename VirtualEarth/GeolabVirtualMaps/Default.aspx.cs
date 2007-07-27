@@ -13,6 +13,7 @@ public partial class DefaultMain : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Response.AppendHeader("Refresh", "10; URL=default.aspx");
 
     }
 }

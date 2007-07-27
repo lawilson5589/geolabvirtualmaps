@@ -10,13 +10,14 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False">
+        <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False">
             <Columns>
                 <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HeaderText="Datetime" SortExpression="Datetime" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="Datetime" HtmlEncode="false" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
+                <asp:BoundField HeaderText="Location" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" />
+                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"

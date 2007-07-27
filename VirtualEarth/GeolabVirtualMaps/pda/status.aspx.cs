@@ -11,19 +11,18 @@ using System.Web.UI.HtmlControls;
 using net.mappoint.staging;
 using System.Text;
 
-    
-public partial class pda_ccrta : System.Web.UI.Page
+public partial class pda_status : System.Web.UI.Page
 {
     private static Geolab.MapPointCredentials global = new Geolab.MapPointCredentials();
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.AppendHeader("Refresh", "5; URL=metrowest.aspx");
+        Response.AppendHeader("Refresh", "30; URL=status.aspx");
     }
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-        
+
             string lat = e.Row.Cells[4].Text;
             double dlat = double.Parse(lat);
             string lng = e.Row.Cells[5].Text;
@@ -31,7 +30,7 @@ public partial class pda_ccrta : System.Web.UI.Page
             LatLong latlong = new LatLong();
             latlong.Latitude = dlat;
             latlong.Longitude = dlng;
-            
+
 
             //Define get info options object
             GetInfoOptions options = new GetInfoOptions();
@@ -47,8 +46,6 @@ public partial class pda_ccrta : System.Web.UI.Page
             returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
 
             e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
-            e.Row.Cells[4].Visible = false;
-            e.Row.Cells[5].Visible = false;
         }
     }
 }
