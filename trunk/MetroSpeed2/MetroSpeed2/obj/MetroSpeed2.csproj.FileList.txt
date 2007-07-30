@@ -1,0 +1,14 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MetroSpeed2.csproj.GenerateResource.Cache
+obj\Debug\MetroSpeed2.Metrowest.resources
+bin\Debug\MetrowestAVL.exe.manifest
+bin\Debug\MetrowestAVL.application
+bin\Debug\MetrowestAVL.exe
+bin\Debug\MetrowestAVL.pdb
+obj\Debug\MetrowestAVL.Properties.Resources.resources
+obj\Debug\MetrowestAVL.TrustInfo.xml
+obj\Debug\MetrowestAVL.exe.manifest
+obj\Debug\MetrowestAVL.application
+obj\Debug\MetrowestAVL.exe
+obj\Debug\MetrowestAVL.pdb
+bin\Debug\MetrowestAVL.exe.config
