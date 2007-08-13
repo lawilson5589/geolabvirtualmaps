@@ -36,7 +36,7 @@ if(Dashboard){
         // Clean up 
         wbs = null;
         
-        CapeCodeRoutes.{Function} =  function(){CapeCodeRoutes.Invoke('{MapID}');
+        //CapeCodeRoutes.{Function} =  function(){CapeCodeRoutes.Invoke('{MapID}');
         CapeCodeRoutes.Barnstable =  function(){CapeCodStops['Barnstable'].Invoke('Barnstable');CapeCodeRoutes.Invoke('Barnstable'); }
         CapeCodeRoutes.Flex =  function(){CapeCodStops['Flex'].Invoke('Flex');CapeCodeRoutes.Invoke('Flex');}
         CapeCodeRoutes.H20 =  function(){CapeCodStops['H2O'].Invoke('H2O');CapeCodeRoutes.Invoke('H20');}

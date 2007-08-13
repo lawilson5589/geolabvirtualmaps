@@ -40,7 +40,7 @@ if(Dashboard){
         CapeCodeRoutes.Barnstable =  function(){CapeCodStops['Barnstable'].Invoke('Barnstable');CapeCodeRoutes.Invoke('Barnstable'); }
         CapeCodeRoutes.Flex =  function(){CapeCodStops['Flex'].Invoke('Flex');CapeCodeRoutes.Invoke('Flex');}
         CapeCodeRoutes.H20 =  function(){CapeCodStops['H2O'].Invoke('H2O');CapeCodeRoutes.Invoke('H20');}
-        CapeCodeRoutes.Hyannis =  function(){CapeCodStops['Hyannis'].Invoke('Hyannis');CapeCodeRoutes.Invoke('Hyannis');}
+        //CapeCodeRoutes.Hyannis =  function(){CapeCodStops['Hyannis'].Invoke('Hyannis');CapeCodeRoutes.Invoke('Hyannis');}
         CapeCodeRoutes.PTown =  function(){CapeCodStops['PTown'].Invoke('PTown');CapeCodeRoutes.Invoke('PTown');}
         CapeCodeRoutes.Orange =  function(){CapeCodStops['Orange'].Invoke('Orange');CapeCodeRoutes.Invoke('Orange');}
         CapeCodeRoutes.Sealine =  function(){CapeCodStops['Sealine'].Invoke('Sealine');CapeCodeRoutes.Invoke('Sealine');}
@@ -50,11 +50,11 @@ if(Dashboard){
 
         var img = "/images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', CapeCodeRoutes.{Function});
-        this.CreateElement('Jim', 'Jim', CapeCodeRoutes.Flex, 'Jimbo', img);
+       // this.CreateElement('Jim', 'Jim', CapeCodeRoutes.Flex, 'Jimbo', img);
         this.CreateElement('Barnstable', 'Barnstable', CapeCodeRoutes.Barnstable, 'Barnstable route', img);
         this.CreateElement('Flex', 'Flex', CapeCodeRoutes.Flex, 'Flex route', img);
         this.CreateElement('H2O', 'H2O', CapeCodeRoutes.H20, 'H2O route', img);
-        this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
+        //this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
         this.CreateElement('PTown', 'PTown', CapeCodeRoutes.PTown, 'PTown route', img);
         this.CreateElement('Orange', 'Orange', CapeCodeRoutes.Orange, 'Orange route', img);
         this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
