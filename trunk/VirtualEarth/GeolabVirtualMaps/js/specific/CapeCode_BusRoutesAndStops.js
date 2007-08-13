@@ -36,7 +36,7 @@ if(Dashboard){
         // Clean up 
         wbs = null;
         
-        //CapeCodeRoutes.{Function} =  function(){CapeCodeRoutes.Invoke('{MapID}');
+        CapeCodeRoutes.{Function} =  function(){CapeCodeRoutes.Invoke('{MapID}');
         CapeCodeRoutes.Barnstable =  function(){CapeCodStops['Barnstable'].Invoke('Barnstable');CapeCodeRoutes.Invoke('Barnstable'); }
         CapeCodeRoutes.Flex =  function(){CapeCodStops['Flex'].Invoke('Flex');CapeCodeRoutes.Invoke('Flex');}
         CapeCodeRoutes.H20 =  function(){CapeCodStops['H2O'].Invoke('H2O');CapeCodeRoutes.Invoke('H20');}
@@ -53,7 +53,7 @@ if(Dashboard){
         this.CreateElement('Barnstable', 'Barnstable', CapeCodeRoutes.Barnstable, 'Barnstable route', img);
         this.CreateElement('Flex', 'Flex', CapeCodeRoutes.Flex, 'Flex route', img);
         this.CreateElement('H2O', 'H2O', CapeCodeRoutes.H20, 'H2O route', img);
-        this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
+        //this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
         this.CreateElement('PTown', 'PtnNTruro', CapeCodeRoutes.PTown, 'PTown NTruro route', img);
         this.CreateElement('Orange', 'Ptn Beaches', CapeCodeRoutes.Orange, 'PTown Beaches route', img);
         this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
