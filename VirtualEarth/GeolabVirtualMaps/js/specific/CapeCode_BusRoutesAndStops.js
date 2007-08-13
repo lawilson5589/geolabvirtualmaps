@@ -54,8 +54,8 @@ if(Dashboard){
         this.CreateElement('Flex', 'Flex', CapeCodeRoutes.Flex, 'Flex route', img);
         this.CreateElement('H2O', 'H2O', CapeCodeRoutes.H20, 'H2O route', img);
         this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
-        this.CreateElement('PTown', 'PTown-Truro', CapeCodeRoutes.PTown, 'PTown route', img);
-        this.CreateElement('Orange', 'PTown-Beaches', CapeCodeRoutes.Orange, 'Orange route', img);
+        this.CreateElement('PTown', 'PTown-Truro', CapeCodeRoutes.PTown, 'PTown North Truro route', img);
+        this.CreateElement('Orange', 'PTownBeaches', CapeCodeRoutes.Orange, 'PTown Beaches route', img);
         this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
         this.CreateElement('Villager', 'Villager', CapeCodeRoutes.Villager, 'Villager route', img);
         this.CreateElement('Whoosh', 'Whoosh', CapeCodeRoutes.Woosh, 'Whoosh route', img);
