@@ -25,7 +25,7 @@ namespace Geolab
     [System.Web.Script.Services.ScriptService]
     public class CapeCod_FireDeptartment : System.Web.Services.WebService
     {
-
+  
         public CapeCod_FireDeptartment()
         {
             //Uncomment the following line if using designed components 
