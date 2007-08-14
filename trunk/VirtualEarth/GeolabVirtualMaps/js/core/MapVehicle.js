@@ -64,7 +64,8 @@ Geolab.Vehicle.prototype = {
                 obj.BatteryLevel,
                 obj.SignalStrength,
                 obj.GeolabID,
-                address
+                address,
+                obj.Froute
                 )
              );   
              this.__layer.AddShape(shape); 
@@ -223,6 +224,9 @@ Geolab.Vehicle.PinDescriptionFormat =
         '<td>{10}</td>'+
         '</tr>'+
         '{11}' +
+        '<td align="right"><b>Route:</b></td>'+
+        '<td>{12}</td>'+
+        '</tr>'+
         '</table>';
         
 Geolab.Vehicle.AddressFormat =

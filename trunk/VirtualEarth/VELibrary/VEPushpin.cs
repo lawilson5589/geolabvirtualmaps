@@ -83,17 +83,17 @@ namespace VELibrary
         public override string ToJson()
         {
             StringBuilder sb = new StringBuilder(50);
-            sb.AppendFormat("(var pushpin = new VEShape(VEShapeType.Pushpin,{0}))", this.Location.ToJson());
+            sb.AppendFormat("var pushpin = new VEShape(VEShapeType.Pushpin,{0});", this.Location.ToJson());
             if (this.CustomIcon != "")
             {
-            //    sb.AppendFormat("pushpin.SetCustomIcon('{0}');", this.CustomIcon);
+                sb.AppendFormat("pushpin.SetCustomIcon('{0}');", this.CustomIcon);
             }            
-            //sb.AppendFormat("pushpin.SetTitle('{0}');", this.Title);
-            //sb.AppendFormat("pushpin.SetDescription('{0}');", this.Description);
+            sb.AppendFormat("pushpin.SetTitle('{0}');", this.Title);
+            sb.AppendFormat("pushpin.SetDescription('{0}');", this.Description);
 
             if (this.PhotoUrl != null)
             {
-            //    sb.AppendFormat("pushpin.SetPhotoURL('{0}');", this.PhotoUrl.ToString());
+                sb.AppendFormat("pushpin.SetPhotoURL('{0}');", this.PhotoUrl.ToString());
             }
             return sb.ToString();
         }
