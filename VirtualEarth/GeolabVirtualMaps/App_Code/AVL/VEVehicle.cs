@@ -146,6 +146,9 @@ namespace Geolab
             get { return locationInfo; }
             set { locationInfo = value; }
         }
+
+        private String froute; 
+
         public String Froute
         {
             get { return froute; }
