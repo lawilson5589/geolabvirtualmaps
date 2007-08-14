@@ -52,7 +52,7 @@ namespace Geolab
                             sqldatareader[VEShape_DbColumnNames.Description].ToString(),
                             sqldatareader[VEShape_DbColumnNames.IconUrl].ToString()
                         );
-                        if (pin is VEPushpin) sb.AppendFormat("Array.add(collection, {0});", pin.ToJson());
+                        if (pin is VEPushpin) sb.AppendFormat("{0}Array.add(collection,pushpin);", pin.ToJson());
                     }
                 }
                 else
