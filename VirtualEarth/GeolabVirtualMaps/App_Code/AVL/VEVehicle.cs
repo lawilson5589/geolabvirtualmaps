@@ -146,7 +146,11 @@ namespace Geolab
             get { return locationInfo; }
             set { locationInfo = value; }
         }
-
+        public String Froute
+        {
+            get { return froute; }
+            set {froute = value;} 
+        }
 
 
         public string ToJson()

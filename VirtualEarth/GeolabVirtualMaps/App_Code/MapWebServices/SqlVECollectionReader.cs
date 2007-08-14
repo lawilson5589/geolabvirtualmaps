@@ -175,6 +175,14 @@ namespace Geolab
                     vehicle.SignalStrength = sqldatareader[AGPS_DbColumnNames.SignalStrength].ToString();
                     vehicle.GeolabID = sqldatareader["GeolabID"].ToString().Trim();
                     vehicle.LocationInfo = vehicle.GeoCoding? vehicle.GetLocationInfo() : "";
+                    try
+                    {
+                        vehicle.Froute = sqldatareader[AGPS_DbColumnNames.Froutename].ToString();
+                    }
+                    catch (SqlException sqlex)
+                    {
+                    }
+
                     output.AppendFormat("Array.add(collection, {0});", vehicle.ToJson());
                 }
             }
