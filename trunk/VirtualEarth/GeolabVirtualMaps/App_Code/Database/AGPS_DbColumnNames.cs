@@ -170,5 +170,14 @@ namespace Geolab
                 return "SignalStrength";
             }
         }
+        public static String Froutename
+        {
+            get
+            
+                {
+                    return "Froutename";
+                }
+            
+        }
     }
 }
