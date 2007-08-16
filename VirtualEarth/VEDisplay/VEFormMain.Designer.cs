@@ -43,8 +43,8 @@ namespace VEDisplay
             this.toolStripButtonDown = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRigth = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.veMapControl = new VELibrary.Controls.VEMapControl();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.veMapControl = new VELibrary.Controls.VEMapControl();
             this.menuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -65,13 +65,13 @@ namespace VEDisplay
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -81,7 +81,7 @@ namespace VEDisplay
             this.showMiniMapToolStripMenuItem,
             this.showDashBoradToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // showMiniMapToolStripMenuItem
@@ -89,14 +89,14 @@ namespace VEDisplay
             this.showMiniMapToolStripMenuItem.Checked = true;
             this.showMiniMapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showMiniMapToolStripMenuItem.Name = "showMiniMapToolStripMenuItem";
-            this.showMiniMapToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showMiniMapToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.showMiniMapToolStripMenuItem.Text = "Show &Mini Map";
             this.showMiniMapToolStripMenuItem.Click += new System.EventHandler(this.showMiniMapToolStripMenuItem_Click);
             // 
             // showDashBoradToolStripMenuItem
             // 
             this.showDashBoradToolStripMenuItem.Name = "showDashBoradToolStripMenuItem";
-            this.showDashBoradToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showDashBoradToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.showDashBoradToolStripMenuItem.Text = "Show &DashBorad";
             this.showDashBoradToolStripMenuItem.Click += new System.EventHandler(this.showDashBoradToolStripMenuItem_Click);
             // 
@@ -188,6 +188,19 @@ namespace VEDisplay
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.AllowNavigation = false;
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 49);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(804, 120);
+            this.webBrowser1.TabIndex = 3;
+            this.webBrowser1.Url = new System.Uri("http://www.geolabvirtualmaps.com/hyannisdisplay.aspx", System.UriKind.Absolute);
+            // 
             // veMapControl
             // 
             this.veMapControl.DeltaX = ((byte)(5));
@@ -208,19 +221,6 @@ namespace VEDisplay
             this.veMapControl.ZoomLevel = 9;
             this.veMapControl.Load += new System.EventHandler(this.veMapControl_Load);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.AllowNavigation = false;
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 49);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(804, 120);
-            this.webBrowser1.TabIndex = 3;
-            this.webBrowser1.Url = new System.Uri("http://www.geolabvirtualmaps.com/hyannisdisplay.aspx", System.UriKind.Absolute);
-            // 
             // VEFormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +233,7 @@ namespace VEDisplay
             this.MainMenuStrip = this.menuStripMain;
             this.Name = "VEFormMain";
             this.Text = "VE Form Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.VEFormMain_Shown);
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
