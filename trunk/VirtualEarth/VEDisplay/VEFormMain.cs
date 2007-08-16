@@ -29,6 +29,7 @@ namespace VEDisplay
             // Start the load of VirtualEarth.html into the WebBrowser.
             // When done, the callback below (DocumentedCompleted) gets called.
             this.veMapControl.Url = new Uri("http://www.geolabvirtualmaps.com/HaynnisDemo.aspx");
+
  
         }
 
