@@ -4,11 +4,10 @@
     <InstallUrlHistory>http://207.206.224.39/VEDisplay/|http://localhost/VEDisplay/</InstallUrlHistory>
     <SupportUrlHistory>
     </SupportUrlHistory>
-    <UpdateUrlHistory>
-    </UpdateUrlHistory>
+    <UpdateUrlHistory>http://207.206.224.39/VEDisplay/</UpdateUrlHistory>
     <BootstrapperUrlHistory>
     </BootstrapperUrlHistory>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>true</VerifyUploadedFiles>
   </PropertyGroup>
