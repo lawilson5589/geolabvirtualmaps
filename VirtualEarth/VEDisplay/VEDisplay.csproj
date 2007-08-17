@@ -22,16 +22,18 @@
     <PublishUrl>http://localhost/VEDisplay/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://207.206.224.39/VEDisplay/</InstallUrl>
+    <UpdateUrl>http://207.206.224.39/VEDisplay/</UpdateUrl>
     <ProductName>VE Display</ProductName>
     <PublisherName>GeoGraphics Lab</PublisherName>
+    <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
