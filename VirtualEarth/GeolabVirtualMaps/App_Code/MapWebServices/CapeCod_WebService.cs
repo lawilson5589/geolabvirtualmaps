@@ -56,6 +56,7 @@ namespace Geolab
                 case "BSCRoute1":
                 case "BSCRoute2":
                 case "BSCRoute28":
+                case "SL_winter":
                     SqlVECollectionReader.RetrievePushPinCollection(ConnectionString.CapeCod, "sp_SelectVEPushPins", mapID, ref sb);
                     break;
                 default:
@@ -90,6 +91,7 @@ namespace Geolab
                 case "BSCRoute1":
                 case "BSCRoute2":
                 case "BSCRoute28":
+                case "SL_winter":
 
 
                     SqlVECollectionReader.RetrievePolyLine(ConnectionString.CapeCod, "sp_SelectVEPolyLines", mapID, ref sb);

@@ -30,6 +30,8 @@ if(Dashboard){
         CapeCodStops['Whoosh'].SetWebService(wbs);
         CapeCodStops['Yarmouth'] = new Geolab.PushPinLayer('Yarmouth');
         CapeCodStops['Yarmouth'].SetWebService(wbs);
+        CapeCodStops['SL_winter'] = new Geolab.PushPinLayer('SL_winter');
+        CapeCodStops['SL_winter'].SetWebService(wbs);
         this.CreateElement('Routes', 'Routes');
          
         // END
@@ -47,6 +49,7 @@ if(Dashboard){
         CapeCodeRoutes.Villager =  function(){CapeCodStops['Villager'].Invoke('Villager');CapeCodeRoutes.Invoke('Villager'); }
         CapeCodeRoutes.Woosh =  function(){CapeCodStops['Whoosh'].Invoke('Whoosh');CapeCodeRoutes.Invoke('Whoosh');}
         CapeCodeRoutes.Yarmouth =  function(){CapeCodStops['Yarmouth'].Invoke('Yarmouth');CapeCodeRoutes.Invoke('Yarmouth');}
+        CapeCodeRoutes.SL_winter =  function(){CapeCodStops['SL_winter'].Invoke('SL_winter');CapeCodeRoutes.Invoke('SL_winter');}
 
         var img = "/images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', CapeCodeRoutes.{Function});
