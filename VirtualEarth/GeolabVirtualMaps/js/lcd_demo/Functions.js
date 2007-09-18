@@ -69,23 +69,23 @@ function step3(){
 }
 function step4(){
 
-    //Yarmouth Procedure
-    map.ZoomIn();
-    setTimeout("map.PanToLatLong(new VELatLong(41.651322,-70.233572));",3000);
-    setTimeout("map.ZoomIn();",4000);
-    setTimeout("map.AddShape(polyline['Yarmouth']);map.SetMapView(polyline['Yarmouth'].GetPoints());",6000);
-    setTimeout("map.ShowInfoBox(polyline['Yarmouth']);",7000);
-    setTimeout("map.HideInfoBox(polyline['Yarmouth']);map.DeleteShape(polyline['Yarmouth']);",12000);
+    //Yarmouth Procedure (Summer)
+    //map.ZoomIn();
+    //setTimeout("map.PanToLatLong(new VELatLong(41.651322,-70.233572));",3000);
+    //setTimeout("map.ZoomIn();",4000);
+    //setTimeout("map.AddShape(polyline['Yarmouth']);map.SetMapView(polyline['Yarmouth'].GetPoints());",6000);
+    //setTimeout("map.ShowInfoBox(polyline['Yarmouth']);",7000);
+    //setTimeout("map.HideInfoBox(polyline['Yarmouth']);map.DeleteShape(polyline['Yarmouth']);",12000);
     
-    //Woosh Procedure
-    setTimeout("map.ZoomOut();",12500);
-    setTimeout("map.PanToLatLong(new VELatLong(41.639052070137204,-70.52295684814453));",13000);
-    setTimeout("map.PanToLatLong(new VELatLong(41.541994,-70.636582));",13500);
-    setTimeout("map.AddShape(polyline['Whoosh']);map.SetMapView(polyline['Whoosh'].GetPoints());",16500);
-    setTimeout("map.ShowInfoBox(polyline['Whoosh']);",17500);
-    setTimeout("map.HideInfoBox(polyline['Whoosh']);map.DeleteShape(polyline['Whoosh']);",22500);
-    setTimeout("step5()",23500);
-    
+    //Woosh Procedure (Summer)
+    //setTimeout("map.ZoomOut();",12500);
+    //setTimeout("map.PanToLatLong(new VELatLong(41.639052070137204,-70.52295684814453));",13000);
+    //setTimeout("map.PanToLatLong(new VELatLong(41.541994,-70.636582));",13500);
+    //setTimeout("map.AddShape(polyline['Whoosh']);map.SetMapView(polyline['Whoosh'].GetPoints());",16500);
+    //setTimeout("map.ShowInfoBox(polyline['Whoosh']);",17500);
+    //setTimeout("map.HideInfoBox(polyline['Whoosh']);map.DeleteShape(polyline['Whoosh']);",22500);
+    //setTimeout("step5()",23500);
+    setTimeout("step5()",500);
 }
 function step5(){
 
