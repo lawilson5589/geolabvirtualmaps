@@ -49,7 +49,7 @@ namespace Geolab
                             break;
                         case "SouthEastern":
                             this.info.CustomIcon = "/images/map_vehicles/ambulance_024.gif";
-                            this.info.Title = "South Eastern MA Emergency";
+                            this.info.Title = "Southeastern MA Emergency";
                             this.storedProcedureName = "sp_SelectAVL_SouthEastern";
                             break;
                         case "Framingham":
