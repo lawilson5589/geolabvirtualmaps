@@ -192,6 +192,48 @@ namespace Geolab
             }
             return true;
         }
+
+        public static bool RetrieveVehicleXMLData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags)
+        {
+            output.AppendFormat("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+            output.AppendFormat("<markers>");
+            if (sqldatareader.HasRows)
+            {
+                while (sqldatareader.Read())
+                {
+                    VEVehicle vehicle = new VEVehicle(flags);
+                    String[] datetime = sqldatareader[AGPS_DbColumnNames.Datetime].ToString().Split(' ');
+
+                    vehicle.Date = datetime[0];
+                    vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
+                    vehicle.Latitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Latitude].ToString());
+                    vehicle.Longitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Longitude].ToString());
+                    vehicle.Accuracy = sqldatareader[AGPS_DbColumnNames.LatLonAccuracy].ToString();
+                    vehicle.Speed = sqldatareader[AGPS_DbColumnNames.PositionSpeed].ToString();
+                    vehicle.Heading = sqldatareader[AGPS_DbColumnNames.PositionHeading].ToString();
+                    vehicle.SatelliteNumber = VEVehicle.GetSatteliteBars(sqldatareader[AGPS_DbColumnNames.SatelliteNumber].ToString());
+                    vehicle.BatteryLevel = sqldatareader[AGPS_DbColumnNames.BatteryLevel].ToString();
+                    vehicle.SignalStrength = sqldatareader[AGPS_DbColumnNames.SignalStrength].ToString();
+                    vehicle.GeolabID = sqldatareader["GeolabID"].ToString().Trim();
+                    vehicle.LocationInfo = vehicle.GeoCoding ? vehicle.GetLocationInfo() : "";
+                    try
+                    {
+                        vehicle.Froute = sqldatareader[AGPS_DbColumnNames.Froutename].ToString();
+                    }
+                    catch (SqlException sqlex)
+                    {
+                    }
+
+                    output.AppendFormat("<marker lat =\"{0} \" lng =\"{1}\" unit_id=\"{2}\" />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID);
+                }
+                output.AppendFormat("</markers>");
+            }
+            else
+            {
+                output.Append("</markers>");
+            }
+            return true;
+        }
     }
 
 }
