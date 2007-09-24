@@ -95,7 +95,7 @@ namespace Geolab
                     sqlcommand = new SqlCommand(this.storedProcedureName, sqlconnection);
                     sqlcommand.CommandType = CommandType.StoredProcedure;
                     sqlconnection.Open();
-                    StringBuilder sb = new StringBuilder("collection=new Array();");
+                    StringBuilder sb = new StringBuilder("");
                     SqlDataReader sqldatareader = sqlcommand.ExecuteReader();
                     
                     String url = context.Request.RawUrl;
