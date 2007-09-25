@@ -1,13 +1,13 @@
 
 //this object tracks all the bus locations/details and downloads new locations
 //it takes the url of the bus xml data, a reference to the main map, and a reference to the mini map
-function BusTracker(new_xmL_bus_data_url, expiration_date, new_main_map, new_mini_map) //constructor
+function BusTracker(new_xmL_bus_data_url, new_main_map, new_mini_map) //constructor
 {
 
 
   //ammend a random number so that ie/firefox does not cache the xml(or rather so it replaces the cached xml)
   //this.xml_bus_data_url = new_xmL_bus_data_url+"?expiration_date=" + expiration_date + "&pleasedon'tcache="+(Math.random());
-  this.xml_bus_data_url = new_xmL_bus_data_url+"?expiration_date=" + expiration_date;
+  this.xml_bus_data_url = new_xmL_bus_data_url;
   
 
   this.buses = new Array; //any associative array of BusObjects to hold all the bus objects
