@@ -4,15 +4,14 @@
     <Require feature="sharedmap"/>
   </ModulePrefs>
   <Content type="html">
-        <![CDATA[
-      <h2>Hello World!</h2>  
-  <script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/buses34.js"></script>
-  <script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/iconclasses.js"></script>
+<![CDATA[
+
+<h2>Hello World!</h2>  
+<body onunload="GUnload()">
+<script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/buses34.js"></script>
+<script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/iconclasses.js"></script>
 <script language="JavaScript1.5">
 
-//settings
-var expiration_date = -9999999; //the time in minutes before a bus timepoint is no longer valid(in whole minutes)
-                            //should be a negative number (-2 = 2 minutes ago)
 
 //latitude and longitude of the map
 var centerOfMap = new GLatLng(41.9888943,-70.96794);
