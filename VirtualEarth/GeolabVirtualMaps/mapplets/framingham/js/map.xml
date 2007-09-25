@@ -22,7 +22,7 @@ map.setCenter(centerOfMap,16, G_HYBRID_MAP);
 
 var miniMap = new GMap2();
 
-buses = new BusTracker("http://geolabvirtualmaps.com/AVL_webservices/XMLHandler.ashx?ID=Framingham", expiration_date, map, miniMap);
+buses = new BusTracker("http://geolabvirtualmaps.com/AVL_webservices/XMLHandler.ashx?ID=Framingham", map, miniMap);
 
 //display the bus now
 buses.update();
