@@ -6,8 +6,8 @@
   <Content type="html">
         <![CDATA[
       <h2>Hello World!</h2>  
-  <script language="JavaScript1.5" type="text/javascript"  src="//buses34.js"></script>
-  <script language="JavaScript1.5" type="text/javascript"  src="//iconclasses.js"></script>
+  <script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/buses34.js"></script>
+  <script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/iconclasses.js"></script>
 <script language="JavaScript1.5">
 
 //settings
