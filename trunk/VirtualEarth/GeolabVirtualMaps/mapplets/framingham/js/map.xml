@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Hello World" description="The Hello World of Mapplets" author="Your name" author_email="your-email@gmail.com"                height="150">
+    <Require feature="sharedmap"/>
+  </ModulePrefs>
+  <Content type="html">
+        <![CDATA[
+      <h2>Hello World!</h2>  
+  <script language="JavaScript1.5" type="text/javascript"  src="http://207.206.224.39/mapplets/framingham/js/buses34.js"></script>
+  <script language="JavaScript1.5" type="text/javascript"  src="http://207.206.224.39/mapplets/framingham/js/iconclasses.js"></script>
+<script language="JavaScript1.5">
+
+//settings
+var expiration_date = -9999999; //the time in minutes before a bus timepoint is no longer valid(in whole minutes)
+                            //should be a negative number (-2 = 2 minutes ago)
+
+//latitude and longitude of the map
+var centerOfMap = new GLatLng(41.9888943,-70.96794);
+
+var map = new GMap2();
+map.setCenter(centerOfMap,16, G_HYBRID_MAP);
+
+var miniMap = new GMap2();
+
+buses = new BusTracker("http://207.206.224.39/bridgewater_transit/serverscripts/bus_location.aspx", expiration_date, map, miniMap);
+
+//display the bus now
+buses.update();
+
+//then display the bus every 1 second
+window.setInterval("buses.update()", 5000); 
+
+
+</script>
+   
+      ]]>
+      </Content>
+    </Module>

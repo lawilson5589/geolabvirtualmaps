@@ -224,7 +224,7 @@ namespace Geolab
                     {
                     }
 
-                    output.AppendFormat("<marker lat =\"{0} \" lng =\"{1}\" unit_id=\"{2}\" />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID);
+                    output.AppendFormat("<marker lat =\"{0}\" lng =\"{1}\" unit_id=\"{2}\" />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID);
                 }
                 output.AppendFormat("</markers>");
             }
