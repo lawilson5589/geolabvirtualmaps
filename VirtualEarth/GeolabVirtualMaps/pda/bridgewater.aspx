@@ -10,18 +10,20 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False">
+        <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False" HorizontalAlign="Center">
             <Columns>
                 <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="false" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
+                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
                 <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                <asp:BoundField />
+                <asp:BoundField DataField="PositionHeading"  />
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_Bridgew" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+            SelectCommand="sp_SelectAVL_Bridgew" SelectCommandType="StoredProcedure" ></asp:SqlDataSource>
     
     </div>
     </form>

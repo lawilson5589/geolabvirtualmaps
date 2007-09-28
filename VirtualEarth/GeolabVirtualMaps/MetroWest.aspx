@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head" runat="server">
-    <title>GeoGraphics Lab - Framingham </title>
+    <title>GeoGraphics Lab - MetroWest </title>
 
      <script type="text/javascript">
 
@@ -13,10 +13,10 @@
         var Vehicle = null;
         // Modify settings values as need
         var Settings = { 
-             "Lat" : 42.308799 
-            ,"Lon" : -71.551208
+             "Lat" : 42.246818561138234
+            ,"Lon" : -71.43104553222658
             ,"MapStyle" : 'r'
-            ,"MapZoom" : 9
+            ,"MapZoom" : 11
             ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
             ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Framingham'
             ,"VehiclePinTitles" : 'Framingham'
