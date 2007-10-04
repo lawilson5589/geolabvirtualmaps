@@ -158,7 +158,7 @@ BusObject.prototype.createBus = function()
   this.bus_marker = new GMarker(this.busGLatLng, this.icon);
 
   //add a listener
-  this.bus_marker = this.addClickListener(this.bus_marker, this.route_name);
+  //this.bus_marker = this.addClickListener(this.bus_marker, this.route_name);
 
 
   return this.bus_marker;
