@@ -27,7 +27,7 @@ BusTracker.prototype.update = function()
 {
 
   //downloads the xml for the buses, and then calls this.parse as a method of this
-  _IG_FetchXmlContent(this.xml_bus_data_url, _IG_Callback(callarseBusXmlAndDisplay, this), { refreshInterval: 0 });
+  _IG_FetchXmlContent(this.xml_bus_data_url, _IG_Callback(callParseBusXmlAndDisplay, this), { refreshInterval: 0 });
 
 
 }
