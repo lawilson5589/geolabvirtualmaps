@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="CCRTA AVL Mapper" description="Cape Cod Regional Transit Authority Real Time Automatic Vehicle Location System" author="Geographics Lab" author_email="danielfitch@gmail.com"                height="150">
+    <Require feature="sharedmap"/>
+  </ModulePrefs>
+  <Content type="html">
+<![CDATA[
+
+<h2>CCRTA AVL Mapper</h2>  
+<body onunload="GUnload()">
+<script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/buses34.js"></script>
+<script language="JavaScript1.5" type="text/javascript"  src="http://www.geolabvirtualmaps.com/mapplets/framingham/js/iconclasses.js"></script>
+<script language="JavaScript1.5">
+
+
+//latitude and longitude of the map
+var centerOfMap = new GLatLng(41.88234259202628,-70.6972148437501);
+
+var map = new GMap2();
+map.setCenter(centerOfMap,10, G_HYBRID_MAP);
+
+var miniMap = new GMap2();
+
+buses = new BusTracker("http://geolabvirtualmaps.com/AVL_webservices/XMLHandler.ashx?ID=CapeCod", map, miniMap);
+
+//display the bus now
+buses.update();
+var geoh2o = new GGeoXml("http://www.geographicslab.org/H20.kml");
+map.addOverlay(geoh2o);
+var geoptown = new GGeoXml("http://www.geographicslab.org/P-Town.kml");
+map.addOverlay(geoptown);
+var geobarnstable = new GGeoXml("http://www.geographicslab.org/Barnstable.kml");
+map.addOverlay(geobarnstable);
+var geosealinewin = new GGeoXml("http://www.geographicslab.org/Sealine_winter.kml");
+map.addOverlay(geosealinewin);
+var geovillager = new GGeoXml("http://www.geographicslab.org/Villager.kml");
+map.addOverlay(geovillager);
+var geoflex = new GGeoXml("http://www.geographicslab.org/Flex-summer.kml");
+map.addOverlay(geoflex);
+
+
+//then display the bus every 1 second
+window.setInterval("buses.update()", 5000); 
+
+
+</script>
+   
+      ]]>
+      </Content>
+    </Module>

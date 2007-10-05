@@ -18,8 +18,8 @@
 
  //creates a generic picture icon
  var picture_icon = new GIcon();
- picture_icon.image = "http://207.206.224.39/framingham/Images/camera.png";
- picture_icon.shadow = "http://www.google.com/mapfiles/shadow50.png";
+ picture_icon.image = "http://www.geolabvirtualmaps.com/images/map_vehicles/bus_024.gif";
+// picture_icon.shadow = "http://www.google.com/mapfiles/shadow50.png";
  picture_icon.iconSize = new GSize(20, 20);
  picture_icon.shadowSize = new GSize(12, 12);
  picture_icon.iconAnchor = new GPoint(20, 10);
