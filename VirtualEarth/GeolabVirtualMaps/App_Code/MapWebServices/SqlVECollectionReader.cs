@@ -193,10 +193,13 @@ namespace Geolab
             return true;
         }
 
-        public static bool RetrieveVehicleXMLData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags)
+        public static bool RetrieveVehicleXMLData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags, bool displayXMLHeader, bool displayXMLFooter)
         {
-            output.AppendFormat("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
-            output.AppendFormat("<markers>");
+            if (displayXMLHeader)
+            {
+                output.AppendFormat("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+                output.AppendFormat("<markers>");
+            }
             if (sqldatareader.HasRows)
             {
                 while (sqldatareader.Read())
@@ -222,15 +225,22 @@ namespace Geolab
                     }
                     catch (SqlException sqlex)
                     {
+                        output.AppendFormat(sqlex.ToString());
                     }
-
-                    output.AppendFormat("<marker lat =\"{0}\" lng =\"{1}\" unit_id=\"{2}\" />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID.Substring(3));
+                    if (vehicle.GeolabID.Length > 3)
+                    {
+                        vehicle.GeolabID = vehicle.GeolabID.Substring(3);
+                    }
+                    output.AppendFormat("<marker lat =\"{0}\" lng =\"{1}\" unit_id=\"{2}\" />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID);
                 }
-                output.AppendFormat("</markers>");
+
             }
             else
+            { }
+
+            if (displayXMLFooter)
             {
-                output.Append("</markers>");
+                output.AppendFormat("</markers>");
             }
             return true;
         }
