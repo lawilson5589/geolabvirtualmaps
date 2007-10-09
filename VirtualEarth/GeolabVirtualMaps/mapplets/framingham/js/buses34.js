@@ -145,9 +145,8 @@ function BusObject(new_xml_data) //constructor
 
 
   //create new icon from icon classes
-  this.icon = new GIcon(bus_icon);
-  this.icon.image = this.xml_data.getAttribute("icon");
-
+  this.icon = new GIcon(bus_icon, "http://www.geographicslab.org-a.googlepages.com/bus_024.png");
+ //this.icon.image = this.xml_data.getAttribute("icon");
 }
 BusObject.prototype.createBus = function()
 {
