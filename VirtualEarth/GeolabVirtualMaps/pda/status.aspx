@@ -17,13 +17,15 @@
                <p style="text-align: center">
             &nbsp;</p>
             <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False" HorizontalAlign="Center">
-            <Columns>
+           <Columns>
                 <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
                 <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
+                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                <asp:BoundField />
+                <asp:BoundField DataField="PositionHeading"  />
             </Columns>
                                     <EmptyDataTemplate>
                             <span style="color: #ff0000">No Data</span>

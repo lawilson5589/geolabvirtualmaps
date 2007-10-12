@@ -23,7 +23,7 @@ public partial class pda_ccrta : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-        
+
             string lat = e.Row.Cells[4].Text;
             double dlat = double.Parse(lat);
             string lng = e.Row.Cells[5].Text;
@@ -31,7 +31,53 @@ public partial class pda_ccrta : System.Web.UI.Page
             LatLong latlong = new LatLong();
             latlong.Latitude = dlat;
             latlong.Longitude = dlng;
-            
+            try
+            {
+                int bearing = Convert.ToInt32(e.Row.Cells[7].Text);
+                if ((bearing >= 20) && (bearing <= 65))
+                {
+                    e.Row.Cells[6].Text = "NE";
+                }
+                else if ((bearing > 65) && (bearing <= 110))
+                {
+                    e.Row.Cells[6].Text = "E";
+                }
+                else if ((bearing > 110) && (bearing <= 155))
+                {
+                    e.Row.Cells[6].Text = "SE";
+                }
+                else if ((bearing > 155) && (bearing <= 200))
+                {
+                    e.Row.Cells[6].Text = "S";
+                }
+                else if ((bearing > 200) && (bearing <= 245))
+                {
+                    e.Row.Cells[6].Text = "SW";
+                }
+                else if ((bearing > 245) && (bearing <= 290))
+                {
+                    e.Row.Cells[6].Text = "W";
+                }
+                else if ((bearing > 290) && (bearing <= 335))
+                {
+                    e.Row.Cells[6].Text = "NW";
+                }
+                else if ((bearing > 335) && (bearing <= 360))
+                {
+                    e.Row.Cells[6].Text = "N";
+                }
+                else if ((bearing >= 0) && (bearing < 20))
+                {
+                    e.Row.Cells[6].Text = "N";
+                }
+            }
+            catch (Exception f)
+            {
+                e.Row.Cells[6].Text = "Null";
+            }
+
+
+
 
             //Define get info options object
             GetInfoOptions options = new GetInfoOptions();
@@ -49,6 +95,7 @@ public partial class pda_ccrta : System.Web.UI.Page
             e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
             e.Row.Cells[4].Visible = false;
             e.Row.Cells[5].Visible = false;
+            e.Row.Cells[7].Visible = false;
         }
     }
 }

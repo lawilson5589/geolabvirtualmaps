@@ -75,6 +75,9 @@ public partial class pda_ccrta : System.Web.UI.Page
                 e.Row.Cells[6].Text = "Null";
             }
 
+
+
+
             //Define get info options object
             GetInfoOptions options = new GetInfoOptions();
             //I'm looking only for cities
