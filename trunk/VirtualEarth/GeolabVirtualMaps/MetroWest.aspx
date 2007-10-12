@@ -47,9 +47,11 @@
                 <asp:ScriptReference Path="~/js/specific/MapInit.js" />
                 <%--Map Specific JS--%>
                 <%--<asp:ScriptReference Path="~/js/specific/Framingham.js" />--%>
+                <asp:ScriptReference Path="~/js/specific/MetroWest_BusRoutesAndStops.js" />
             </Scripts>
 			<services>	
 			    <%--Map Specific WebService --%>
+			
 			    <asp:ServiceReference Path="~/MapWebService/CapeCod_WebService.asmx" />
 			</services>
         </asp:ScriptManager>
