@@ -31,15 +31,16 @@ var geoptown = new GGeoXml("http://www.geographicslab.org/P-Town.kml");
 map.addOverlay(geoptown);
 var geobarnstable = new GGeoXml("http://www.geographicslab.org/Barnstable.kml");
 map.addOverlay(geobarnstable);
+var geoflex = new GGeoXml("http://www.geographicslab.org/Flex.kml");
+map.addOverlay(geoflex);
 var geosealinewin = new GGeoXml("http://www.geographicslab.org/Sealine_winter.kml");
 map.addOverlay(geosealinewin);
 var geovillager = new GGeoXml("http://www.geographicslab.org/Villager.kml");
 map.addOverlay(geovillager);
-var geoflex = new GGeoXml("http://www.geographicslab.org/Flex-summer.kml");
-map.addOverlay(geoflex);
 
 
-//then display the bus every 1 second
+
+//then display the bus every 1 seconds
 window.setInterval("buses.update()", 5000); 
 
 
