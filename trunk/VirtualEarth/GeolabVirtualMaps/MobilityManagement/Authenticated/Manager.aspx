@@ -14,7 +14,9 @@
         
         <asp:LoginName ID="LoginName1" runat="server" Font-Names="Arial" />
         <span style="font-family: Arial">
-        (</span><asp:Label ID="Label3" runat="server" Text="Label" Font-Names="Arial"></asp:Label><span style="font-family: Arial">)</span><asp:LoginView ID="LoginView1" runat="server">
+        (</span><asp:Label ID="Label3" runat="server" Text="Label" Font-Names="Arial"></asp:Label><span style="font-family: Arial">)<asp:LoginStatus
+            ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="http://www.geolabvirtualmaps.com" />
+        </span><asp:LoginView ID="LoginView1" runat="server">
             <RoleGroups>
                 <asp:RoleGroup Roles="MetroWest">
                     <ContentTemplate>
@@ -60,6 +62,8 @@
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" /><br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx">Change Password</asp:HyperLink><br />
                             &nbsp;</span>
                     </ContentTemplate>
                 </asp:RoleGroup>
@@ -91,7 +95,8 @@
                                     <asp:Parameter Name="Date" Type="DateTime" />
                                 </UpdateParameters>
                                 <SelectParameters>
-                                    <asp:Parameter DefaultValue="MWRTA" Name="Carrier" Type="String" />
+                                    <asp:ControlParameter ControlID="Label3" DefaultValue="" Name="Carrier" PropertyName="Text"
+                                        Type="String" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <br />
@@ -110,7 +115,7 @@
                             <br />
                             <br />
                             <br />
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/ChangePassword.aspx">Change Password</asp:HyperLink></span>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx">Change Password</asp:HyperLink></span>
                     </ContentTemplate>
                 </asp:RoleGroup>
                 <asp:RoleGroup Roles="Administrator">
