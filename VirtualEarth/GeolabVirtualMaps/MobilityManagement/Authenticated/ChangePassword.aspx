@@ -11,11 +11,10 @@
     <div>
         <asp:LoginView ID="LoginView1" runat="server">
             <LoggedInTemplate>
-                <asp:ChangePassword ID="ChangePassword1" runat="server" Font-Names="Arial">
+                <asp:ChangePassword ID="ChangePassword1" runat="server" Font-Names="Arial" CancelDestinationPageUrl="~/MobilityManagement/Authenticated/Manager.aspx" ContinueDestinationPageUrl="~/MobilityManagement/Authenticated/Manager.aspx">
                 </asp:ChangePassword>
+                &nbsp;<br />
                 <br />
-                <br />
-                <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" NavigateUrl="/Manager.aspx">Back To Manager</asp:HyperLink>
             </LoggedInTemplate>
         </asp:LoginView>
     

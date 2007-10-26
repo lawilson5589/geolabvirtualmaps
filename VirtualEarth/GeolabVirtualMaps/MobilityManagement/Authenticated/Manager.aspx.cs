@@ -21,6 +21,10 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         {
             Label3.Text = "CCRTA MDT";
         }
+        else if (User.IsInRole("Administrator"))
+        {
+            //do nothing
+        }
         else
         {
             Response.Redirect("Error.aspx");
