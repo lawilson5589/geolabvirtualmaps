@@ -30,7 +30,8 @@ public partial class pda_ccrta : System.Web.UI.Page
             double dlng = double.Parse(lng);
             LatLong latlong = new LatLong();
             latlong.Latitude = dlat;
-            latlong.Longitude = dlng;
+            latlong.Longitude = dlng;    
+            string latlong2 = String.Concat("Lat: ", lat, " Lng: ", lng);
             try
             {
                 int bearing = Convert.ToInt32(e.Row.Cells[7].Text);
@@ -90,9 +91,16 @@ public partial class pda_ccrta : System.Web.UI.Page
             Location[] returnedLocations;
             //Call GetLocationInfo with "MapPoint.NA" data source
 
-            returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
-
-            e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
+            try
+            {
+                returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
+                e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
+            }
+            catch (Exception f)
+            {
+                e.Row.Cells[3].Text = latlong2;
+            }
+            
             e.Row.Cells[4].Visible = false;
             e.Row.Cells[5].Visible = false;
             e.Row.Cells[7].Visible = false;
