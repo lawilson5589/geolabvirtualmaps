@@ -135,6 +135,60 @@
                         </asp:CreateUserWizard>
                     </ContentTemplate>
                 </asp:RoleGroup>
+                <asp:RoleGroup Roles="BusyBeeMWRTA">
+                    <ContentTemplate>
+                        <span style="font-family: Arial">Available phones for Busy Bee MWRTA Transportation:
+                            <br />
+                            <br />
+                        </span>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="GeolabID" OnSelectedIndexChanged ="IndexChange" style="font-family: Arial"
+                                >
+                            <Columns>
+                                <asp:CommandField ShowSelectButton="True" />
+                                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                                <asp:BoundField DataField="Device Serial Number" HeaderText="Device Serial Number"
+                                        SortExpression="Device Serial Number" />
+                                <asp:BoundField DataField="RouteName" HeaderText="RouteName" SortExpression="RouteName" />
+                                <asp:BoundField DataField="ModifiedLast" HeaderText="ModifiedLast" SortExpression="ModifiedLast" />
+                                <asp:BoundField DataField="DateModified" HeaderText="DateModified" SortExpression="DateModified" />
+                            </Columns>
+                        </asp:GridView>
+                        <span style="font-family: Arial">
+                        <span></span></span>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
+                                SelectCommand="SelectCurrentPhones" SelectCommandType="StoredProcedure" UpdateCommand="sp_UpdateRouteInfo" UpdateCommandType="StoredProcedure">
+                            <UpdateParameters>
+                                <asp:Parameter Name="GeolabID" Type="String" />
+                                <asp:Parameter Name="Routename" Type="String" />
+                                <asp:Parameter Name="Username" Type="String" />
+                                <asp:Parameter Name="Date" Type="DateTime" />
+                            </UpdateParameters>
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="BusyBeeMWRTA" Name="Carrier" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <span style="font-family: Arial"></span>
+                        <span>
+                            <br />
+                            <span style="font-family: Arial">Phone: </span></span>
+                        <asp:Label ID="Label2" runat="server" Text="None Selected"></asp:Label><br />
+                        <br />
+                        <span style="font-family: Arial">Route:</span><asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
+                                DataTextField="Route" DataValueField="Route">
+                        </asp:DropDownList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
+                                SelectCommand="sp_SelectAvailableRoutes" SelectCommandType="StoredProcedure">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="BusyBeeMWRTA" Name="Carrier" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <span style="font-family: Arial">
+                        <span></span></span>
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" /><br />
+                        <br />
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx" Font-Names="Arial">Change Password</asp:HyperLink><span
+                            style="font-family: Arial"> </span>
+                    </ContentTemplate>
+                </asp:RoleGroup>
             </RoleGroups>
         </asp:LoginView>
         

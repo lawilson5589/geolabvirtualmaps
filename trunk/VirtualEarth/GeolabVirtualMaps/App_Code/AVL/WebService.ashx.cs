@@ -53,13 +53,18 @@ namespace Geolab
                             break;
                         case "Framingham":
                             this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
-                            this.info.Title = "Framingham Transportation";
+                            this.info.Title = "MWRTA Transportation";
                             this.storedProcedureName = "sp_SelectAVL_Framingham";
                             break;
                         case "Ferries":
                             this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Framingham Transportation";
                             this.storedProcedureName = "sp_SelectAVL_Framingham";
+                            break;
+                        case "BusyBeeMWRTA":
+                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Blue.png";
+                            this.info.Title = "MWRTA Paratransit Transportation";
+                            this.storedProcedureName = "sp_SelectAVL_BusyBeeMWRTA";
                             break;
                         default:
                             break;
@@ -104,9 +109,9 @@ namespace Geolab
                     SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader, ref sb, this.info);
                     sqlconnection.Close();
 
-                    if (this.StoredProcedureName.Equals("Framingham"))
+                    if (this.StoredProcedureName.Equals("sp_SelectAVL_Framingham"))
                     {
-                        this.StoredProcedureName = "CapeCod";
+                        this.StoredProcedureName = "BusyBeeMWRTA";
                         sqlcommand2 = new SqlCommand(this.StoredProcedureName, sqlconnection);
                         sqlcommand2.CommandType = CommandType.StoredProcedure;
                         sqlconnection.Open();
