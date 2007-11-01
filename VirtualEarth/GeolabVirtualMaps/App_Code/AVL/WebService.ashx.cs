@@ -17,7 +17,6 @@ namespace Geolab
     public sealed class Avl_WebService : AGPS_DbColumnNames, IHttpHandler
     {
         private static String connectionString = ConnectionString.Geolab_mdt2_cape;
-
         private VEVehicleInfoFlags info = new VEVehicleInfoFlags(); 
         private String storedProcedureName = String.Empty;
         public String StoredProcedureName
@@ -83,6 +82,7 @@ namespace Geolab
             context.Response.ContentType = "text/ja";
             SqlConnection sqlconnection = null;
             SqlCommand sqlcommand = null;
+            SqlCommand sqlcommand2 = null;
 
 
             try
@@ -102,6 +102,18 @@ namespace Geolab
                     this.info.GeoCoding = url.Contains("GeoCoding=true");
                     this.info.OnlyFirstAddress = url.Contains("OnlyFirstAddress=true");
                     SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader, ref sb, this.info);
+                    sqlconnection.Close();
+
+                    if (this.StoredProcedureName.Equals("Framingham"))
+                    {
+                        this.StoredProcedureName = "CapeCod";
+                        sqlcommand2 = new SqlCommand(this.StoredProcedureName, sqlconnection);
+                        sqlcommand2.CommandType = CommandType.StoredProcedure;
+                        sqlconnection.Open();
+                        SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
+                        this.StoredProcedureName = String.Empty;
+                    }
                     context.Response.Write(sb.ToString());
                 }
                 else
