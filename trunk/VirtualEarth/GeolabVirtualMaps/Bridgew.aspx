@@ -18,7 +18,7 @@
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
             ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
-            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Bridgew'
+            ,"VehicleWebServicePath" : 'AVL_webservices/LiveData.ashx?ID=Bridgew'
             ,"VehiclePinTitles" : 'Bridgewater Transit'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true
