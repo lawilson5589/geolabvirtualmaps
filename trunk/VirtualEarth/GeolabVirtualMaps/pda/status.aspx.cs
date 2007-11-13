@@ -98,7 +98,7 @@ public partial class pda_status : System.Web.UI.Page
             {
                 e.Row.Cells[3].Text = latlong2;
             }
-            
+
             e.Row.Cells[4].Visible = false;
             e.Row.Cells[5].Visible = false;
             e.Row.Cells[7].Visible = false;

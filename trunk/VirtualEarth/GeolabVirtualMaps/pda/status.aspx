@@ -16,9 +16,10 @@
             Bridgewater Transit System</p>
                <p style="text-align: center">
             &nbsp;</p>
+          
             <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False" HorizontalAlign="Center">
-           <Columns>
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+            <Columns> 
+               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
                 <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
@@ -41,12 +42,14 @@
             &nbsp;</p>
                     <asp:GridView ID="GridView2" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" EnableViewState="False" HorizontalAlign="Center">
             <Columns>
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
                 <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
+                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                <asp:BoundField />
+                <asp:BoundField DataField="PositionHeading"  />
             </Columns>
                                     <EmptyDataTemplate>
                             <span style="color: #ff0000">No Data</span>
@@ -65,8 +68,10 @@
                 <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
+                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                <asp:BoundField />
+                <asp:BoundField DataField="PositionHeading"  />
             </Columns>
                                     <EmptyDataTemplate>
                             <span style="color: #ff0000">No Data</span>
@@ -83,12 +88,14 @@
                    <asp:GridView ID="GridView4" onrowdatabound="GridView1_RowDataBound" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4"
             EnableViewState="False" HorizontalAlign="Center">
             <Columns>
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:F}" />
+               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
+                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                <asp:BoundField />
+                <asp:BoundField DataField="PositionHeading"  />
             </Columns>
                        <EmptyDataTemplate>
                            <span style="color: #ff0000">No Data</span>
@@ -105,12 +112,14 @@
             &nbsp;</p>
                     <asp:GridView ID="GridView5" onrowdatabound="GridView1_RowDataBound"  runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" EnableViewState="False" HorizontalAlign="Center">
             <Columns>
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
                 <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
+                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
+                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                <asp:BoundField />
+                <asp:BoundField DataField="PositionHeading"  />
             </Columns>
                         <EmptyDataTemplate>
                             <span style="color: #ff0000">No Data</span>
@@ -119,26 +128,6 @@
         <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
             SelectCommand="sp_SelectAVL_Framingham" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
-    
-        <p>
-            NHTSA Grant</p>
-        <p>
-            &nbsp;</p>
-                    <asp:GridView ID="GridView6" onrowdatabound="GridView1_RowDataBound" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource6" EnableViewState="False" HorizontalAlign="Center">
-            <Columns>
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" HeaderText="Latitude" SortExpression="Latitude" />
-                <asp:BoundField DataField="Longitude" HeaderText="Longitude" SortExpression="Longitude" />
-            </Columns>
-                        <EmptyDataTemplate>
-                            <span style="color: #ff0000">No Data</span>
-                        </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_GeoLab" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     
     
     </div>
