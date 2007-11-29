@@ -112,7 +112,7 @@ Geolab.PushPinLayer.prototype = {
             // that is used to display return data.
             try{
                 var collection = null;
-                debugger
+                //debugger
                 eval(results);
                 if(collection)
                 {   
