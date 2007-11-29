@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
+
 
 namespace VELibrary
 {
@@ -95,6 +97,8 @@ namespace VELibrary
             {
                 sb.AppendFormat("pushpin.SetPhotoURL('{0}');", this.PhotoUrl.ToString());
             }
+            sb.Replace("\n\r" , string.Empty);
+
             return sb.ToString();
         }
 

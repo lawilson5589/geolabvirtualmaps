@@ -19,6 +19,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\GeolabVirtualMaps\",
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "65282"
+		VWDVirtualPath = "/"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VELibrary", "VELibrary\VELibrary.csproj", "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}"
