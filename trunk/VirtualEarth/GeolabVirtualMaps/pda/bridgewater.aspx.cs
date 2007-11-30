@@ -17,8 +17,12 @@ public partial class pda_ccrta : System.Web.UI.Page
     private static Geolab.MapPointCredentials global = new Geolab.MapPointCredentials();
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.AppendHeader("Refresh", "5; URL=bridgewater.aspx");
+        InfoRetrieved.Text = System.DateTime.Now.ToString();
         
+    }
+    protected void Refresher_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(Page.Request.Url.ToString());
     }
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
@@ -105,6 +109,11 @@ public partial class pda_ccrta : System.Web.UI.Page
             e.Row.Cells[5].Visible = false;
             e.Row.Cells[7].Visible = false;
         }
+    }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 
 }

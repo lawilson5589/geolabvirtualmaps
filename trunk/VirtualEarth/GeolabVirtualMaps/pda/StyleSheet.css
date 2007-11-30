@@ -16,6 +16,13 @@ h1
     font-family: Verdana;
     text-align: right;
 }
+h2
+{
+	font-size: small ;
+	color: Black;
+	font-family: Verdana;
+	text-align: center;
+}
 TD
 {
     font-size: smaller;

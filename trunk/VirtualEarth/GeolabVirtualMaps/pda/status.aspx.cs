@@ -16,7 +16,12 @@ public partial class pda_status : System.Web.UI.Page
     private static Geolab.MapPointCredentials global = new Geolab.MapPointCredentials();
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.AppendHeader("Refresh", "30; URL=status.aspx");
+        InfoRetrieved.Text = System.DateTime.Now.ToString();
+
+    }
+    protected void Refresher_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(Page.Request.Url.ToString());
     }
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {

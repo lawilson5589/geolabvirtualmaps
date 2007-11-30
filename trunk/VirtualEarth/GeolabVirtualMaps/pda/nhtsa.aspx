@@ -10,6 +10,12 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <h2>
+            Information Retrieved at:
+            <asp:Label ID="InfoRetrieved" runat="server" Text="Label"></asp:Label></h2>
+        <br />
+        <asp:Button ID="Refresher" runat="server" OnClick="Refresher_Click" Text="Refresh" /><br />
+        <br />
         <asp:GridView ID="GridView1" onrowdatabound="GridView1_RowDataBound" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False">
            <Columns>
                 <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
