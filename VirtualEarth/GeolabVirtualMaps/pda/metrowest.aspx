@@ -14,6 +14,13 @@
         </h2>
         <h3>
         </h3>
+        <h2>
+            Information Retrieved at:
+            <asp:Label ID="InfoRetrieved" runat="server" Text="Label"></asp:Label></h2>
+        <p>
+            <asp:Button ID="Refresher" runat="server" OnClick="Refresher_Click" Text="Refresh" />&nbsp;</p>
+        <p>
+            &nbsp;</p>
         <p>
             Metrowest Fixed Route Vehicles</p>
         <br />
