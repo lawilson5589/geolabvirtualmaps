@@ -37,6 +37,9 @@
                 <asp:BoundField />
                 <asp:BoundField DataField="PositionHeading"  />
             </Columns>
+            <EmptyDataTemplate>
+                No Data Available
+            </EmptyDataTemplate>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
             SelectCommand="sp_SelectAVL_Framingham" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
@@ -58,9 +61,41 @@
                 <asp:BoundField />
                 <asp:BoundField DataField="PositionHeading"  />
             </Columns>
+            <EmptyDataTemplate>
+                No Data Available
+            </EmptyDataTemplate>
         </asp:GridView>
         &nbsp;<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
             SelectCommand="sp_SelectAVL_BusyBeeMWRTA" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br />
+        <br />
+        <p>
+            <span style="color: gray">Commuter Rail</span></p>
+        <p>
+            &nbsp;</p>
+        <p>
+        </p>
+    
+    <h4>
+            <asp:GridView ID="GridView3" onrowdatabound="GridView1_RowDataBound"  runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" EnableViewState="False" Font-Bold="False">
+                <Columns>
+                    <asp:BoundField DataField="Froutename" HeaderText="Route" />
+                    <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                    <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
+                    <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
+                    <asp:BoundField HeaderText="Location" />
+                    <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
+                    <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
+                    <asp:BoundField />
+                    <asp:BoundField DataField="PositionHeading"  />
+                </Columns>
+                <EmptyDataTemplate>
+                    No Data Available
+                </EmptyDataTemplate>
+            </asp:GridView>
+                &nbsp;<asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
+            SelectCommand="sp_SelectAVL_RailsMWRTA" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+         </h4>
     
     </div>
     </form>
