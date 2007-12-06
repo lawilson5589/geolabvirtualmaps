@@ -6,14 +6,13 @@
 <head id="Head" runat="server">
     <title>GeoGraphics Lab - MetroWest </title>
 
-     <script type="text/javascript">
-
+         <script type="text/javascript">
         var map = null;
         var MapNav = null;
         var Vehicle = null;
         // Modify settings values as need
         var Settings = { 
-             "Lat" : 42.246818561138234
+            "Lat" : 42.246818561138234
             ,"Lon" : -71.43104553222658
             ,"MapStyle" : 'r'
             ,"MapZoom" : 11

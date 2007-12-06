@@ -66,6 +66,12 @@ namespace Geolab
                             this.info.Title = "MWRTA Paratransit Transportation";
                             this.storedProcedureName = "sp_SelectAVL_BusyBeeMWRTA";
                             break;
+
+                        case "RailsMWRTA":
+                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Purple.png";
+                            this.info.Title = "Commuter Rail Transportation";
+                            this.storedProcedureName = "sp_SelectAVL_RailsMWRTA";
+                            break;
                         default:
                             break;
                     }
@@ -88,6 +94,7 @@ namespace Geolab
             SqlConnection sqlconnection = null;
             SqlCommand sqlcommand = null;
             SqlCommand sqlcommand2 = null;
+            SqlCommand sqlcommand3 = null;
 
 
             try
@@ -118,6 +125,18 @@ namespace Geolab
                         SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
                         SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
                         this.StoredProcedureName = String.Empty;
+                        sqlconnection.Close();
+
+                        this.StoredProcedureName = "RailsMWRTA";
+                        sqlcommand3 = new SqlCommand(this.StoredProcedureName, sqlconnection);
+                        sqlcommand3.CommandType = CommandType.StoredProcedure;
+                        sqlconnection.Open();
+                        SqlDataReader sqldatareader3 = sqlcommand3.ExecuteReader();
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader3, ref sb, this.info);
+                        this.StoredProcedureName = String.Empty;
+                        sqlconnection.Close();
+
+
                     }
                     context.Response.Write(sb.ToString());
                 }
