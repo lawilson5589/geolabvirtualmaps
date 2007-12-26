@@ -223,13 +223,13 @@ Geolab.Vehicle.PinDescriptionFormat =
         '<td align="right"><b>ID:</b></td>'+
         '<td>{10}</td>'+
         '</tr>'+
-        '<tr>'+
-        '<td align="right"><b>Bus ID:</b></td>'+
-        '<td>{13}</td>'+
-        '</tr>'+
         '{11}' +
         '<td align="right"><b>Route:</b></td>'+
         '<td>{12}</td>'+
+        '</tr>'+
+        '<tr>'+
+        '<td align="right"><b>BusID:</b></td>'+
+        '<td>{13}</td>'+
         '</tr>'+
         '</table>';
         
