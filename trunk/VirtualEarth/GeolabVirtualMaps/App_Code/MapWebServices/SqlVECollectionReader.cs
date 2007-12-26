@@ -182,6 +182,20 @@ namespace Geolab
                     catch (SqlException sqlex)
                     {
                     }
+                    try
+                    {
+                        if (sqldatareader.VisibleFieldCount == 14)
+                        {
+                            String bid = sqldatareader[AGPS_DbColumnNames.Busid].ToString();
+                            if (bid != "")
+                            {
+                                vehicle.Busid = int.Parse(bid);
+                            }
+                        }
+                    }
+                    catch (SqlException sqlex)
+                    {
+                    }
 
                     output.AppendFormat("Array.add(collection, {0});", vehicle.ToJson());
                 }

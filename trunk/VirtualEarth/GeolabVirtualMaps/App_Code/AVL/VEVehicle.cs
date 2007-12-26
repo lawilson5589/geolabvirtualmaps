@@ -155,6 +155,13 @@ namespace Geolab
             set {froute = value;} 
         }
 
+        private int busid;
+
+        public int Busid
+        {
+            get { return busid; }
+            set { busid = value; }
+        }
 
         public string ToJson()
         {

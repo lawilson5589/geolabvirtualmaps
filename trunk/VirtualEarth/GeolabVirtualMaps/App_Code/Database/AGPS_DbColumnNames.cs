@@ -179,5 +179,13 @@ namespace Geolab
                 }
             
         }
+        public static String Busid
+        {
+            get
+            {
+                return "BusID";
+            }
+
+        }
     }
 }
