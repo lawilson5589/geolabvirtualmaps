@@ -30,6 +30,7 @@
                                 <Columns>
                                     <asp:CommandField ShowSelectButton="True" />
                                     <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                                    <asp:BoundField DataField="BusID" HeaderText="Bus ID" SortExpression="BusID" />
                                     <asp:BoundField DataField="Device Serial Number" HeaderText="Device Serial Number"
                                         SortExpression="Device Serial Number" />
                                     <asp:BoundField DataField="RouteName" HeaderText="RouteName" SortExpression="RouteName" />
@@ -37,13 +38,18 @@
                                     <asp:BoundField DataField="DateModified" HeaderText="DateModified" SortExpression="DateModified" />
                                 </Columns>
                             </asp:GridView>
+                            &nbsp;<br />
+                            <br />
+                            <br />
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="SelectCurrentPhones" SelectCommandType="StoredProcedure" UpdateCommand="sp_UpdateRouteInfo" UpdateCommandType="StoredProcedure">
                                 <UpdateParameters>
+                                    <asp:Parameter Direction="ReturnValue" Name="RETURN_VALUE" Type="Int32" />
                                     <asp:Parameter Name="GeolabID" Type="String" />
                                     <asp:Parameter Name="Routename" Type="String" />
                                     <asp:Parameter Name="Username" Type="String" />
                                     <asp:Parameter Name="Date" Type="DateTime" />
+                                    <asp:Parameter Name="BusID" Type="Int32" />
                                 </UpdateParameters>
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="MWRTA" Name="Carrier" Type="String" />
@@ -53,6 +59,9 @@
                             Phone:
                             <asp:Label ID="Label2" runat="server" Text="None Selected"></asp:Label><br />
                             <br />
+                            Bus ID:
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+                            <br />
                             Route:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
                                 DataTextField="Route" DataValueField="Route">
                             </asp:DropDownList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
@@ -61,7 +70,10 @@
                                     <asp:Parameter DefaultValue="Metrowest" Name="Carrier" Type="String" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
-                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" /><br />
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" ValidationGroup="Group1" /><br />
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox1"
+                                ErrorMessage="BusID Must Be Integer Between 0 and 100" MaximumValue="100" MinimumValue="0"
+                                SetFocusOnError="True" Type="Integer" ValidationGroup="Group1"></asp:RangeValidator>
                             <br />
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx">Change Password</asp:HyperLink><br />
                             &nbsp;</span>
@@ -74,18 +86,7 @@
                         <span style="width: 100%; font-family: Arial">Available phones for CapeCod Transportation:
                             <br />
                             <br />
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="GeolabID" OnSelectedIndexChanged ="IndexChange"
-                                >
-                                <Columns>
-                                    <asp:CommandField ShowSelectButton="True" />
-                                    <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                                    <asp:BoundField DataField="Device Serial Number" HeaderText="Device Serial Number"
-                                        SortExpression="Device Serial Number" />
-                                    <asp:BoundField DataField="RouteName" HeaderText="RouteName" SortExpression="RouteName" />
-                                    <asp:BoundField DataField="ModifiedLast" HeaderText="ModifiedLast" SortExpression="ModifiedLast" />
-                                    <asp:BoundField DataField="DateModified" HeaderText="DateModified" SortExpression="DateModified" />
-                                </Columns>
-                            </asp:GridView>
+
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="SelectCurrentPhones" SelectCommandType="StoredProcedure" UpdateCommand="sp_UpdateRouteInfo" UpdateCommandType="StoredProcedure">
                                 <UpdateParameters>

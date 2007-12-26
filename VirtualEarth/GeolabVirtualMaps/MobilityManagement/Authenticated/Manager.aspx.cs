@@ -57,12 +57,14 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         String test = gv1.SelectedRow.Cells[1].Text.ToString();
         Label labl = (Label)LoginView1.FindControl("Label2");
         SqlDataSource sql1 = (SqlDataSource)LoginView1.FindControl("SqlDataSource1");
+        TextBox text1 = (TextBox)LoginView1.FindControl("Textbox1");
 
         sql1.UpdateParameters.Clear();
         sql1.UpdateParameters.Add("Username", User.Identity.Name);
         sql1.UpdateParameters.Add("GeolabID", labl.Text);
         sql1.UpdateParameters.Add("Routename", dd1.SelectedValue);
         sql1.UpdateParameters.Add("Date", null);
+        sql1.UpdateParameters.Add("BusID", text1.Text);
         sql1.Update();
         gv1.DataBind();
        
