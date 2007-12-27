@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\GeolabVirtualMaps\", "GeolabVirtualMaps\", "{BB4FBCA8-137D-4EC7-931B-AE55104735A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VELibrary", "VELibrary\VELibrary.csproj", "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEDisplay", "VEDisplay\VEDisplay.csproj", "{70896310-5699-43B3-94DF-AF8D93CFA7F5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\GeolabVirtualMaps\", "GeolabVirtualMaps\", "{F02B767F-25E1-458D-B530-A50F072C1463}"
 	ProjectSection(WebsiteProperties) = preProject
-		ProjectReferences = "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}|VELibrary.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/GeolabVirtualMaps"
 		Debug.AspNetCompiler.PhysicalPath = "GeolabVirtualMaps\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GeolabVirtualMaps\"
@@ -19,19 +22,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\GeolabVirtualMaps\",
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "65282"
-		VWDVirtualPath = "/"
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VELibrary", "VELibrary\VELibrary.csproj", "{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEDisplay", "VEDisplay\VEDisplay.csproj", "{70896310-5699-43B3-94DF-AF8D93CFA7F5}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
 Global
@@ -44,16 +34,6 @@ Global
 		Release|Mixed Platforms = Release|Mixed Platforms
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|.NET.ActiveCfg = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|.NET.Build.0 = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|Any CPU.ActiveCfg = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Debug|Mixed Platforms.Build.0 = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|.NET.ActiveCfg = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|.NET.Build.0 = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|Any CPU.ActiveCfg = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
-		{BB4FBCA8-137D-4EC7-931B-AE55104735A4}.Release|Mixed Platforms.Build.0 = Debug|.NET
 		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|.NET.ActiveCfg = Debug|Any CPU
 		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95AA720E-7C8B-4CDE-A8C6-E9A35B9186DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
@@ -74,6 +54,16 @@ Global
 		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{70896310-5699-43B3-94DF-AF8D93CFA7F5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Debug|.NET.ActiveCfg = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Debug|.NET.Build.0 = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Release|.NET.ActiveCfg = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Release|.NET.Build.0 = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{F02B767F-25E1-458D-B530-A50F072C1463}.Release|Mixed Platforms.Build.0 = Debug|.NET
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

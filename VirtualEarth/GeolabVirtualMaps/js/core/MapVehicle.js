@@ -51,7 +51,7 @@ Geolab.Vehicle.prototype = {
              }else {
                 shape.SetTitle(this.__pintitle);  
              }
-                 
+             if(obj.Busid != 0){ 
              shape.SetDescription(String.format(Geolab.Vehicle.PinDescriptionFormat,
                 obj.Date, 
                 obj.Time, 
@@ -65,9 +65,27 @@ Geolab.Vehicle.prototype = {
                 obj.SignalStrength,
                 obj.GeolabID,
                 address,
-                obj.Froute
-                )
-             );   
+                obj.Froute,
+                obj.Busid
+                ));}
+              else {
+                shape.SetDescription(String.format(Geolab.Vehicle.PinDescriptionFormat,
+                obj.Date, 
+                obj.Time, 
+                obj.Latitude, 
+                obj.Longitude, 
+                obj.Accuracy, 
+                obj.Speed, 
+                obj.Heading, 
+                obj.SatelliteNumber,
+                obj.BatteryLevel,
+                obj.SignalStrength,
+                obj.GeolabID,
+                address,
+                obj.Froute,
+                obj.GeolabID
+                ));}
+                
              this.__layer.AddShape(shape); 
              shape = null; address = null;
         }catch(e){
@@ -220,7 +238,7 @@ Geolab.Vehicle.PinDescriptionFormat =
         '<td><img alt="Sattelite" src="images/map_icons/sat_{7}.gif" /><img alt="Signal" src="images/map_icons/sig_{8}.gif" /><img alt="Battery" src="images/map_icons/batt_{9}.gif" /></td>'+    
         '</tr>'+
         '<tr>'+
-        '<td align="right"><b>ID:</b></td>'+
+        '<td align="right"><b>AVL ID:</b></td>'+
         '<td>{10}</td>'+
         '</tr>'+
         '{11}' +
