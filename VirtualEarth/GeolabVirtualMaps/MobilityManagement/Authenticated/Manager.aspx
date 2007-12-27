@@ -147,6 +147,7 @@
                             <Columns>
                                 <asp:CommandField ShowSelectButton="True" />
                                 <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                                <asp:BoundField DataField="BusID" HeaderText="Bus ID" />
                                 <asp:BoundField DataField="Device Serial Number" HeaderText="Device Serial Number"
                                         SortExpression="Device Serial Number" />
                                 <asp:BoundField DataField="RouteName" HeaderText="RouteName" SortExpression="RouteName" />
@@ -163,6 +164,8 @@
                                 <asp:Parameter Name="Routename" Type="String" />
                                 <asp:Parameter Name="Username" Type="String" />
                                 <asp:Parameter Name="Date" Type="DateTime" />
+                                <asp:Parameter Direction="ReturnValue" Name="RETURN_VALUE" Type="Int32" />
+                                <asp:Parameter Name="BusID" Type="Int32" />
                             </UpdateParameters>
                             <SelectParameters>
                                 <asp:Parameter DefaultValue="BusyBeeMWRTA" Name="Carrier" Type="String" />
@@ -171,20 +174,31 @@
                         <span style="font-family: Arial"></span>
                         <span>
                             <br />
-                            <span style="font-family: Arial">Phone: </span></span>
+                            <span style="font-family: Arial"> </span></span>
+                        <br />
+                        <span style="font-family: Arial">Phone: </span>
                         <asp:Label ID="Label2" runat="server" Text="None Selected"></asp:Label><br />
+                        <br />
+                        <span style="font-family: Arial">Bus ID: </span>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
                         <br />
                         <span style="font-family: Arial">Route:</span><asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
                                 DataTextField="Route" DataValueField="Route">
                         </asp:DropDownList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="sp_SelectAvailableRoutes" SelectCommandType="StoredProcedure">
                             <SelectParameters>
-                                <asp:Parameter DefaultValue="BusyBeeMWRTA" Name="Carrier" Type="String" />
+                                <asp:ControlParameter ControlID="Label3" DefaultValue="" Name="Carrier" PropertyName="Text"
+                                    Type="String" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <span style="font-family: Arial">
-                        <span></span></span>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" /><br />
+                        <span style="font-family: Arial"></span>
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" ValidationGroup="Group1" /><br />
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox1"
+                            ErrorMessage="BusID Must Be Integer Between 0 and 100" Font-Names="Arial" MaximumValue="100"
+                            MinimumValue="0" SetFocusOnError="True" Type="Integer" ValidationGroup="Group1"></asp:RangeValidator><span
+                                style="font-family: Arial">
+                                <br />
+                            </span>
                         <br />
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx" Font-Names="Arial">Change Password</asp:HyperLink><span
                             style="font-family: Arial"> </span>
