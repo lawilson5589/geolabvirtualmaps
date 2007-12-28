@@ -33,7 +33,15 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         {
             Response.Redirect("Error.aspx");
         }
-
+        if (!IsPostBack)
+        {
+            DropDownList dd1 = (DropDownList)LoginView1.FindControl("DropDownList1");
+            SqlDataSource sql1 = (SqlDataSource)LoginView1.FindControl("SqlDataSource2");
+            sql1.SelectParameters.Clear();
+            sql1.SelectParameters.Add("Carrier", Label3.Text);
+            sql1.DataBind();
+            dd1.DataBind();
+        }
 
     }
     protected void SqlUpdate(object sender,SqlDataSourceCommandEventArgs e)
@@ -62,11 +70,15 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         {
             text1 = (TextBox)LoginView1.FindControl("Textbox1");
         }
-
+        String route = dd1.SelectedValue;
+        if (dd1.SelectedValue == "Unspecified")
+        {
+            route = null;
+        }
         sql1.UpdateParameters.Clear();
         sql1.UpdateParameters.Add("Username", User.Identity.Name);
         sql1.UpdateParameters.Add("GeolabID", labl.Text);
-        sql1.UpdateParameters.Add("Routename", dd1.SelectedValue);
+        sql1.UpdateParameters.Add("Routename", route);
         sql1.UpdateParameters.Add("Date", null);
         if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")))
         {
