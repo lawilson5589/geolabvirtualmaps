@@ -160,12 +160,7 @@
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="SelectCurrentPhones" SelectCommandType="StoredProcedure" UpdateCommand="sp_UpdateRouteInfo" UpdateCommandType="StoredProcedure">
                             <UpdateParameters>
-                                <asp:Parameter Name="GeolabID" Type="String" />
-                                <asp:Parameter Name="Routename" Type="String" />
-                                <asp:Parameter Name="Username" Type="String" />
-                                <asp:Parameter Name="Date" Type="DateTime" />
                                 <asp:Parameter Direction="ReturnValue" Name="RETURN_VALUE" Type="Int32" />
-                                <asp:Parameter Name="BusID" Type="Int32" />
                             </UpdateParameters>
                             <SelectParameters>
                                 <asp:Parameter DefaultValue="BusyBeeMWRTA" Name="Carrier" Type="String" />
@@ -183,12 +178,11 @@
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
                         <br />
                         <span style="font-family: Arial">Route:</span><asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
-                                DataTextField="Route" DataValueField="Route">
+                                DataTextField="Route" DataValueField="Route" EnableViewState="False">
                         </asp:DropDownList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="sp_SelectAvailableRoutes" SelectCommandType="StoredProcedure">
                             <SelectParameters>
-                                <asp:ControlParameter ControlID="Label3" DefaultValue="" Name="Carrier" PropertyName="Text"
-                                    Type="String" />
+                                <asp:Parameter Name="Carrier" Type="String" />
                             </SelectParameters>
                         </asp:SqlDataSource>
                         <span style="font-family: Arial"></span>
