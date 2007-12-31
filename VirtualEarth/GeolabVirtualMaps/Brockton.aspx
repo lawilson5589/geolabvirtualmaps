@@ -13,10 +13,10 @@
         var Vehicle = null;
         // Modify settings values as need
         var Settings = { 
-             "Lat" : 41.783896 
-            ,"Lon" : -70.732356
+             "Lat" : 42.101843
+            ,"Lon" : -71.023950
             ,"MapStyle" : 'r'
-            ,"MapZoom" : 9
+            ,"MapZoom" : 11
             ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
             ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Brockton'
             ,"VehiclePinTitles" : 'Brockton'
@@ -45,7 +45,7 @@
                 <asp:ScriptReference Path="~/js/core/MapJavaScripts.ashx?release=false" />
                 <asp:ScriptReference Path="~/js/specific/MapInit.js" />
                 <%--Map Specific JS--%>
-                <asp:ScriptReference Path="~/js/specific/CapeCode_BusRoutesAndStops.js" />
+             <%--   <asp:ScriptReference Path="~/js/specific/CapeCode_BusRoutesAndStops.js" />--%>
             </Scripts>
 			<services>	
 			    <%--Map Specific WebService --%>
