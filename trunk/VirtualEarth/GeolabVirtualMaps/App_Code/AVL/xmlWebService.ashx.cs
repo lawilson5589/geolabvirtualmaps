@@ -67,6 +67,12 @@ namespace Geolab
                             this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
                             break;
+                        case "Brockton":
+                            // Here sp_SelectAVL_ is prefix for every AVL stored procedure
+                            this.storedProcedureName = "sp_SelectAVL_Brockton";
+                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.Title = "Brockton Paratransit";
+                            break;
                         default:
                             break;
                     }

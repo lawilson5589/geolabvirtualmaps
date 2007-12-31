@@ -73,6 +73,12 @@ namespace Geolab
                             this.storedProcedureName = "sp_SelectAVL_RailsMWRTA";
                             break;
 
+                        case "BridgewTrains":
+                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Purple.png";
+                            this.info.Title = "Commuter Rail Transportation";
+                            this.storedProcedureName = "sp_SelectAVL_RailsBridgew";
+                            break;
+
                         case "Brockton":
                             this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
                             this.info.Title = "Brockton Area Transit Paratransit";
@@ -144,7 +150,19 @@ namespace Geolab
 
 
                     }
-                    context.Response.Write(sb.ToString());
+
+                    if (this.StoredProcedureName.Equals("sp_SelectAVL_Bridgew"))
+                    {
+                        this.StoredProcedureName = "BridgewTrains";
+                        sqlcommand2 = new SqlCommand(this.StoredProcedureName, sqlconnection);
+                        sqlcommand2.CommandType = CommandType.StoredProcedure;
+                        sqlconnection.Open();
+                        SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
+                        this.StoredProcedureName = String.Empty;
+                        sqlconnection.Close();
+                    }
+                context.Response.Write(sb.ToString());
                 }
                 else
                 {
