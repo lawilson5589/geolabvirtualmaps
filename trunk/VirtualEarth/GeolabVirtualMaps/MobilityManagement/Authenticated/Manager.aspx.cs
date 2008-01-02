@@ -16,6 +16,8 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         if (User.IsInRole("MetroWest"))
         {
             Label3.Text = "MWRTA";
+            Page.Response.Output.Write("<iframe src ='http://www.geolabvirtualmaps.com/pda/metrowest.aspx#GridView'width= '100%' height = '30%'></iframe>");
+            
         }
         else if (User.IsInRole("CapeCod"))
         {
@@ -56,6 +58,24 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         GridView gv1 = (GridView)LoginView1.FindControl("GridView1");
         String test = gv1.SelectedRow.Cells[1].Text.ToString();
         Label labl = (Label)LoginView1.FindControl("Label2");
+        TextBox text1 = (TextBox)LoginView1.FindControl("textbox1");
+        DropDownList dd1 = (DropDownList)LoginView1.FindControl("DropDownList1");
+        if (gv1.SelectedRow.Cells[2].Text != "&nbsp;")
+        {
+            text1.Text = gv1.SelectedRow.Cells[2].Text.ToString();
+        }
+        else
+        {
+            text1.Text = "";
+        }
+        if (gv1.SelectedRow.Cells[4].Text != "&nbsp;")
+        {
+            dd1.SelectedValue = gv1.SelectedRow.Cells[4].Text.ToString();
+        }
+        else
+        {
+            dd1.SelectedValue = "Unspecified";
+        }
         labl.Text = test;
     }
     protected void Button1_Click(object sender, EventArgs e)

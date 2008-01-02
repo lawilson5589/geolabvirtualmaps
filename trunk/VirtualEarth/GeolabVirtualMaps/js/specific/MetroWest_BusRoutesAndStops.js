@@ -37,11 +37,10 @@ if(Dashboard){
         var img = "/images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', MetroWestRoutes.{Function});
        // this.CreateElement('Jim', 'Jim', MetroWestRoutes.Flex, 'Jimbo', img);
-        this.CreateElement('LIFT2', 'LIFT2', MetroWestRoutes.LIFT2, 'LIFT2 route', img);
-        this.CreateElement('LIFT3', 'LIFT3', MetroWestRoutes.LIFT3, 'LIFT3 route', img);
-        this.CreateElement('LIFT5', 'LIFT5', MetroWestRoutes.LIFT5, 'LIFT5 route', img);
-        this.CreateElement('LIFT6', 'LIFT6', MetroWestRoutes.LIFT6, 'LIFT6 route', img);
-        this.CreateElement('LIFT7', 'LIFT7', MetroWestRoutes.LIFT7, 'LIFT7 route', img);
+        this.CreateElement('LIFT2', 'Route 2', MetroWestRoutes.LIFT2, 'Route 2', img);
+        this.CreateElement('LIFT5', 'Route 5', MetroWestRoutes.LIFT5, 'Route 5', img);
+        this.CreateElement('LIFT6', 'Route 6', MetroWestRoutes.LIFT6, 'Route 6', img);
+        this.CreateElement('LIFT7', 'Route 7', MetroWestRoutes.LIFT7, 'Route 7', img);
         img = null;
     }
 }
