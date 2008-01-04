@@ -49,7 +49,7 @@
                                     <asp:Parameter Name="Routename" Type="String" />
                                     <asp:Parameter Name="Username" Type="String" />
                                     <asp:Parameter Name="Date" Type="DateTime" />
-                                    <asp:Parameter Name="BusID" Type="Int32" />
+                                    <asp:Parameter Name="BusID" Type="String" />
                                 </UpdateParameters>
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="MWRTA" Name="Carrier" Type="String" />
@@ -60,7 +60,7 @@
                             <asp:Label ID="Label2" runat="server" Text="None Selected"></asp:Label><br />
                             <br />
                             Bus ID:
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+                            <asp:TextBox ID="TextBox1" runat="server" MaxLength="7"></asp:TextBox><br />
                             <br />
                             Route:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
                                 DataTextField="Route" DataValueField="Route">
@@ -71,10 +71,7 @@
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" ValidationGroup="Group1" /><br />
-                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox1"
-                                ErrorMessage="BusID Must Be Integer Between 0 and 100" MaximumValue="100" MinimumValue="0"
-                                SetFocusOnError="True" Type="Integer" ValidationGroup="Group1"></asp:RangeValidator>
-                            <br />
+                            &nbsp;<br />
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx">Change Password</asp:HyperLink><br />
                             &nbsp;</span>
                     </ContentTemplate>
@@ -175,7 +172,8 @@
                         <asp:Label ID="Label2" runat="server" Text="None Selected"></asp:Label><br />
                         <br />
                         <span style="font-family: Arial">Bus ID: </span>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+                        <asp:TextBox ID="TextBox1" runat="server" MaxLength="7"></asp:TextBox>
+                        <span style="font-family: Arial">(7 Character Max)</span><br />
                         <br />
                         <span style="font-family: Arial">Route:</span><asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
                                 DataTextField="Route" DataValueField="Route" EnableViewState="False">
@@ -187,9 +185,7 @@
                         </asp:SqlDataSource>
                         <span style="font-family: Arial"></span>
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" ValidationGroup="Group1" /><br />
-                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox1"
-                            ErrorMessage="BusID Must Be Integer Between 0 and 100" Font-Names="Arial" MaximumValue="100"
-                            MinimumValue="0" SetFocusOnError="True" Type="Integer" ValidationGroup="Group1"></asp:RangeValidator><span
+                        <span
                                 style="font-family: Arial">
                                 <br />
                             </span>
