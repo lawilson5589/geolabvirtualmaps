@@ -189,7 +189,7 @@ namespace Geolab
                             String bid = sqldatareader[AGPS_DbColumnNames.Busid].ToString();
                             if (bid != "")
                             {
-                                vehicle.Busid = int.Parse(bid);
+                                vehicle.Busid = bid;
                             }
                         }
                     }

@@ -21,15 +21,14 @@
             <asp:Button ID="Refresher" runat="server" OnClick="Refresher_Click" Text="Refresh" />&nbsp;</p>
         <p>
             &nbsp;</p>
-        <p>  <a name ="GridView">
-            Metrowest Fixed Route Vehicles</p></a>
+        <p>  <a name ="GridView">Metrowest Fixed Route Vehicles</a></p>
         <br />
         <br />
       
         <asp:GridView ID="GridView1" onrowdatabound="GridView1_RowDataBound"  runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False">
             <Columns>
                 <asp:BoundField DataField="Froutename" HeaderText="Route" />
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                <asp:BoundField DataField="BusID" HeaderText="Bus ID" SortExpression="BusID" />
                 <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />

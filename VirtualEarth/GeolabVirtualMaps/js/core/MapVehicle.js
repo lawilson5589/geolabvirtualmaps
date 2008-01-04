@@ -51,7 +51,7 @@ Geolab.Vehicle.prototype = {
              }else {
                 shape.SetTitle(this.__pintitle);  
              }
-             if(obj.Busid != 0){ 
+             if(obj.Busid != ""){ 
              shape.SetDescription(String.format(Geolab.Vehicle.PinDescriptionFormat,
                 obj.Date, 
                 obj.Time, 

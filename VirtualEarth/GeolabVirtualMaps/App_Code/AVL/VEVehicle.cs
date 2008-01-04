@@ -155,9 +155,9 @@ namespace Geolab
             set {froute = value;} 
         }
 
-        private int busid;
+        private String busid;
 
-        public int Busid
+        public String Busid
         {
             get { return busid; }
             set { busid = value; }
