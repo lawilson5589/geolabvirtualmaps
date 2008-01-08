@@ -16,8 +16,10 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         if (User.IsInRole("MetroWest"))
         {
             Label3.Text = "MWRTA";
-            Page.Response.Output.Write("<iframe src ='http://www.geolabvirtualmaps.com/pda/metrowest.aspx#GridView'width= '100%' height = '30%'></iframe>");
-            
+            if (!IsPostBack)
+            {
+                Page.Response.Output.Write("<iframe src ='http://www.geolabvirtualmaps.com/pda/metrowest.aspx#GridView'width= '100%' height = '30%'></iframe>");
+            }
         }
         else if (User.IsInRole("CapeCod"))
         {
@@ -105,7 +107,6 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
             sql1.UpdateParameters.Add("BusID", text1.Text);
         }
         sql1.Update();
-        gv1.DataBind();
-       
+        gv1.DataBind();   
     }
 }

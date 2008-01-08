@@ -232,25 +232,32 @@ namespace Geolab
                 Location[] returnedLocations;
                 //Call GetLocationInfo with "MapPoint.NA" data source
 
-                returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
+                sb.Append(latlong.Latitude);
+                sb.Append(",");
+                sb.Append(latlong.Longitude);
 
-                if (this.OnlyFirstAddress)
-                {
-                    //Get entity information
-                    sb.Append("<li>");
-                    sb.Append(returnedLocations[0].Entity.DisplayName);
-                    sb.Append("</li>");
-                }
-                else
-                {
-                    //Get entity information
-                    for (int i = 0; i < returnedLocations.Length; i++)
-                    {
-                        sb.Append("<li>");
-                        sb.Append(returnedLocations[i].Entity.DisplayName);
-                        sb.Append("</li>");
-                    }
-                }
+                //MAPPOINT SERVICE CALL
+
+                //returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
+
+
+                //if (this.OnlyFirstAddress)
+                //{
+                //    //Get entity information
+                //    sb.Append("<li>");
+                //    sb.Append(returnedLocations[0].Entity.DisplayName);
+                //    sb.Append("</li>");
+                //}
+                //else
+                //{
+                //    //Get entity information
+                //    for (int i = 0; i < returnedLocations.Length; i++)
+                //    {
+                //        sb.Append("<li>");
+                //        sb.Append(returnedLocations[i].Entity.DisplayName);
+                //        sb.Append("</li>");
+                //    }
+                //}
 
             }
             catch (Exception ex)

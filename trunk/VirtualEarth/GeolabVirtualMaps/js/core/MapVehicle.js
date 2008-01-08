@@ -252,12 +252,14 @@ Geolab.Vehicle.PinDescriptionFormat =
         '</table>';
         
 Geolab.Vehicle.AddressFormat =
-        '<tr>'+
-        '<td align="center" colspan="2"><b>Nearest well-known address:</b>&nbsp;</td>'+
-        '</tr>'+
-        '<tr>'+
-        '<td class="address" colspan="2"><ul>{0}</ul></td>'+
-        '</tr>';
+          '<tr>'+
+          '</tr>';
+//        '<tr>'+
+//        '<td align="center" colspan="2"><b>Nearest well-known address:</b>&nbsp;</td>'+
+//        '</tr>'+
+//        '<tr>'+
+//        '<td class="address" colspan="2"><ul>{0}</ul></td>'+
+//        '</tr>';
     
 Geolab.Vehicle.registerClass('Geolab.Vehicle');
 
