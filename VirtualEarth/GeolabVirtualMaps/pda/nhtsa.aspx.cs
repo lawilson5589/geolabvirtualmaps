@@ -96,8 +96,10 @@ public partial class pda_ccrta : System.Web.UI.Page
             //Call GetLocationInfo with "MapPoint.NA" data source
             try
             {
-                returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
-                e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
+                //MAPPOINT CALL
+                //returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
+                //e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
+                e.Row.Cells[3].Text = latlong2;
             }
             catch (Exception f)
             {

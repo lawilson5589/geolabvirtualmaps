@@ -624,12 +624,6 @@ Geolab.MapNav.prototype = {
         if(child){
             el.removeChild(child);
         }
-
-        el = $get('MSVE_minimap_style_div');
-        while(el.firstChild){
-            el.removeChild(el.firstChild);
-        }
-        el = null;
         child = null;
             
     },
@@ -642,7 +636,7 @@ Geolab.MapNav.prototype = {
         elem = null;
     },
     ShowMiniMap : function(){
-        debugging 
+        //debugger
         var elem = $get("MSVE_minimap");
         var mapdiv = $get(this.__mapDivID); // geoMap elem
         this.__miniMapLeft = parseInt(mapdiv.style.width) - this.__miniMapOffsetX;
