@@ -102,6 +102,7 @@ Geolab.PushPinLayer.prototype = {
         {
             // This is the callback function invoked if the Web service failed.
             // Display the error.    
+            debug:
             Sys.Debug.trace(error.get_message());
             error = null;
         };
@@ -151,14 +152,17 @@ Geolab.PushPinLayer.prototype = {
         //    pin.SetWebService('Geolab.CapeCod_FireDeptartment.FireStation');
         //    pin.Invoke('Fire_Cape');
         try{
+            if(this.__layer != null){
+                this.ToggleVisibility();
+            }
             if(this.__layer == null){
                 this.args = args; // Hold arg value for callback
                 if(!this.shapesPoints) this.shapesPoints = new Array();
                 eval( this.__webService + "('"+ args + "',OnSucceeded,OnFailed)");
-            }else{
-                this.ToggleVisibility();
             }
-        }catch(e){
+
+        }
+        catch(e){
             Sys.Debug.trace(e.name + ": " + e.message + "\n" + e.stack);
         }
         

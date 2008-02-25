@@ -98,8 +98,13 @@ public partial class pda_status : System.Web.UI.Page
             {
                 //MAPPOINT CALL
                 //returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
-                //e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
-                e.Row.Cells[3].Text = latlong2;
+                //e.Row.Cells[4].Text = returnedLocations[0].Entity.DisplayName;
+                // e.Row.Cells[4].Text = latlong2;
+                returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(dlat, dlng);
+                String result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.adminName2, " ,", returnedLocations.address.adminCode1);
+
+
+                e.Row.Cells[3].Text = result;
             }
             catch (Exception f)
             {
