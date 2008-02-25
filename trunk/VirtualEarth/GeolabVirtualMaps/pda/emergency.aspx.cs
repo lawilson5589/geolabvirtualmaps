@@ -92,7 +92,8 @@ public partial class pda_ccrta : System.Web.UI.Page
 
 
             //Define a field to hold returned locations
-            Location[] returnedLocations;
+            //Location[] returnedLocations;
+            ReverseGeo.SingleReverseGeoCode returnedLocations;
             //Call GetLocationInfo with "MapPoint.NA" data source
 
             try
@@ -102,8 +103,7 @@ public partial class pda_ccrta : System.Web.UI.Page
                 //e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
                 //e.Row.Cells[3].Text = latlong2;
                 returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(dlat, dlng);
-                String result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.adminName2, " ,", returnedLocations.address.adminCode1);
-
+                String result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.placename, " ,", returnedLocations.address.adminCode1, " ", returnedLocations.address.postalcode);
 
                 e.Row.Cells[3].Text = result;
             }
