@@ -108,12 +108,16 @@ Geolab.PolyLineLayer.prototype = {
         //    CapeCodeRoutes.setWebService('Geolab.CapeCod_WebService.BusLine');
         //    CapeCodeRoutes.invoke('PTown'); 
         try{
+        
+            if( this.__ShapeNames.containsKey(args)){
+                this.ToggleShapeVisibility(args);
+            }
             if(!this.__ShapeNames.containsKey(args)){
                 this.args = args; // Hold arg value for callback
                 eval( this.__webService + "('"+ args + "',OnSucceeded,OnFailed)");
-            }else{
-                this.ToggleShapeVisibility(args);
             }
+
+            
         }catch(e){
             Sys.Debug.trace(e.name + ": " + e.message + "\n" + e.stack);
         }
