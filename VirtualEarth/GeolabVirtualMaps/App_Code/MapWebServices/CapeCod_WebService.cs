@@ -63,6 +63,8 @@ namespace Geolab
                 case "LIFT6":
                 case "LIFT7":
                 case "ROUTE9":
+                case "NatickCBus":
+                case "NatickNBus":
 
                     SqlVECollectionReader.RetrievePushPinCollection(ConnectionString.CapeCod, "sp_SelectVEPushPins", mapID, ref sb);
                     break;
@@ -105,6 +107,8 @@ namespace Geolab
                 case "LIFT6":
                 case "LIFT7":
                 case "ROUTE9":
+                case "NatickCBus":
+                case "NatickNBus":
 
 
                     SqlVECollectionReader.RetrievePolyLine(ConnectionString.CapeCod, "sp_SelectVEPolyLines", mapID, ref sb);

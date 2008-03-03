@@ -22,6 +22,10 @@ if(Dashboard){
         MetroWestStops['LIFT7'].SetWebService(wbs);
         MetroWestStops['ROUTE9'] = new Geolab.PushPinLayer('ROUTE9');
         MetroWestStops['ROUTE9'].SetWebService(wbs);
+        MetroWestStops['NatickCBus'] = new Geolab.PushPinLayer('NatickCBus');
+        MetroWestStops['NatickCBus'].SetWebService(wbs);
+        MetroWestStops['NatickNBus'] = new Geolab.PushPinLayer('NatickNBus');
+        MetroWestStops['NatickNBus'].SetWebService(wbs);
         this.CreateElement('Routes', 'Routes');
          
         // END
@@ -35,6 +39,8 @@ if(Dashboard){
         MetroWestRoutes.LIFT6 =  function(){MetroWestStops['LIFT6'].Invoke('LIFT6');MetroWestRoutes.Invoke('LIFT6');}
         MetroWestRoutes.LIFT7 =  function(){MetroWestStops['LIFT7'].Invoke('LIFT7');MetroWestRoutes.Invoke('LIFT7');}
         MetroWestRoutes.ROUTE9 =  function(){MetroWestStops['ROUTE9'].Invoke('ROUTE9');MetroWestRoutes.Invoke('ROUTE9');}
+        MetroWestRoutes.NatickCBus =  function(){MetroWestStops['NatickCBus'].Invoke('NatickCBus');MetroWestRoutes.Invoke('NatickCBus');}
+        MetroWestRoutes.NatickNBus =  function(){MetroWestStops['NatickNBus'].Invoke('NatickNBus');MetroWestRoutes.Invoke('NatickNBus');}
 
     
 
@@ -47,6 +53,8 @@ if(Dashboard){
         this.CreateElement('LIFT6', 'Route 6', MetroWestRoutes.LIFT6, 'Route 6', img);
         this.CreateElement('LIFT7', 'Route 7', MetroWestRoutes.LIFT7, 'Route 7', img);
         this.CreateElement('ROUTE9', 'Route 9', MetroWestRoutes.ROUTE9, 'Route 9', img);
+        this.CreateElement('NatickCBus', 'NatickCBus', MetroWestRoutes.NatickCBus, 'NatickCBus', img);
+        this.CreateElement('NatickNBus', 'NatickNBus', MetroWestRoutes.NatickNBus, 'NatickNBus', img);
         img = null;
     }
 }

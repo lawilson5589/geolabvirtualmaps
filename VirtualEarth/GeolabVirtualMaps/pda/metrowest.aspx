@@ -29,7 +29,7 @@
             <Columns>
                 <asp:BoundField DataField="Froutename" HeaderText="Route" />
                 <asp:BoundField DataField="BusID" HeaderText="Bus ID" SortExpression="BusID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
+                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
                 <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
@@ -53,7 +53,7 @@
             <Columns>
                 <asp:BoundField DataField="Froutename" HeaderText="Route" />
                 <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:T}" />
+                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
                 <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
                 <asp:BoundField HeaderText="Location" />
                 <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
