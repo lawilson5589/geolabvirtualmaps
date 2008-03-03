@@ -156,14 +156,18 @@ namespace Geolab
         /// <returns>true if method executed ok</returns>
         public static bool RetrieveVehicleData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags)
         {
+            TimeSpan timespan1 = new TimeSpan(0,2,0);
             if (sqldatareader.HasRows)
             {
                 while (sqldatareader.Read())
                 {
+                    
                     VEVehicle vehicle = new VEVehicle(flags);
                     String[] datetime = sqldatareader[AGPS_DbColumnNames.Datetime].ToString().Split(' ');
-
                     vehicle.Date = datetime[0];
+                    if (Convert.ToDateTime(datetime) < System.DateTime.Now.Subtract(timespan1))
+                    {
+                    }
                     vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
                     vehicle.Latitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Latitude].ToString());
                     vehicle.Longitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Longitude].ToString());

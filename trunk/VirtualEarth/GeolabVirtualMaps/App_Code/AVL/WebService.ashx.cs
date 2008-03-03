@@ -80,7 +80,7 @@ namespace Geolab
                             break;
 
                         case "Brockton":
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Blue.png";
                             this.info.Title = "Brockton Area Transit Paratransit";
                             this.storedProcedureName = "sp_SelectAVL_Brockton";
                             break;
