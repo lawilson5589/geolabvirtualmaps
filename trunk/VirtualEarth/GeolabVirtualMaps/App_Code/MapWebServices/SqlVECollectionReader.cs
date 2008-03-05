@@ -13,7 +13,7 @@ namespace Geolab
 
 
     /// <summary>
-    /// Class for retrieving a VE collections from SQl Server
+    /// Class for retrieving a VE collections from SQL Server
     /// </summary>
     public sealed class SqlVECollectionReader 
     {
@@ -156,17 +156,23 @@ namespace Geolab
         /// <returns>true if method executed ok</returns>
         public static bool RetrieveVehicleData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags)
         {
-            TimeSpan timespan1 = new TimeSpan(0,2,0);
+            TimeSpan timespan1 = new TimeSpan(0,5,0);
             if (sqldatareader.HasRows)
             {
                 while (sqldatareader.Read())
                 {
                     
                     VEVehicle vehicle = new VEVehicle(flags);
+                    DateTime dt1 = Convert.ToDateTime(sqldatareader[AGPS_DbColumnNames.Datetime]);
+                    DateTime dt2 = System.DateTime.Now.Subtract(timespan1);
                     String[] datetime = sqldatareader[AGPS_DbColumnNames.Datetime].ToString().Split(' ');
                     vehicle.Date = datetime[0];
-                    if (Convert.ToDateTime(datetime) < System.DateTime.Now.Subtract(timespan1))
+                    if ((DateTime)dt1 < System.DateTime.Now.Subtract(timespan1))
                     {
+                        //Timespan Variable sets the lowerbound, Stored Procedure Sets the UpperBound
+                        //Turns Bus Grey When Record not received for period of time
+                        //Currently 5 seconds- 3 days
+                        vehicle.CustomIcon = "/images/map_vehicles/Bus_20_grey.png";
                     }
                     vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
                     vehicle.Latitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Latitude].ToString());
