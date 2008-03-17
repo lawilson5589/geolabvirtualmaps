@@ -28,7 +28,9 @@ public partial class pda_ccrta : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-
+            DateTime recordtime = Convert.ToDateTime(e.Row.Cells[1].Text);
+            TimeSpan timespan1 = new TimeSpan(0, 1, 0);
+            bool current = true;
             string lat = e.Row.Cells[4].Text;
             double dlat = double.Parse(lat);
             string lng = e.Row.Cells[5].Text;
@@ -37,87 +39,97 @@ public partial class pda_ccrta : System.Web.UI.Page
             latlong.Latitude = dlat;
             latlong.Longitude = dlng;
             string latlong2 = String.Concat("Lat: ", lat, " Lng: ", lng);
-            try
+
+
+            if ((recordtime < (DateTime)System.DateTime.Now.Subtract(timespan1)))
             {
-                int bearing = Convert.ToInt32(e.Row.Cells[7].Text);
-                if ((bearing >= 20) && (bearing <= 65))
-                {
-                    e.Row.Cells[6].Text = "NE";
-                }
-                else if ((bearing > 65) && (bearing <= 110))
-                {
-                    e.Row.Cells[6].Text = "E";
-                }
-                else if ((bearing > 110) && (bearing <= 155))
-                {
-                    e.Row.Cells[6].Text = "SE";
-                }
-                else if ((bearing > 155) && (bearing <= 200))
-                {
-                    e.Row.Cells[6].Text = "S";
-                }
-                else if ((bearing > 200) && (bearing <= 245))
-                {
-                    e.Row.Cells[6].Text = "SW";
-                }
-                else if ((bearing > 245) && (bearing <= 290))
-                {
-                    e.Row.Cells[6].Text = "W";
-                }
-                else if ((bearing > 290) && (bearing <= 335))
-                {
-                    e.Row.Cells[6].Text = "NW";
-                }
-                else if ((bearing > 335) && (bearing <= 360))
-                {
-                    e.Row.Cells[6].Text = "N";
-                }
-                else if ((bearing >= 0) && (bearing < 20))
-                {
-                    e.Row.Cells[6].Text = "N";
-                }
+                e.Row.Visible = false;
+                current = false;
             }
-            catch (Exception f)
+            if (current == true)
             {
-                e.Row.Cells[6].Text = "Null";
+                try
+                {
+                    int bearing = Convert.ToInt32(e.Row.Cells[7].Text);
+                    if ((bearing >= 20) && (bearing <= 65))
+                    {
+                        e.Row.Cells[6].Text = "NE";
+                    }
+                    else if ((bearing > 65) && (bearing <= 110))
+                    {
+                        e.Row.Cells[6].Text = "E";
+                    }
+                    else if ((bearing > 110) && (bearing <= 155))
+                    {
+                        e.Row.Cells[6].Text = "SE";
+                    }
+                    else if ((bearing > 155) && (bearing <= 200))
+                    {
+                        e.Row.Cells[6].Text = "S";
+                    }
+                    else if ((bearing > 200) && (bearing <= 245))
+                    {
+                        e.Row.Cells[6].Text = "SW";
+                    }
+                    else if ((bearing > 245) && (bearing <= 290))
+                    {
+                        e.Row.Cells[6].Text = "W";
+                    }
+                    else if ((bearing > 290) && (bearing <= 335))
+                    {
+                        e.Row.Cells[6].Text = "NW";
+                    }
+                    else if ((bearing > 335) && (bearing <= 360))
+                    {
+                        e.Row.Cells[6].Text = "N";
+                    }
+                    else if ((bearing >= 0) && (bearing < 20))
+                    {
+                        e.Row.Cells[6].Text = "N";
+                    }
+                }
+                catch (Exception f)
+                {
+                    e.Row.Cells[6].Text = "Null";
+                }
+
+
+
+
+                //Define get info options object
+                GetInfoOptions options = new GetInfoOptions();
+                //I'm looking only for cities
+                options.IncludeAllEntityTypes = false;
+                options.EntityTypesToReturn = new string[] { "PopulatedPlace" };
+
+
+                //Define a field to hold returned locations
+                //Location[] returnedLocations;
+                ReverseGeo.SingleReverseGeoCode returnedLocations;
+                //Call GetLocationInfo with "MapPoint.NA" data source
+                try
+                {
+                    //MAPPOINT CALL
+                    //returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
+                    //e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
+                    //e.Row.Cells[3].Text = latlong2;
+
+                    returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(dlat, dlng);
+                    String result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.placename, " ,", returnedLocations.address.adminCode1, " ", returnedLocations.address.postalcode);
+
+
+                    e.Row.Cells[3].Text = result;
+
+                }
+                catch (Exception f)
+                {
+                    e.Row.Cells[3].Text = latlong2;
+                }
+
+                e.Row.Cells[4].Visible = false;
+                e.Row.Cells[5].Visible = false;
+                e.Row.Cells[7].Visible = false;
             }
-
-            
-                
-
-            //Define get info options object
-            GetInfoOptions options = new GetInfoOptions();
-            //I'm looking only for cities
-            options.IncludeAllEntityTypes = false;
-            options.EntityTypesToReturn = new string[] { "PopulatedPlace" };
-
-
-            //Define a field to hold returned locations
-            //Location[] returnedLocations;
-            ReverseGeo.SingleReverseGeoCode returnedLocations;
-            //Call GetLocationInfo with "MapPoint.NA" data source
-            try
-            {
-                //MAPPOINT CALL
-                //returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
-                //e.Row.Cells[3].Text = returnedLocations[0].Entity.DisplayName;
-                //e.Row.Cells[3].Text = latlong2;
-
-                returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(dlat, dlng);
-                String result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.placename, " ,", returnedLocations.address.adminCode1, " ", returnedLocations.address.postalcode );
-
-
-                e.Row.Cells[3].Text = result;
-
-            }
-            catch (Exception f)
-            {
-                e.Row.Cells[3].Text = latlong2;
-            }
-            
-            e.Row.Cells[4].Visible = false;
-            e.Row.Cells[5].Visible = false;
-            e.Row.Cells[7].Visible = false;
         }
     }
 
