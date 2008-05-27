@@ -10,10 +10,10 @@
          var Vehicle = null;
          // Modify settings values as need
          var Settings = { 
-             "Lat" : 41.99 
-            ,"Lon" : -70.96
+             "Lat" : 41.27780646738183 
+            ,"Lon" : -75.84960937500001
             ,"MapStyle" : 'r'
-            ,"MapZoom" : 10
+            ,"MapZoom" : 6
             ,"VehicleIcon" : '/images/map_icons/default.gif'
             ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=GeoLab'
             ,"VehiclePinTitles" : 'GeoGraphics Lab'
