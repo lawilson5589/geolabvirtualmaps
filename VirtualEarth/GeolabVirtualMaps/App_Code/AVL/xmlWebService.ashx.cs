@@ -46,6 +46,11 @@ namespace Geolab
                             this.info.Title = "GeoGraphics Lab";
                             this.storedProcedureName = "sp_SelectAVL_GeoLab";
                             break;
+                        case "GeoLabParatransit":
+                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Blue.png";
+                            this.info.Title = "GeoGraphics Lab Paratransit";
+                            this.storedProcedureName = "sp_SelectAVL_GeoLabParatransit";
+                            break;
                         case "SouthEastern":
                             this.info.CustomIcon = "/images/map_vehicles/ambulance_024.gif";
                             this.info.Title = "Southeastern MA Emergency";

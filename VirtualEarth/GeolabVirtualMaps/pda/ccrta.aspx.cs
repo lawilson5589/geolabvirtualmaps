@@ -28,7 +28,7 @@ public partial class pda_ccrta : System.Web.UI.Page
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             DateTime recordtime = Convert.ToDateTime(e.Row.Cells[1].Text);
-            TimeSpan timespan1 = new TimeSpan(0, 1, 0);
+            TimeSpan timespan1 = new TimeSpan(0, 3, 0);
             bool current = true;
             string lat = e.Row.Cells[4].Text;
             double dlat = double.Parse(lat);

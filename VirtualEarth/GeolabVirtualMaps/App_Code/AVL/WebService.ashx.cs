@@ -46,6 +46,11 @@ namespace Geolab
                             this.info.Title = "GeoGraphics Lab";
                             this.storedProcedureName = "sp_SelectAVL_GeoLab";
                             break;
+                        case "GeoLabParatransit":
+                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Blue.png";
+                            this.info.Title = "GeoGraphics Lab Paratransit";
+                            this.storedProcedureName = "sp_SelectAVL_GeoLabParatransit";
+                            break;
                         case "SouthEastern":
                             this.info.CustomIcon = "/images/map_vehicles/ambulance_024.gif";
                             this.info.Title = "Southeastern MA Emergency";
@@ -154,6 +159,18 @@ namespace Geolab
                     if (this.StoredProcedureName.Equals("sp_SelectAVL_Bridgew"))
                     {
                         this.StoredProcedureName = "BridgewTrains";
+                        sqlcommand2 = new SqlCommand(this.StoredProcedureName, sqlconnection);
+                        sqlcommand2.CommandType = CommandType.StoredProcedure;
+                        sqlconnection.Open();
+                        SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
+                        this.StoredProcedureName = String.Empty;
+                        sqlconnection.Close();
+                    }
+
+                    if(this.StoredProcedureName.Equals("sp_SelectAVL_GeoLab"))
+                    {
+                        this.StoredProcedureName = "GeoLabParatransit";
                         sqlcommand2 = new SqlCommand(this.StoredProcedureName, sqlconnection);
                         sqlcommand2.CommandType = CommandType.StoredProcedure;
                         sqlconnection.Open();

@@ -255,7 +255,7 @@ namespace Geolab
                     {
                         vehicle.GeolabID = vehicle.GeolabID.Substring(3);
                     }
-                    output.AppendFormat("<marker lat =\"{0}\" lng =\"{1}\" unit_id=\"{2}\" />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID);
+                    output.AppendFormat("<marker lat =\"{0}\" lng =\"{1}\" unit_id=\"{2}\" date=\"{3}\" time=\"{4}\" accuracy=\"{5}\" speed=\"{6}\" heading=\"{7}\" satelite=\"{8}\" battery=\"{9}\" signal=\"{10}\"  />", vehicle.Latitude, vehicle.Longitude, vehicle.GeolabID, vehicle.Date, vehicle.Time, vehicle.Accuracy, vehicle.Speed, vehicle.Heading, vehicle.SatelliteNumber, vehicle.BatteryLevel, vehicle.SignalStrength);
                 }
 
             }

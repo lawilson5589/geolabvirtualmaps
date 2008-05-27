@@ -29,6 +29,10 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         {
             Label3.Text = "BusyBeeMWRTA";
         }
+        else if (User.IsInRole("BAT"))
+        {
+            Label3.Text = "BAT";
+        }
         else if (User.IsInRole("Administrator"))
         {
             //do nothing
@@ -88,7 +92,7 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         Label labl = (Label)LoginView1.FindControl("Label2");
         SqlDataSource sql1 = (SqlDataSource)LoginView1.FindControl("SqlDataSource1");
         TextBox text1 = null;
-        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")))
+        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")) || (User.IsInRole("BAT")))
         {
             text1 = (TextBox)LoginView1.FindControl("Textbox1");
         }
@@ -102,7 +106,7 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         sql1.UpdateParameters.Add("GeolabID", labl.Text);
         sql1.UpdateParameters.Add("Routename", route);
         sql1.UpdateParameters.Add("Date", null);
-        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")))
+        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA"))  || (User.IsInRole("BAT")))
         {
             sql1.UpdateParameters.Add("BusID", text1.Text);
         }
