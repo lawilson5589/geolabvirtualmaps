@@ -246,12 +246,12 @@ Geolab.MapNav.prototype = {
             el.removeChild(child);
         }
 
-        el = $get('MSVE_minimap_style_div');
-        while(el.firstChild){
-            el.removeChild(el.firstChild);
-        }
-        el = null;
-        child = null;
+        //el = $get('MSVE_minimap_style_div');
+        //while(el.firstChild){
+        //    el.removeChild(el.firstChild);
+        //}
+        //el = null;
+        //child = null;
             
     },
     HideMiniMap : function(){

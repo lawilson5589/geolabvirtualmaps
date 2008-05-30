@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MetroWest.aspx.cs" Inherits="Framingham" EnableEventValidation="false" StylesheetTheme="VE_Theme" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MetroWest.aspx.cs" debug = "true" Inherits="Framingham" EnableEventValidation="false" StylesheetTheme="VE_Theme" %>
 <%@ Register Src="WebControls/WebUserControl_ToolBarList.ascx" TagName="WebUserControl_ToolBarList" TagPrefix="geo" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,7 +33,7 @@
             ,'DivIDToolbar' : 'ToolBar'
             ,'DivIDMap' : 'geoMap'
             ,'DivIDLeftMenu' : 'LeftMenu'
-        };
+        }; 
      </script> 
 </head>
 <body>
@@ -41,9 +41,10 @@
     <form id="formMain" runat="server">
         <asp:ScriptManager ID="scriptManagerMap" runat="server">
             <Scripts>   
-                <asp:ScriptReference Path="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=5" />
-                <asp:ScriptReference Path="~/js/core/MapJavaScripts.ashx?release=false" />
-                <asp:ScriptReference Path="~/js/specific/MapInit.js" />
+                <asp:ScriptReference Path="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6" />
+                                <asp:ScriptReference Path="~/js/specific/MapInit.js" />
+                <asp:ScriptReference Path="~/js/core/MapJavaScripts6.ashx?release=false" />
+
                 <%--Map Specific JS--%>
                 <%--<asp:ScriptReference Path="~/js/specific/Framingham.js" />--%>
                 <asp:ScriptReference Path="~/js/specific/MetroWest_BusRoutesAndStops.js" />
