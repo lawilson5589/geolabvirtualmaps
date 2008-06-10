@@ -33,7 +33,7 @@
     <UpdateUrl>http://207.206.224.39/VEDisplay/</UpdateUrl>
     <ProductName>VE Display</ProductName>
     <PublisherName>GeoGraphics Lab</PublisherName>
-    <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
+    <MinimumRequiredVersion>1.0.0.7</MinimumRequiredVersion>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>

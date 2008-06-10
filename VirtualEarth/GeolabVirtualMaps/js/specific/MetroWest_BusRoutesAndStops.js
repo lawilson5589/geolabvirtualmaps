@@ -14,6 +14,8 @@ if(Dashboard){
         MetroWestStops['LIFT2'].SetWebService(wbs);
         MetroWestStops['LIFT3'] = new Geolab.PushPinLayer('LIFT3');
         MetroWestStops['LIFT3'].SetWebService(wbs);
+        MetroWestStops['LIFT4'] = new Geolab.PushPinLayer('LIFT4');
+        MetroWestStops['LIFT4'].SetWebService(wbs);
         MetroWestStops['LIFT5'] = new Geolab.PushPinLayer('LIFT5');
         MetroWestStops['LIFT5'].SetWebService(wbs);
         MetroWestStops['LIFT6']= new Geolab.PushPinLayer('LIFT6');
@@ -35,6 +37,7 @@ if(Dashboard){
         //MetroWestRoutes.{Function} =  function(){MetroWestRoutes.Invoke('{MapID}');
         MetroWestRoutes.LIFT2 =  function(){MetroWestStops['LIFT2'].Invoke('LIFT2');MetroWestRoutes.Invoke('LIFT2'); }
         MetroWestRoutes.LIFT3 =  function(){MetroWestStops['LIFT3'].Invoke('LIFT3');MetroWestRoutes.Invoke('LIFT3');}
+        MetroWestRoutes.LIFT4 =  function(){MetroWestStops['LIFT4'].Invoke('LIFT4');MetroWestRoutes.Invoke('LIFT4');}
         MetroWestRoutes.LIFT5 =  function(){MetroWestStops['LIFT5'].Invoke('LIFT5');MetroWestRoutes.Invoke('LIFT5');}
         MetroWestRoutes.LIFT6 =  function(){MetroWestStops['LIFT6'].Invoke('LIFT6');MetroWestRoutes.Invoke('LIFT6');}
         MetroWestRoutes.LIFT7 =  function(){MetroWestStops['LIFT7'].Invoke('LIFT7');MetroWestRoutes.Invoke('LIFT7');}
@@ -49,6 +52,7 @@ if(Dashboard){
        // this.CreateElement('Jim', 'Jim', MetroWestRoutes.Flex, 'Jimbo', img);
         this.CreateElement('LIFT2', 'Route 2', MetroWestRoutes.LIFT2, 'Route 2', img);
         this.CreateElement('LIFT3', 'Route 3', MetroWestRoutes.LIFT3, 'Route 3', img);
+        this.CreateElement('LIFT4', 'Route 4', MetroWestRoutes.LIFT4, 'Route 4', img);
         this.CreateElement('LIFT5', 'Route 5', MetroWestRoutes.LIFT5, 'Route 5', img);
         this.CreateElement('LIFT6', 'Route 6', MetroWestRoutes.LIFT6, 'Route 6', img);
         this.CreateElement('LIFT7', 'Route 7', MetroWestRoutes.LIFT7, 'Route 7', img);
