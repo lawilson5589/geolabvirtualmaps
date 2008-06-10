@@ -19,7 +19,7 @@
                 <tr>
                     <td class="headerimage">
                         <!-- BEGIN: Header Container -->
-                        <img src="/geolab_mdt2_cape/images/geolablogo_header.png" alt="" height="95" width="655" />
+                        <img src="geolab_mdt2_cape/images/geolablogo_header.png" alt="" height="95" width="655" />
                         <!-- END -->
                     </td>
                 </tr>

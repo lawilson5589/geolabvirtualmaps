@@ -31,57 +31,57 @@ namespace Geolab
                     {
                         // Valid names
                         case "CapeCod": 
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_CapeCod";
                             break;
                         case "Bridgew":
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Bridgewater Transit";
                             this.storedProcedureName = "sp_SelectAVL_Bridgew";
                             break;
                         case "GeoLab":
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "GeoGraphics Lab";
                             this.storedProcedureName = "sp_SelectAVL_GeoLab";
                             break;
                         case "GeoLabParatransit":
-                            this.info.CustomIcon = "/images/map_vehicles/Bus_20_Blue.png";
+                            this.info.CustomIcon = "images/map_vehicles/Bus_20_Blue.png";
                             this.info.Title = "GeoGraphics Lab Paratransit";
                             this.storedProcedureName = "sp_SelectAVL_GeoLabParatransit";
                             break;
                         case "SouthEastern":
-                            this.info.CustomIcon = "/images/map_vehicles/ambulance_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/ambulance_024.gif";
                             this.info.Title = "Southeastern MA Emergency";
                             this.storedProcedureName = "sp_SelectAVL_SouthEastern";
                             break;
                         case "Framingham":
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Framingham Transportation";
                             this.storedProcedureName = "sp_SelectAVL_Framingham";
                             break;
                         case "Ferries":
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Framingham Transportation";
                             this.storedProcedureName = "sp_SelectAVL_Framingham";
                             break;
                         case "CapeCodPartners":
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_CapeCodePartners";
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Cape Cod Transportation";
                             break;
                         case "Brockton":
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_Brockton";
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Brockton Paratransit";
                             break;
                         case "BusyBeeMWRTA":
                             // Here sp_SelectAVL_ is prefix for every AVL stored procedure
                             this.storedProcedureName = "sp_SelectAVL_BusyBeeMWRTA";
-                            this.info.CustomIcon = "/images/map_vehicles/bus_024.gif";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "BusyBeeMWRTA";
                             break;
                         default:

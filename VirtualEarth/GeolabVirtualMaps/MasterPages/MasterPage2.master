@@ -19,7 +19,7 @@
                 <tr>
                     <td class="headerimage">
                         <!-- BEGIN: Header Container -->
-                        <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/geolablogo_header.png" ToolTip="" Height="95" Width="655" />
+                        <asp:Image ID="ImageLogo" runat="server" ImageUrl="images/geolablogo_header.png" ToolTip="" Height="95" Width="655" />
                         <!-- END -->
                     </td>
                 </tr>

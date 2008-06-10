@@ -172,7 +172,7 @@ namespace Geolab
                         //Timespan Variable sets the lowerbound, Stored Procedure Sets the UpperBound
                         //Turns Bus Grey When Record not received for period of time
                         //Currently 5 seconds- 3 days
-                        vehicle.CustomIcon = "/images/map_vehicles/Bus_20_grey.png";
+                        vehicle.CustomIcon = "images/map_vehicles/Bus_20_grey.png";
                     }
                     vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
                     vehicle.Latitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Latitude].ToString());

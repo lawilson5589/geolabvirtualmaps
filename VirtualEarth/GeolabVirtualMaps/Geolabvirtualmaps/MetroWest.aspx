@@ -3,7 +3,7 @@
     <div style="margin:0 auto 0 auto;width:94%; padding-left:50px;">
         <table border="0" cellpadding="0" cellspacing="0" style="WIDTH: 931px">
             <tr>
-                <td style="WIDTH: 843px"><div style="float:left"><asp:Image ID="ImageIcon" runat="server" ImageUrl="~/images/Map_content/Map-128x128.gif" CssClass="Icon" /></div><div style="float:left;font-size:20pt;margin-top:45px; width: 708px;">
+                <td style="WIDTH: 843px"><div style="float:left"><asp:Image ID="ImageIcon" runat="server" ImageUrl="images/Map_content/Map-128x128.gif" CssClass="Icon" /></div><div style="float:left;font-size:20pt;margin-top:45px; width: 708px;">
                     <span style="font-family: Verdana">We're sorry......<br />
                         <br />
                         <br />

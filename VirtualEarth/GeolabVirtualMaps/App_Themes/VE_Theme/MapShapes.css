@@ -81,7 +81,7 @@ div.pinStyle
 	text-align: center;
 	font: bold 12px Arial;
 	cursor: pointer;
-	/*background: url(/images/PushPins/25x29/pin3.gif) no-repeat 0 0; */
+	/*background: url(images/PushPins/25x29/pin3.gif) no-repeat 0 0; */
 	background-color: transparent;
 }
 

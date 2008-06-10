@@ -12,6 +12,6 @@
 //    
 //    
 //    // Dashboard.CreateElement('{ID}', '{Title}', FireStation.{Function}, tooltip, tooltipimage);
-//    this.CreateElement('Stations', 'Fire Stations', FireStation.Stations, 'Fire Station Offices', '/images/map_icons/FireStationIcon.gif' );
+//    this.CreateElement('Stations', 'Fire Stations', FireStation.Stations, 'Fire Station Offices', 'images/map_icons/FireStationIcon.gif' );
 //    
 //}
