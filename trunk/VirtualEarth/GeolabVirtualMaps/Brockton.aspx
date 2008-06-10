@@ -17,8 +17,8 @@
             ,"Lon" : -71.023950
             ,"MapStyle" : 'r'
             ,"MapZoom" : 11
-            ,"VehicleIcon" : '/images/map_vehicles/Bus_20_Blue.png'
-            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=Brockton'
+            ,"VehicleIcon" : 'images/map_vehicles/Bus_20_Blue.png'
+            ,"VehicleWebServicePath" : 'AVL_webservices/LiveData.ashx?ID=Brockton'
             ,"VehiclePinTitles" : 'Brockton'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true

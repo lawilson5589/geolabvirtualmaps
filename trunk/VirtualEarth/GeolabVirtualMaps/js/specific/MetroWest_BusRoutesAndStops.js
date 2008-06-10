@@ -47,7 +47,7 @@ if(Dashboard){
 
     
 
-        var img = "/images/map_vehicles/bus_024.gif";
+        var img = "images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', MetroWestRoutes.{Function});
        // this.CreateElement('Jim', 'Jim', MetroWestRoutes.Flex, 'Jimbo', img);
         this.CreateElement('LIFT2', 'Route 2', MetroWestRoutes.LIFT2, 'Route 2', img);

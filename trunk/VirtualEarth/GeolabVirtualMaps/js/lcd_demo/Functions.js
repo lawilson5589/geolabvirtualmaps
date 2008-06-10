@@ -9,7 +9,7 @@ function AddPin(lat, long, title, description)
 {
     var pinlatlong = new VELatLong(lat, long);
     shape = new VEShape(VEShapeType.Pushpin, pinlatlong);  
-    shape.SetCustomIcon('/images/bus_stop_icon.png');
+    shape.SetCustomIcon('images/bus_stop_icon.png');
     shape.SetTitle(title);         
     shape.SetDescription(description); 
     map.AddShape(shape);

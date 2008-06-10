@@ -15,8 +15,8 @@
             ,"Lon" : -70.732356
             ,"MapStyle" : 'r'
             ,"MapZoom" : 9
-            ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
-            ,"VehicleWebServicePath" : '/AVL_webservices/LiveData.ashx?ID=CapeCod'
+            ,"VehicleIcon" : 'images/map_vehicles/bus_024.gif'
+            ,"VehicleWebServicePath" : 'AVL_webservices/LiveData.ashx?ID=CapeCod'
             ,"VehiclePinTitles" : 'Cape Cod Transit'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true
