@@ -59,6 +59,7 @@ namespace Geolab
                 case "SL_winter":
                 case "LIFT2":
                 case "LIFT3":
+                case "LIFT4":
                 case "LIFT5":
                 case "LIFT6":
                 case "LIFT7":
@@ -103,6 +104,7 @@ namespace Geolab
                 case "SL_winter":
                 case "LIFT2":
                 case "LIFT3":
+                case "LIFT4":
                 case "LIFT5":
                 case "LIFT6":
                 case "LIFT7":

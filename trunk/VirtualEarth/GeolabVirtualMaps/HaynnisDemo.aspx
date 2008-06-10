@@ -18,7 +18,7 @@
             ,"MapZoom" : 9
             ,"VehicleIcon" : '/images/map_vehicles/bus_024.gif'
             ,"VehicleWebServicePath" : '/AVL_webservices/LiveDataCapeCodePartners.ashx?ID=CapeCodePartners'
-            ,"VehiclePinTitles" : 'Haynnis Transportation'
+            ,"VehiclePinTitles" : 'Hyannis Transportation'
             ,"DataRefreshRate" : 10000
             ,"GeoCoding" : false
         };
