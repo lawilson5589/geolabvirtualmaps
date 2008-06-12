@@ -37,6 +37,8 @@ table.legend
 	font-weight:bold;
 }
 /* DashBoard Style  - BEGIN */
+
+
 .MSVE_MapStyle_Header
 {
 	background-color: #d7edf4;
@@ -54,10 +56,28 @@ table.legend
 
 }
 
-.MSVE_MapStyle_Hover
+.MSVE_MapStyle_Header_Hover
 {
-	background-color: #E9E9E9;
+    background-color: #E9E9E9;
 	font-weight:bold;
+	color:#444444;
+	cursor:pointer;
+	font-family:Verdana,sans-serif;
+	font-size:7.5pt;
+	height:21px;
+	line-height:21px;
+	margin:1px;
+	padding:0pt;
+	position:relative;
+	text-align:center;
+}
+
+.MSVE_MapStyle_Header_click
+{
+
+    background-color: #E9E9E9;
+	font-weight:bold;
+	font-style:italic;
 	color:#444444;
 	cursor:pointer;
 	font-family:Verdana,sans-serif;
@@ -70,22 +90,7 @@ table.legend
 	text-align:center;
 
 }
-.MSVE_MapStyle_clicked
-{
-	background-color: #CCCCCC;
-	font-weight:bold;
-	color:#444444;
-	cursor:pointer;
-	font-family:Verdana,sans-serif;
-	font-size:7.5pt;
-	height:21px;
-	line-height:21px;
-	margin:1px;
-	padding:0pt;
-	position:relative;
-	text-align:center;
-}
-.MSVE_MapStyle_clicked_hover
+.MSVE_MapStyle_Header_clicked_hover
 {
 	background-color: #EEEEEE;
 	font-weight:bold;

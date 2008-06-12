@@ -1,8 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\GeolabVirtualMaps\", "GeolabVirtualMaps\", "{F02B767F-25E1-458D-B530-A50F072C1463}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GeolabVirtualMaps", "GeolabVirtualMaps\", "{F02B767F-25E1-458D-B530-A50F072C1463}"
 	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "2.0"
 		Debug.AspNetCompiler.VirtualPath = "/GeolabVirtualMaps"
 		Debug.AspNetCompiler.PhysicalPath = "GeolabVirtualMaps\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GeolabVirtualMaps\"
