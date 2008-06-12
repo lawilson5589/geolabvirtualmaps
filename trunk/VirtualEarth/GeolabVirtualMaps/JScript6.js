@@ -140,7 +140,8 @@ VEMap.SetMapSize = function(){
 
 
 Geolab.Dashboard = function(){
-    this.DashBoardID = "MSVE_navAction_mapStyleCell";
+    //this.DashBoardID = "MSVE_navAction_mapStyleCell";
+    this.DashBoardID = "MSVE_navAction_container";
     this.ElemIDPrefix = "MSVE_navAction_"
     this.ElemclassName = "MSVE_MapStyle";
     this.HeaderclassName = "MSVE_MapStyle_Header";

@@ -49,9 +49,11 @@ VEMap.SetMapSize = function(){
 
 
 Geolab.Dashboard = function(){
-    this.DashBoardID = "MSVE_navAction_mapStyleCell";
+    //this.DashBoardID = "MSVE_navAction_mapStyleCell";
+    this.DashBoardID = "MSVE_navAction_container";
     this.ElemIDPrefix = "MSVE_navAction_"
-    this.ElemclassName = "MSVE_MapStyle";
+    //this.ElemclassName = "MSVE_MapStyle";
+    this.ElemclassName = "MSVE_MapStyle_Header";
     this.HeaderclassName = "MSVE_MapStyle_Header";
 };
 // Static method
@@ -66,6 +68,7 @@ Geolab.Dashboard.prototype = {
        var over = function(){
             if(!el.isClicked){
                 el.className = obj.ElemclassName + "_Hover";
+                //el.className = obj.ElemclassName;
                 if(el.tooltip){
                     var loc = Sys.UI.DomElement.getBounds(el);
                     var txt = $get('TooltipText')
@@ -110,7 +113,8 @@ Geolab.Dashboard.prototype = {
             if(cs){
                 el.className = obj.ElemclassName;
             }else{
-                el.className = obj.ElemclassName + "_clicked";
+                el.className = obj.ElemclassName + "_click";
+
                 if(el.tooltip){
                     var txt = $get('TooltipText')
                     if(txt){
