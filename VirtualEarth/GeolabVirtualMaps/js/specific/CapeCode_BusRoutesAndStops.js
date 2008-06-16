@@ -24,8 +24,8 @@ if(Dashboard){
         CapeCodStops['Orange'].SetWebService(wbs);
         CapeCodStops['Sealine'] = new Geolab.PushPinLayer('Sealine');
         CapeCodStops['Sealine'].SetWebService(wbs);
-        CapeCodStops['Villager'] = new Geolab.PushPinLayer('Villager');
-        CapeCodStops['Villager'].SetWebService(wbs);
+        //CapeCodStops['Villager'] = new Geolab.PushPinLayer('Villager');
+        //CapeCodStops['Villager'].SetWebService(wbs);
         CapeCodStops['Whoosh'] = new Geolab.PushPinLayer('Whoosh');
         CapeCodStops['Whoosh'].SetWebService(wbs);
         CapeCodStops['Yarmouth'] = new Geolab.PushPinLayer('Yarmouth');
@@ -46,7 +46,7 @@ if(Dashboard){
         CapeCodeRoutes.PTown =  function(){CapeCodStops['PTown'].Invoke('PTown');CapeCodeRoutes.Invoke('PTown');}
         CapeCodeRoutes.Orange =  function(){CapeCodStops['Orange'].Invoke('Orange');CapeCodeRoutes.Invoke('Orange');}
         CapeCodeRoutes.Sealine =  function(){CapeCodStops['Sealine'].Invoke('Sealine');CapeCodeRoutes.Invoke('Sealine');}
-        CapeCodeRoutes.Villager =  function(){CapeCodStops['Villager'].Invoke('Villager');CapeCodeRoutes.Invoke('Villager'); }
+        //CapeCodeRoutes.Villager =  function(){CapeCodStops['Villager'].Invoke('Villager');CapeCodeRoutes.Invoke('Villager'); }
         CapeCodeRoutes.Woosh =  function(){CapeCodStops['Whoosh'].Invoke('Whoosh');CapeCodeRoutes.Invoke('Whoosh');}
         CapeCodeRoutes.Yarmouth =  function(){CapeCodStops['Yarmouth'].Invoke('Yarmouth');CapeCodeRoutes.Invoke('Yarmouth');}
         CapeCodeRoutes.SL_winter =  function(){CapeCodStops['SL_winter'].Invoke('SL_winter');CapeCodeRoutes.Invoke('SL_winter');}
@@ -61,7 +61,7 @@ if(Dashboard){
         this.CreateElement('Orange', 'Ptn Beaches', CapeCodeRoutes.Orange, 'PTown Beaches route', img);
         this.CreateElement('SL_winter', 'Sealine', CapeCodeRoutes.SL_winter, 'Sealine route', img);
         //this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
-        this.CreateElement('Villager', 'Villager', CapeCodeRoutes.Villager, 'Villager route', img);
+        //this.CreateElement('Villager', 'Villager', CapeCodeRoutes.Villager, 'Villager route', img);
         //this.CreateElement('Whoosh', 'Whoosh', CapeCodeRoutes.Woosh, 'Whoosh route', img);
         //this.CreateElement('Yarmouth', 'Yarmouth', CapeCodeRoutes.Yarmouth, 'Yarmouth route', img);
         img = null;

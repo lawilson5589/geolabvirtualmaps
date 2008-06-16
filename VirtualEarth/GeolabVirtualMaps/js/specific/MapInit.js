@@ -33,6 +33,7 @@ var GeolabMap = {
         window.setTimeout("MapNav.SetNavControl()", 4000);
         if(typeof(Dashboard.Init) == 'function') Dashboard.Init();
         Dashboard.InitializeTooltip();
+
     }
 };
 
