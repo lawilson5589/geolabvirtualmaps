@@ -50,7 +50,7 @@ namespace Geolab
                 case "Whoosh":
                 case "Yarmouth":
                 case "Hyannis":
-                case "Villager":
+                //case "Villager":
                 case "Barnstable":
                 case "Woosh":
                 case "BSCRoute1":
@@ -96,7 +96,7 @@ namespace Geolab
                 case "Whoosh":
                 case "Yarmouth":
                 case "Hyannis":
-                case "Villager":
+                //case "Villager":
                 case "Barnstable":
                 case "BSCRoute1":
                 case "BSCRoute2":
