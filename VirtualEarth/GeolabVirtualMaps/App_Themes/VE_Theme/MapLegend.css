@@ -60,7 +60,8 @@ table.legend
 
 .MSVE_MapStyle_Header_Hover
 {
-    background-color: #E9E9E9;
+    /*background-color: #E9E9E9;*/
+    background: url(/images/map_icons/bg_image_small_grey.png) repeat-y;
 	font-weight:bold;
 	color:#444444;
 	cursor:pointer;
@@ -68,16 +69,21 @@ table.legend
 	font-size:7.5pt;
 	height:21px;
 	line-height:21px;
-	margin:1px;
+	/*margin:1px;
 	padding:0pt;
 	position:relative;
-	text-align:center;
+	text-align:center;*/
+	line-height:21px;
+	margin-left: 50pt;
+	padding-left:25pt;
+	position:relative;
+	text-align: left;
 }
 
 .MSVE_MapStyle_Header_click
 {
-
-    background-color: #E9E9E9;
+    background: url(/images/map_icons/bg_image_small_grey.png) repeat-y;
+    /*background-color: #E9E9E9;*/
 	font-weight:bold;
 	font-style:italic;
 	color:#444444;
@@ -86,15 +92,21 @@ table.legend
 	font-size:7.5pt;
 	height:21px;
 	line-height:21px;
-	margin:1px;
+	/*margin:1px;
 	padding:0pt;
 	position:relative;
-	text-align:center;
+	text-align:center;*/
+	line-height:21px;
+	margin-left: 50pt;
+	padding-left:25pt;
+	position:relative;
+	text-align: left;
 
 }
 .MSVE_MapStyle_Header_clicked_hover
 {
-	background-color: #EEEEEE;
+    background: url(/images/map_icons/bg_image_small_grey.png) repeat-y;
+	/*background-color: #EEEEEE;*/
 	font-weight:bold;
 	color:#444444;
 	cursor:pointer;
@@ -102,9 +114,14 @@ table.legend
 	font-size:7.5pt;
 	height:21px;
 	line-height:21px;
-	margin:1px;
+	/*margin:1px;
 	padding:0pt;
 	position:relative;
-	text-align:center;
+	text-align:center;*/
+	line-height:21px;
+	margin-left: 50pt;
+	padding-left:25pt;
+	position:relative;
+	text-align: left;
 }
 /* DashBoard Style  - END */
