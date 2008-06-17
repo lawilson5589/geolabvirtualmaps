@@ -18,7 +18,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GeolabVirtualMaps", "Geolab
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "15076"
+		VWDPort = "63962"
+		VWDVirtualPath = "/"
 	EndProjectSection
 EndProject
 Global

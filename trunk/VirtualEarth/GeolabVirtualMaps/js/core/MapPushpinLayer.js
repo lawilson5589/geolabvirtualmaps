@@ -44,17 +44,39 @@ Geolab.PushPinLayer.prototype = {
             Sys.Debug.trace(e.name + ": " + e.message + "\n" + e.stack);
         }
     },
+    __GetShape : function(name){
+        //return this.__layer.GetShapeByID(this.__ShapeNames.get(name))
+        return this.__layerID
+    },
     GetShapeByID : function(name){
         return this.__layer.GetShapeByID(name);
     },
-    ToggleVisibility : function (){
-        if(this.__layer){
-                if(this.__layer.GetVisibility()){ this.__layer.Hide()} 
-                else { 
-                    this.InitBestView();
-                    this.__layer.Show(); 
+    ToggleVisibility : function (layer){
+    if(this.__layer){
+            var id = this.__GetShape(name);
+            if(id){
+                if(id.GetVisibility()){ 
+                    id.Hide();
+                    map.HideInfoBox();
+                } 
+                else {
+                    id.Show();
+                    id.GetPoints(); 
+                    map.SetMapView(id.GetPoints());
+                    map.ShowInfoBox(id);
                 };
-        }
+                id = null;
+            }
+       
+//        if(layer){
+//                layer.SetVisibility(false);
+//                //visible = this.__layer.GetVisibility();
+//                //if(visible){ this.__layer.Hide()} 
+//                //else { 
+//                //    this.InitBestView();
+//                //    this.__layer.Show(); 
+//                //};
+       }
     },
     ToggleShapeVisibility : function (name){
         if(this.__layer){
@@ -98,6 +120,7 @@ Geolab.PushPinLayer.prototype = {
     Invoke: function(args){
         // Store variables to use after AJAX callback
         var self = this;
+        var obj = this;
         function OnFailed(error)
         {
             // This is the callback function invoked if the Web service failed.
@@ -113,25 +136,27 @@ Geolab.PushPinLayer.prototype = {
             // that is used to display return data.
             try{
                 var collection = null;
+
                 //debugger
                 eval(results);
                 if(collection)
                 {   
                     // First time ever any PushPinLayer added on map  
-                    if(self.__layer == null){
-                        self.__layer = new VEShapeLayer();
-                        self.__layer.SetTitle(self.__layerID);
-                        self.__LayersIDIndex = self.__layer.iid;
+                    if(obj.__layer == null){
+                        obj.__layer = new VEShapeLayer();
+                        obj.__layer.SetTitle(obj.__layerID);
+                        obj.__LayersIDIndex = obj.__layer.iid;
                         // Put key like PTown and MSVE unique id in hash
-                        Geolab.PushPinLayer.Layers.put(self.__layer.Name,self.__layer.iid);
-                        self.__ShapeLayerIndex = map.GetShapeLayerCount();
-                        map.AddShapeLayer(self.__layer);
+                        Geolab.PushPinLayer.Layers.put(obj.__layer.Name,obj.__layer.iid);
+                        obj.__ShapeLayerIndex = map.GetShapeLayerCount();
+                        map.AddShapeLayer(obj.__layer);
                     }
                     //---------------------------------------
 
                     // {'Type':'VEShapeType.Pushpin','LatLong':new VELatLong(41.5519999,-70.6115),'Title':'Fire Department','Icon':'','Description':'Falmouth Town Fire Department<br />399 Main St <br />Falmouth, MA 02540 <br />(508) 548 2325<br />','PhotoURL':''}
                     for(var i in collection){
-                        self.AddPushpin(collection[i], ++i);                          
+                        //self.AddPushpin(collection[i], ++i);           
+                        obj.__layer.AddShape(collection[i]);               
                     }
                     self.InitBestView();
                     collection = null; 
@@ -151,20 +176,28 @@ Geolab.PushPinLayer.prototype = {
         //    var pin = new Geolab.PushPinLayer('CapeCode_Routes');
         //    pin.SetWebService('Geolab.CapeCod_FireDeptartment.FireStation');
         //    pin.Invoke('Fire_Cape');
-        try{
-            if(this.__layer != null){
-                this.ToggleVisibility();
-            }
-            if(this.__layer == null){
-                this.args = args; // Hold arg value for callback
-                if(!this.shapesPoints) this.shapesPoints = new Array();
-                eval( this.__webService + "('"+ args + "',OnSucceeded,OnFailed)");
-            }
+//        try{
+////            if(this.__layer != null){
+////            //if( this.__ShapeNames.containsKey(args)){
+////                this.ToggleVisibility();
+////            }
+//            if(obj.__layer == null){
+//            //if( !this.__ShapeNames.containsKey(args)){
+//                obj.args = args; // Hold arg value for callback
+//                if(!obj.shapesPoints) obj.shapesPoints = new Array();
+//                eval( obj.__webService + "('"+ args + "',OnSucceeded,OnFailed)");
+//                this.__layer = 1;
+//            }
+//            else{
+//                this.ToggleVisibility(this.__layer);
+//                //obj.__layer.SetVisibility(false);
+//            }
+//                
 
-        }
-        catch(e){
-            Sys.Debug.trace(e.name + ": " + e.message + "\n" + e.stack);
-        }
+//        }
+//        catch(e){
+//            Sys.Debug.trace(e.name + ": " + e.message + "\n" + e.stack);
+//        }
         
     }
 };

@@ -41,7 +41,8 @@ table.legend
 
 .MSVE_MapStyle_Header
 {
-	background-color: #d7edf4;
+	/*background-color: #d7edf4;*/
+	background: url(/images/map_icons/bg_image_small.png) repeat-y;
 	font-weight:bold;
 	color:#444444;
 	cursor:text;
@@ -49,10 +50,11 @@ table.legend
 	font-size:7.5pt;
 	height:21px;
 	line-height:21px;
-	margin:1px;
-	padding:0pt;
+	margin-left: 50pt;
+	padding-left:25pt;
 	position:relative;
-	text-align:center;
+	text-align: left;
+
 
 }
 
