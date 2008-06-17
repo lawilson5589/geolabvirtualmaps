@@ -66,7 +66,9 @@ namespace Geolab
                                     sqldatareader[VEShape_DbColumnNames.Description].ToString(),
                                     sqldatareader[VEShape_DbColumnNames.IconUrl].ToString()
                                 );
-                                if (pin is VEPushpin) sb.AppendFormat("Array.add(collection, {0});", pin.ToJson());
+                                
+                                //if (pin is VEPushpin) sb.AppendFormat("Array.add(collection, {0});", pin.ToJson());
+                                if (pin is VEPushpin) sb.Append(String.Concat(String.Format("Array.add(collection,pushpin) var pushpin = new VEShape(VEShapeType.Pushpin,new VELatLong({0},{1})); pushpin.SetCustomIcon('{2}'); pushpin.SetTitle('{3}'); pushpin.SetDescription('{4}');", pin.Location.Latitude, pin.Location.Longitude, pin.PhotoUrl, pin.Title, pin.Description)));
                             }
                         }
                         else

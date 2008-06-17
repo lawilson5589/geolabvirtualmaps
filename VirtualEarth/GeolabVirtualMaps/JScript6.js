@@ -859,29 +859,30 @@ Geolab.PushPinLayer.prototype = {
             // This the handler for the Web request completed event
             // that is used to display return data.
             try{
-
+                var obj = this;
                 var json = "var as=new Array();";
                 //eval(json);
                 if(collection)
                 {   
                     // First time ever any PushPinLayer added on map  
-//                    if(self.__layer == null){
-//                        self.__layer = new VEShapeLayer();
-//                        self.__layer.SetTitle(self.__layerID);
-//                        self.__LayersIDIndex = self.__layer.iid;
-//                        // Put key like PTown and MSVE unique id in hash
-//                        Geolab.PushPinLayer.Layers.put(self.__layer.Name,self.__layer.iid);
-//                        self.__ShapeLayerIndex = map.GetShapeLayerCount();
-//                        map.AddShapeLayer(self.__layer);
-//                    }
-//                    //---------------------------------------
+                    if(obj.__layer == null){
+                        obj.__layer = new VEShapeLayer();
+                        obj.__layer.SetTitle(obj.__layerID);
+                        obj.__LayersIDIndex = obj.__layer.iid;
+                        // Put key like PTown and MSVE unique id in hash
+                        Geolab.PushPinLayer.Layers.put(obj.__layer.Name,obj.__layer.iid);
+                        obj.__ShapeLayerIndex = map.GetShapeLayerCount();
+                        map.AddShapeLayer(obj.__layer);
+                    }
+                    //---------------------------------------
 
-//                    // {'Type':'VEShapeType.Pushpin','LatLong':new VELatLong(41.5519999,-70.6115),'Title':'Fire Department','Icon':'','Description':'Falmouth Town Fire Department<br />399 Main St <br />Falmouth, MA 02540 <br />(508) 548 2325<br />','PhotoURL':''}
-//                    for(var i in collection){
-//                        self.AddPushpin(collection[i], ++i);                          
-//                    }
-//                    self.InitBestView();
-//                    collection = null; 
+                    // {'Type':'VEShapeType.Pushpin','LatLong':new VELatLong(41.5519999,-70.6115),'Title':'Fire Department','Icon':'','Description':'Falmouth Town Fire Department<br />399 Main St <br />Falmouth, MA 02540 <br />(508) 548 2325<br />','PhotoURL':''}
+                    for(var i in collection){
+                        //self.AddPushpin(collection[i], ++i);                          
+                        obj.__layer.AddShape(collection[i]);
+                    }
+                    self.InitBestView();
+                    collection = null; 
                 }
             }catch(e){
                 Sys.Debug.trace(e.name + ": " + e.message + "\n" + e.stack);

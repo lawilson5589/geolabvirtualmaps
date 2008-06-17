@@ -52,7 +52,9 @@ namespace Geolab
                             sqldatareader[VEShape_DbColumnNames.Description].ToString(),
                             sqldatareader[VEShape_DbColumnNames.IconUrl].ToString()
                         );
-                        if (pin is VEPushpin) sb.AppendFormat("{0}Array.add(collection,pushpin);", pin.ToJson());
+                       // if (pin is VEPushpin) sb.AppendFormat("{0}Array.add(collection,pushpin);", pin.ToJson());
+                        if (pin is VEPushpin) sb.Append(String.Concat(String.Format("var pushpin = new VEShape(VEShapeType.Pushpin,new VELatLong({0},{1})); pushpin.SetCustomIcon('/images/bus_stop_icon.png'); pushpin.SetTitle('{2}'); pushpin.SetDescription('{3}'); Array.add(collection,pushpin);", pin.Location.Latitude, pin.Location.Longitude, pin.Title, pin.Description)));
+
                     }
                 }
                 else
