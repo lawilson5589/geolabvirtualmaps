@@ -89,6 +89,13 @@ namespace Geolab
                             this.info.Title = "Brockton Area Transit Paratransit";
                             this.storedProcedureName = "sp_SelectAVL_Brockton";
                             break;
+
+                        case "NorthernTier":
+                            this.info.CustomIcon = "images/map_vehicles/Bus_20_Blue.png";
+                            this.info.Title = "Northern Transportation Tier";
+                            this.storedProcedureName = "sp_SelectAVL_NorthernTier";
+                            break;
+
                         default:
                             break;
                     }
