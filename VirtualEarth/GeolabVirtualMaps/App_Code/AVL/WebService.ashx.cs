@@ -91,7 +91,7 @@ namespace Geolab
                             break;
 
                         case "NorthernTier":
-                            this.info.CustomIcon = "images/map_vehicles/Bus_20_Blue.png";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "Northern Transportation Tier";
                             this.storedProcedureName = "sp_SelectAVL_NorthernTier";
                             break;
