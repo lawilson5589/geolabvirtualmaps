@@ -45,7 +45,7 @@
                 <h3> <a href="Brockton.aspx">Microsoft Virtual Earth</a></h3>
                 <h3> <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/brockton.xml">Google Mapplets</a></h3>
                     <h3>
-                        PDA Display</h3>
+                        <a href="pda/brockton.aspx">PDA Display</a></h3>
                     <h3>
                         </h3>
                 </td>
