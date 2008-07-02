@@ -235,7 +235,7 @@ Geolab.Vehicle.PinDescriptionFormat =
         '</tr>'+
         '<tr>'+
         '<td align="right"><b>GPS Device Status:</b></td>'+
-        '<td><img alt="Sattelite" src="images/map_icons/sat_{7}.gif" /><img alt="Signal" src="images/map_icons/sig_{8}.gif" /><img alt="Battery" src="images/map_icons/batt_{9}.gif" /></td>'+    
+        '<td><img alt="Sattelite" src="images/map_icons/sat_{7}.gif" /><img alt="Signal" src="images/map_icons/sig_{9}.gif" /><img alt="Battery" src="images/map_icons/batt_{8}.gif" /></td>'+    
         '</tr>'+
         '<tr>'+
         '<td align="right"><b>AVL ID:</b></td>'+

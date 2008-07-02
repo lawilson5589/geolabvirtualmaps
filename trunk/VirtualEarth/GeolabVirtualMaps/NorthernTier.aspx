@@ -12,10 +12,10 @@
         var Vehicle = null;
         // Modify settings values as need
         var Settings = { 
-            "Lat" : 42.246818561138234
-            ,"Lon" : -71.43104553222658
+            "Lat" : 42.596565493154024
+            ,"Lon" : -72.26669311523438
             ,"MapStyle" : 'r'
-            ,"MapZoom" : 11
+            ,"MapZoom" : 10
             ,"VehicleIcon" : 'images/map_vehicles/bus_024.gif'
             ,"VehicleWebServicePath" : 'AVL_webservices/LiveData.ashx?ID=NorthernTier'
             ,"VehiclePinTitles" : 'NorthernTier'
@@ -41,7 +41,7 @@
     <form id="formMain" runat="server">
         <asp:ScriptManager ID="scriptManagerMap" runat="server">
             <Scripts>   
-                <asp:ScriptReference Path="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6" />
+                <asp:ScriptReference Path="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.1" />
                                 <asp:ScriptReference Path="~/js/specific/MapInit.js" />
                 <asp:ScriptReference Path="~/js/core/MapJavaScripts6.ashx?release=false" />
 

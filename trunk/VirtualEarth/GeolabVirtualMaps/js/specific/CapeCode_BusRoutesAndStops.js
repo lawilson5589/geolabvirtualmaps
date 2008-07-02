@@ -56,14 +56,14 @@ if(Dashboard){
         this.CreateElement('Barnstable', 'Barnstable', CapeCodeRoutes.Barnstable, 'Barnstable route', img);
         this.CreateElement('Flex', 'Flex', CapeCodeRoutes.Flex, 'Flex route', img);
         this.CreateElement('H2O', 'H2O', CapeCodeRoutes.H20, 'H2O route', img);
-        //this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
+        this.CreateElement('Hyannis', 'Hyannis', CapeCodeRoutes.Hyannis, 'Hyannis route', img);
         this.CreateElement('PTown', 'PtnNTruro', CapeCodeRoutes.PTown, 'PTown NTruro route', img);
         this.CreateElement('Orange', 'Ptn Beaches', CapeCodeRoutes.Orange, 'PTown Beaches route', img);
-        this.CreateElement('SL_winter', 'Sealine', CapeCodeRoutes.SL_winter, 'Sealine route', img);
-        //this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
+        //this.CreateElement('SL_winter', 'Sealine', CapeCodeRoutes.SL_winter, 'Sealine route', img);
+        this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
         //this.CreateElement('Villager', 'Villager', CapeCodeRoutes.Villager, 'Villager route', img);
-        //this.CreateElement('Whoosh', 'Whoosh', CapeCodeRoutes.Woosh, 'Whoosh route', img);
-        //this.CreateElement('Yarmouth', 'Yarmouth', CapeCodeRoutes.Yarmouth, 'Yarmouth route', img);
+        this.CreateElement('Whoosh', 'Whoosh', CapeCodeRoutes.Woosh, 'Whoosh route', img);
+        this.CreateElement('Yarmouth', 'Yarmouth', CapeCodeRoutes.Yarmouth, 'Yarmouth route', img);
         img = null;
     }
 }
