@@ -41,7 +41,7 @@
     <form id="formMain" runat="server">
         <asp:ScriptManager ID="scriptManagerMap" runat="server">
             <Scripts>   
-                <asp:ScriptReference Path="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6" />
+                <asp:ScriptReference Path="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.1" />
     <%--            <asp:ScriptReference Path="~/js/core/MapJavaScripts.ashx?release=false" />--%>
                     <asp:ScriptReference Path="~/JScript6.js" />
                 <asp:ScriptReference Path="~/js/specific/MapInit.js" />

@@ -5,9 +5,9 @@
 
 var shape;
 var haynnislatlon = new VELatLong(41.65588797740388,-70.28833866119386);
-function AddPin(lat, long, title, description)
+function AddPin(lat, longitude, title, description)
 {
-    var pinlatlong = new VELatLong(lat, long);
+    var pinlatlong = new VELatLong(lat, longitude);
     shape = new VEShape(VEShapeType.Pushpin, pinlatlong);  
     shape.SetCustomIcon('images/bus_stop_icon.png');
     shape.SetTitle(title);         
@@ -70,22 +70,22 @@ function step3(){
 function step4(){
 
     //Yarmouth Procedure (Summer)
-    //map.ZoomIn();
-    //setTimeout("map.PanToLatLong(new VELatLong(41.651322,-70.233572));",3000);
-    //setTimeout("map.ZoomIn();",4000);
-    //setTimeout("map.AddShape(polyline['Yarmouth']);map.SetMapView(polyline['Yarmouth'].GetPoints());",6000);
-    //setTimeout("map.ShowInfoBox(polyline['Yarmouth']);",7000);
-    //setTimeout("map.HideInfoBox(polyline['Yarmouth']);map.DeleteShape(polyline['Yarmouth']);",12000);
+    map.ZoomIn();
+    setTimeout("map.PanToLatLong(new VELatLong(41.651322,-70.233572));",3000);
+    setTimeout("map.ZoomIn();",4000);
+    setTimeout("map.AddShape(polyline['Yarmouth']);map.SetMapView(polyline['Yarmouth'].GetPoints());",6000);
+    setTimeout("map.ShowInfoBox(polyline['Yarmouth']);",7000);
+    setTimeout("map.HideInfoBox(polyline['Yarmouth']);map.DeleteShape(polyline['Yarmouth']);",12000);
     
     //Woosh Procedure (Summer)
-    //setTimeout("map.ZoomOut();",12500);
-    //setTimeout("map.PanToLatLong(new VELatLong(41.639052070137204,-70.52295684814453));",13000);
-    //setTimeout("map.PanToLatLong(new VELatLong(41.541994,-70.636582));",13500);
-    //setTimeout("map.AddShape(polyline['Whoosh']);map.SetMapView(polyline['Whoosh'].GetPoints());",16500);
-    //setTimeout("map.ShowInfoBox(polyline['Whoosh']);",17500);
-    //setTimeout("map.HideInfoBox(polyline['Whoosh']);map.DeleteShape(polyline['Whoosh']);",22500);
-    //setTimeout("step5()",23500);
-    setTimeout("step5()",500);
+    setTimeout("map.ZoomOut();",12500);
+    setTimeout("map.PanToLatLong(new VELatLong(41.639052070137204,-70.52295684814453));",13000);
+    setTimeout("map.PanToLatLong(new VELatLong(41.541994,-70.636582));",13500);
+    setTimeout("map.AddShape(polyline['Whoosh']);map.SetMapView(polyline['Whoosh'].GetPoints());",16500);
+    setTimeout("map.ShowInfoBox(polyline['Whoosh']);",17500);
+    setTimeout("map.HideInfoBox(polyline['Whoosh']);map.DeleteShape(polyline['Whoosh']);",22500);
+    setTimeout("step5()",23500);
+    //setTimeout("step5()",500);
 }
 function step5(){
 
@@ -115,11 +115,11 @@ function step6(){
     //setTimeout("map.HideInfoBox(polyline['Villager']);map.DeleteShape(polyline['Villager']);",12000);
     
     //Hyannis Procedure
-    //setTimeout("map.PanToLatLong(new VELatLong(41.647006,-70.284777));",13000);
-    //setTimeout("map.AddShape(polyline['Hyannis']);map.SetMapView(polyline['Hyannis'].GetPoints());",16000);
-    //setTimeout("map.ShowInfoBox(polyline['Hyannis']);",17000);
-    //setTimeout("map.HideInfoBox(polyline['Hyannis']);map.DeleteShape(polyline['Hyannis']);",22000);
-    setTimeout("step7()", 1000);
+    setTimeout("map.PanToLatLong(new VELatLong(41.647006,-70.284777));",13000);
+    setTimeout("map.AddShape(polyline['Hyannis']);map.SetMapView(polyline['Hyannis'].GetPoints());",16000);
+    setTimeout("map.ShowInfoBox(polyline['Hyannis']);",17000);
+    setTimeout("map.HideInfoBox(polyline['Hyannis']);map.DeleteShape(polyline['Hyannis']);",22000);
+    setTimeout("step7()", 23000);
     
 }
 function step7(){
