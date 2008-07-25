@@ -64,8 +64,9 @@ namespace Geolab
                 case "LIFT6":
                 case "LIFT7":
                 case "ROUTE9":
+                case "ROUTE10":
                 case "NatickCBus":
-                case "NatickNBus":
+                case "ROUTE11":
                 case "GLinkRoute1":
                 case "GLinkRoute2":
                 case "GLinkRoute3":
@@ -112,8 +113,9 @@ namespace Geolab
                 case "LIFT6":
                 case "LIFT7":
                 case "ROUTE9":
+                case "ROUTE10":
                 case "NatickCBus":
-                case "NatickNBus":
+                case "ROUTE11":
                 case "GLinkRoute1":
                 case "GLinkRoute2":
                 case "GLinkRoute3":

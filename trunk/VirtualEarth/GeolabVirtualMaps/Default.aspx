@@ -5,7 +5,19 @@
     <div style="margin:0 auto 0 auto;width:100%; padding-left:50px;">
         <table border="0" cellpadding="0" cellspacing="0" style="WIDTH: 849px">
             <tr>
-                <td style="WIDTH: 843px"><div style="float:left"><asp:Image ID="ImageIcon" runat="server" ImageUrl="images/Map_content/Map-128x128.gif" CssClass="Icon" /></div><div style="float:left;font-size:20pt;margin-top:45px">Automatic Vehicle Location Projects (AVL)&nbsp;</div></td>
+                <td style="WIDTH: 843px"><div style="float:left"><asp:Image ID="ImageIcon" runat="server" ImageUrl="images/Map_content/Map-128x128.gif"  /></div><div style="float:left;font-size:20pt;margin-top:45px">Automatic Vehicle Location Projects (AVL)&nbsp;</div></td>
+            </tr>
+            <tr>
+                <td style="text-indent:135px; width: 843px;">
+                    <h2 class="links">
+                        MetroWest (Boston MA) Mobility Manager&nbsp;</h2>
+                    <h3>
+                        <a href="MetroWest.aspx">Microsoft Virtual Earth</a></h3>
+                    <h3>
+                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/metrowest.xml">Google Mapplets</a></h3>
+                    <h3>
+                        <a href="pda/metrowest.aspx">PDA Display</a></h3>
+                </td>
             </tr>
             <tr>
                 <td style="text-indent:135px; width: 843px;">
@@ -18,27 +30,13 @@
                         <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/capecod.xml">Google Mapplets</a></h3>
                     <h3>
                         <a href="pda/ccrta.aspx">PDA Display</a></h3>
-                    <p>
-                        &nbsp;</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-indent:135px; width: 843px; height: 42px;">
-                    <h2 class="links">
-                        MetroWest (Boston MA) Mobility Manager&nbsp;</h2>
-                    <h3>
-                        <a href="MetroWest.aspx">Microsoft Virtual Earth</a></h3>
-                    <h3>
-                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/metrowest.xml">Google Mapplets</a></h3>
-                    <h3>
-                        <a href="pda/metrowest.aspx">PDA Display</a></h3>
                     <h3>
                         </h3>
                 </td>
             </tr>
             
             
-              <tr>
+            <tr>
                 <td style="text-indent:135px; width: 843px; height: 42px">
                 <h2 class="links">
                 Brockton Area Mobility Manager</h2>
@@ -59,10 +57,25 @@
                         <a href="NorthernTier.aspx">Microsoft Virtual Earth</a></h3>
                     <%--<h3>
                         <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/metrowest.xml">Google Mapplets</a></h3>--%>
-                    <%--<h3>
-                        <a href="pda/metrowest.aspx">PDA Display</a></h3>
                     <h3>
-                        </h3>--%>
+                        <a href="pda/northerntier.aspx">PDA Display</a></h3>
+                    <h3>
+                        </h3>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-indent:135px; width: 843px; height: 42px;">
+                    <h2 class="links">
+                        South Portland (ME) Mobility Manager&nbsp;</h2>
+                    <%-- %><h3>
+                        <a href="NorthernTier.aspx">Microsoft Virtual Earth</a></h3> --%>
+                    <%--<h3>
+                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/metrowest.xml">Google Mapplets</a></h3>--%>
+                    <h3>
+                        <a href="pda/southportland.aspx">PDA Display</a></h3>
+                    <h3>
+                        </h3>
                 </td>
             </tr>
             
@@ -72,7 +85,8 @@
                     <h2 class="links">
                         GeoGraphics Lab R&amp;D AVL</h2>
                     <h3> <a href="GeoGraphicsLab.aspx">Microsoft Virtual Earth</a></h3>
-                    <h3> <a href="pda/nhtsa.aspx">PDA Display</a></h3>
+                    <h3> <a href="pda/geolab.aspx">PDA Display</a></h3>
+                    <h3> </h3>
                 </td>
             </tr>
          
@@ -82,6 +96,7 @@
                        Southeastern MA Emergency Management AVL</h2>
                     <h3> <a href="SouthEastern.aspx">Microsoft Virtual Earth</a></h3>
                     <h3> <a href="pda/emergency.aspx">PDA Display</a></h3>
+                    <h3></h3>
                 </td>
             </tr>
           
@@ -93,7 +108,7 @@
                         Bridgewater State Transit AVL</h2>
                     <h3> <a href="Bridgew.aspx">Microsoft Virtual Earth </a></h3>
                     <h3> <a href="pda/bridgewater.aspx">PDA Display</a></h3>
-                    
+                    <h3></h3>
                                     </td>
             </tr>  
             <tr>
