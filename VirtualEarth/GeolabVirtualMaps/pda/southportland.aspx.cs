@@ -17,7 +17,7 @@ using Geolab;
         {
             InfoRetrieved.Text = System.DateTime.Now.ToString();
             Geolab.PDAData p1 = new Geolab.PDAData();
-            p1.RetreivePDATable("Bridgew", ref Table1);
+            p1.RetreivePDATable("SouthPortland", ref Table1);
             Table1.Visible = true;
         }
         protected void Refresher_Click(object sender, EventArgs e)

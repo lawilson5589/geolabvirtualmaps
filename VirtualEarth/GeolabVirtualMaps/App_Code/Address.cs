@@ -64,6 +64,10 @@ namespace ReverseGeo
                 _address = value;
             }
         }
+        public SingleReverseGeoCode()
+        {
+            _address = new Address();
+        }
     }
 
     public class Address

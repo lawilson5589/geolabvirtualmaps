@@ -24,10 +24,12 @@ if(Dashboard){
         MetroWestStops['LIFT7'].SetWebService(wbs);
         MetroWestStops['ROUTE9'] = new Geolab.PushPinLayer('ROUTE9');
         MetroWestStops['ROUTE9'].SetWebService(wbs);
+        MetroWestStops['Route10'] = new Geolab.PushPinLayer('Route10');
+        MetroWestStops['Route10'].SetWebService(wbs);
+        MetroWestStops['ROUTE11'] = new Geolab.PushPinLayer('ROUTE11');
+        MetroWestStops['ROUTE11'].SetWebService(wbs);
         MetroWestStops['NatickCBus'] = new Geolab.PushPinLayer('NatickCBus');
         MetroWestStops['NatickCBus'].SetWebService(wbs);
-        MetroWestStops['NatickNBus'] = new Geolab.PushPinLayer('NatickNBus');
-        MetroWestStops['NatickNBus'].SetWebService(wbs);
         this.CreateElement('Routes', 'Routes');
          
         // END
@@ -42,14 +44,15 @@ if(Dashboard){
         MetroWestRoutes.LIFT6 =  function(){MetroWestStops['LIFT6'].Invoke('LIFT6');MetroWestRoutes.Invoke('LIFT6');}
         MetroWestRoutes.LIFT7 =  function(){MetroWestStops['LIFT7'].Invoke('LIFT7');MetroWestRoutes.Invoke('LIFT7');}
         MetroWestRoutes.ROUTE9 =  function(){MetroWestStops['ROUTE9'].Invoke('ROUTE9');MetroWestRoutes.Invoke('ROUTE9');}
+        MetroWestRoutes.ROUTE10 = function() {MetroWestStops['Route10'].Invoke('ROUTE10');MetroWestRoutes.Invoke('ROUTE10');}
+        MetroWestRoutes.ROUTE11 =  function(){MetroWestStops['ROUTE11'].Invoke('ROUTE11');MetroWestRoutes.Invoke('ROUTE11');}
         MetroWestRoutes.NatickCBus =  function(){MetroWestStops['NatickCBus'].Invoke('NatickCBus');MetroWestRoutes.Invoke('NatickCBus');}
-        MetroWestRoutes.NatickNBus =  function(){MetroWestStops['NatickNBus'].Invoke('NatickNBus');MetroWestRoutes.Invoke('NatickNBus');}
 
     
 
         var img = "images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', MetroWestRoutes.{Function});
-       // this.CreateElement('Jim', 'Jim', MetroWestRoutes.Flex, 'Jimbo', img);
+        // this.CreateElement('Jim', 'Jim', MetroWestRoutes.Flex, 'Jimbo', img);
         this.CreateElement('LIFT2', 'Route 2', MetroWestRoutes.LIFT2, 'Route 2', img);
         this.CreateElement('LIFT3', 'Route 3', MetroWestRoutes.LIFT3, 'Route 3', img);
         this.CreateElement('LIFT4', 'Route 4', MetroWestRoutes.LIFT4, 'Route 4', img);
@@ -57,8 +60,10 @@ if(Dashboard){
         this.CreateElement('LIFT6', 'Route 6', MetroWestRoutes.LIFT6, 'Route 6', img);
         this.CreateElement('LIFT7', 'Route 7', MetroWestRoutes.LIFT7, 'Route 7', img);
         this.CreateElement('ROUTE9', 'Route 9', MetroWestRoutes.ROUTE9, 'Route 9', img);
+        this.CreateElement('ROUTE10', 'Route 10', MetroWestRoutes.ROUTE10, 'Route 10', img);
+        this.CreateElement('ROUTE11', 'Route 11', MetroWestRoutes.ROUTE11, 'Route 11', img);
         this.CreateElement('NatickCBus', 'NatickCBus', MetroWestRoutes.NatickCBus, 'NatickCBus', img);
-        this.CreateElement('NatickNBus', 'NatickNBus', MetroWestRoutes.NatickNBus, 'NatickNBus', img);
+
         img = null;
     }
 }

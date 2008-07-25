@@ -23,6 +23,14 @@ h2
 	font-family: Verdana;
 	text-align: center;
 }
+table
+{
+    Border: solid;
+}
+table-cell
+{
+    border-spacing: 0;
+}
 TD
 {
     font-size: smaller;
@@ -38,5 +46,4 @@ TH
 }
 div
 {
-	text-align: center;
 }

@@ -18,6 +18,13 @@ namespace Geolab
             }
         }
 
+        public static String GeolabID
+        {
+            get
+            {
+                return "GeolabID";
+            }
+        }
        
         public static String Datetime
         {
@@ -185,6 +192,22 @@ namespace Geolab
             get
             {
                 return "BusID";
+            }
+
+        }
+        public static String TimetoGrey
+        {
+            get
+            {
+                return "TimetoGrey";
+            }
+
+        }
+        public static String CustomIcon
+        {
+            get
+            {
+                return "CustomIcon";
             }
 
         }

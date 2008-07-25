@@ -163,8 +163,17 @@ namespace Geolab
             {
                 while (sqldatareader.Read())
                 {
-                    
                     VEVehicle vehicle = new VEVehicle(flags);
+                    if (sqldatareader[AGPS_DbColumnNames.TimetoGrey].ToString() != "")
+                    {
+                        timespan1 = RetreiveTimespan(sqldatareader[AGPS_DbColumnNames.TimetoGrey].ToString());
+                    }
+
+                    if (sqldatareader[AGPS_DbColumnNames.CustomIcon].ToString() != "")
+                    {
+                        vehicle.CustomIcon = sqldatareader[AGPS_DbColumnNames.CustomIcon].ToString();
+                    }
+                    
                     DateTime dt1 = Convert.ToDateTime(sqldatareader[AGPS_DbColumnNames.Datetime]);
                     DateTime dt2 = System.DateTime.Now.Subtract(timespan1);
                     String[] datetime = sqldatareader[AGPS_DbColumnNames.Datetime].ToString().Split(' ');
@@ -173,7 +182,8 @@ namespace Geolab
                     {
                         //Timespan Variable sets the lowerbound, Stored Procedure Sets the UpperBound
                         //Turns Bus Grey When Record not received for period of time
-                        //Currently 5 seconds- 3 days
+                        //Currently, lowerbound is defaulted at 5 sec, read from database if exists on geolab_mdt2_cape.dbo.PhoneRoutes
+                        //Upperbound is set at 3 days from the timeselection on the stored procedure selecting data (Filters out all GPS older than three days)
                         vehicle.CustomIcon = "images/map_vehicles/Bus_20_grey.png";
                     }
                     vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
@@ -193,10 +203,11 @@ namespace Geolab
                     }
                     catch (SqlException sqlex)
                     {
+                        Convert.ToString(sqlex);
                     }
                     try
                     {
-                        if (sqldatareader.VisibleFieldCount == 14)
+                        if (sqldatareader.VisibleFieldCount == 16)
                         {
                             String bid = sqldatareader[AGPS_DbColumnNames.Busid].ToString();
                             if (bid != "")
@@ -207,6 +218,7 @@ namespace Geolab
                     }
                     catch (SqlException sqlex)
                     {
+                        Convert.ToString(sqlex);
                     }
 
                     output.AppendFormat("Array.add(collection, {0});", vehicle.ToJson());
@@ -219,8 +231,27 @@ namespace Geolab
             return true;
         }
 
+        private static TimeSpan RetreiveTimespan(string p)
+        {
+            //Converts string time in seconds to a TimeSpan type for determining grey timeout lowerbound
+            int temp = 0;
+            int timeinseconds = Convert.ToInt32(p);
+            int hours = timeinseconds / 3600;
+            temp = hours * 3600;
+            timeinseconds = timeinseconds - temp;
+            int minutes = timeinseconds / 60;
+            temp = minutes * 60;
+            timeinseconds = timeinseconds - temp;
+            int seconds = timeinseconds;
+
+            TimeSpan t1 = new TimeSpan(hours, minutes, seconds);
+            return (t1);
+
+        }
+
         public static bool RetrieveVehicleXMLData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags, bool displayXMLHeader, bool displayXMLFooter)
         {
+            //XML Web Service- Returns xml file with current phone GPS information to requestor. Used in the Google Mapplet application to display the phones.
             if (displayXMLHeader)
             {
                 output.AppendFormat("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
@@ -243,7 +274,7 @@ namespace Geolab
                     vehicle.SatelliteNumber = VEVehicle.GetSatteliteBars(sqldatareader[AGPS_DbColumnNames.SatelliteNumber].ToString());
                     vehicle.BatteryLevel = sqldatareader[AGPS_DbColumnNames.BatteryLevel].ToString();
                     vehicle.SignalStrength = sqldatareader[AGPS_DbColumnNames.SignalStrength].ToString();
-                    vehicle.GeolabID = sqldatareader["GeolabID"].ToString().Trim();
+                    vehicle.GeolabID = sqldatareader["GeolabID"].ToString().Substring(4);
                     vehicle.LocationInfo = vehicle.GeoCoding ? vehicle.GetLocationInfo() : "";
                     try
                     {

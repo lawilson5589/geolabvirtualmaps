@@ -18,123 +18,90 @@
         <p>
             <asp:Button ID="Refresher" runat="server" OnClick="Refresher_Click" Text="Refresh" />&nbsp;</p>
         <p>
-            Bridgewater Transit System</p>
-               <p style="text-align: center">
-            &nbsp;</p>
-          
-            <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False" HorizontalAlign="Center">
-            <Columns> 
-               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
-                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
-                <asp:BoundField />
-                <asp:BoundField DataField="PositionHeading"  />
-            </Columns>
-                                    <EmptyDataTemplate>
-                            <span style="color: #ff0000">No Data</span>
-                        </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_Bridgew" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-        <br />
+            MetroWest Transit Authority</p>
+         
+                   <asp:Table ID="Table1" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+                   </asp:Table>
+
           
         <p>
-            Cape Cod Regional Transit Authority- Cell Phones</p>
+            BusyBee Paratransit Services</p>
+  
+            <asp:Table ID="Table2" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+
         <p>
-            &nbsp;</p>
-                    <asp:GridView ID="GridView2" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" EnableViewState="False" HorizontalAlign="Center">
-            <Columns>
-               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
-                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
-                <asp:BoundField />
-                <asp:BoundField DataField="PositionHeading"  />
-            </Columns>
-                                    <EmptyDataTemplate>
-                            <span style="color: #ff0000">No Data</span>
-                        </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_CapeCod" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-        <br />
+            Bridgewater State College Transit</p>
+
+            <asp:Table ID="Table3" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+
         <p>
-            Cape Cod Regional Transit Authority- Legacy</p>
-        <p>
-            &nbsp;</p>
-                   <asp:GridView ID="GridView3" runat="server" onrowdatabound="GridView1_RowDataBound" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" EnableViewState="False" HorizontalAlign="Center">
-            <Columns>
-                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
-                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
-                <asp:BoundField />
-                <asp:BoundField DataField="PositionHeading"  />
-            </Columns>
-                                    <EmptyDataTemplate>
-                            <span style="color: #ff0000">No Data</span>
-                        </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:busgpsConnectionString %>"
-            SelectCommand="sp_SelectAVL_CapeCodePartners" SelectCommandType="StoredProcedure">
-        </asp:SqlDataSource>
-        <br />
-        <p>
-            Southeastern MA Emergency Control</p>
-        <p>
-            &nbsp;</p>
-                   <asp:GridView ID="GridView4" onrowdatabound="GridView1_RowDataBound" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4"
-            EnableViewState="False" HorizontalAlign="Center">
-            <Columns>
-               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
-                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
-                <asp:BoundField />
-                <asp:BoundField DataField="PositionHeading"  />
-            </Columns>
-                       <EmptyDataTemplate>
-                           <span style="color: #ff0000">No Data</span>
-                       </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_SouthEastern" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-        <br />
-        <br />
+            Brockton Area Transit Paratransit</p>
+    
+            <asp:Table ID="Table4" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+
+ 
     
         <p>
-            Metrowest Transit Authority</p>
+            Cape Cod 8000 Series/6000 Series</p>
+   
+            <asp:Table ID="Table5" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+    
+            
+                    <p>
+                        Cape Cod MDTs</p>
+
+            <asp:Table ID="Table6" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+
+                    <p>
+                        Emergency Services</p>
+
+            <asp:Table ID="Table7" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+
+                    <p>
+                        Geolab Development Phones</p>
+
+            <asp:Table ID="Table8" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+     
+                    <p>
+                        Geolab Paratransit Development Phones</p>
+  
+            <asp:Table ID="Table9" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+       
+                    <p>
+                        NorthernTier Transportation </p>
+       
+            <asp:Table ID="Table10" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+            </asp:Table>
+   
+                    <p>
+                        MWRTA Commuter Rail</p>
+        <asp:Table ID="Table11" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+        </asp:Table>
         <p>
-            &nbsp;</p>
-                    <asp:GridView ID="GridView5" onrowdatabound="GridView1_RowDataBound"  runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" EnableViewState="False" HorizontalAlign="Center">
-            <Columns>
-               <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
-                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
-                <asp:BoundField />
-                <asp:BoundField DataField="PositionHeading"  />
-            </Columns>
-                        <EmptyDataTemplate>
-                            <span style="color: #ff0000">No Data</span>
-                        </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_Framingham" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-        <br />
-    
-    
+            South Portland Transportation
+        </p>
+        <asp:Table ID="Table12" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+        </asp:Table>     
     </div>
     </form>
 </body>

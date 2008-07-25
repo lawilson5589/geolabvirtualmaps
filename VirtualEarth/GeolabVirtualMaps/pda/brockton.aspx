@@ -22,31 +22,10 @@
         <p>
             &nbsp;</p>
         <p>  <a name ="GridView">Brockton Paratransit Vehicles</a></p>
+        <asp:Table ID="Table1" runat="server" BorderStyle="Solid" CellPadding="0" 
+            CellSpacing="0" GridLines="Both">
+        </asp:Table>
         <br />
-        <br />
-      
-        <asp:GridView ID="GridView1" onrowdatabound="GridView1_RowDataBound"  runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableViewState="False">
-            <Columns>
-                <asp:BoundField DataField="Froutename" HeaderText="Route" />
-                <asp:BoundField DataField="BusID" HeaderText="Bus ID" SortExpression="BusID" />
-                <asp:BoundField DataField="Datetime" HtmlEncode="False" HeaderText="Time" SortExpression="Datetime" DataFormatString="{0:g}" />
-                <asp:BoundField DataField="PositionSpeed" HeaderText="Speed" SortExpression="PositionSpeed" />
-                <asp:BoundField HeaderText="Location" />
-                <asp:BoundField DataField="Latitude" SortExpression="Latitude" HeaderText ="Bearing"/>
-                <asp:BoundField DataField="Longitude" SortExpression="Longitude" />
-                <asp:BoundField />
-                <asp:BoundField DataField="PositionHeading"  />
-            </Columns>
-            <EmptyDataTemplate>
-                No Data Available
-            </EmptyDataTemplate>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
-            SelectCommand="sp_SelectAVL_Brockton" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-        <br />
-    
-    <h4>
-        &nbsp;</h4>
     
     </div>
     </form>

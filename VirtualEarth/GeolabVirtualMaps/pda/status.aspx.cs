@@ -17,115 +17,46 @@ public partial class pda_status : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         InfoRetrieved.Text = System.DateTime.Now.ToString();
+        Geolab.PDAData p1 = new Geolab.PDAData();
+        Geolab.PDAData p2 = new Geolab.PDAData();
+        Geolab.PDAData p3 = new Geolab.PDAData();
+        Geolab.PDAData p4 = new Geolab.PDAData();
+        Geolab.PDAData p5 = new Geolab.PDAData();
+        Geolab.PDAData p6 = new Geolab.PDAData();
+        Geolab.PDAData p7 = new Geolab.PDAData();
+        Geolab.PDAData p8 = new Geolab.PDAData();
+        Geolab.PDAData p9 = new Geolab.PDAData();
+        Geolab.PDAData p10 = new Geolab.PDAData();
+        Geolab.PDAData p11 = new Geolab.PDAData();
+        Geolab.PDAData p12 = new Geolab.PDAData();
 
+        p1.RetreivePDATable("MWRTA", ref Table1);
+        p2.RetreivePDATable("BusyBeeMWRTA", ref Table2);
+        p3.RetreivePDATable("Bridgew", ref Table3);
+        p4.RetreivePDATable("Brockton", ref Table4);
+        p5.RetreivePDATable("CapeCod", ref Table5);
+        p6.RetreivePDATable("CapeCodMDT", ref Table6);
+        p7.RetreivePDATable("Emergency", ref Table7);
+        p8.RetreivePDATable("GeoLab", ref Table8);
+        p9.RetreivePDATable("GeoLabParatransit", ref Table9);
+        p10.RetreivePDATable("NorthernTier", ref Table10);
+        p11.RetreivePDATable("RailsMWRTA", ref Table11);
+        p12.RetreivePDATable("SouthPortland", ref Table12);
+
+        Table1.Visible = true;
+        Table2.Visible = true;
+        Table3.Visible = true;
+        Table4.Visible = true;
+        Table5.Visible = true;
+        Table6.Visible = true;
+        Table7.Visible = true;
+        Table8.Visible = true;
+        Table9.Visible = true;
+        Table10.Visible = true;
+        Table11.Visible = true;
     }
     protected void Refresher_Click(object sender, EventArgs e)
     {
         Response.Redirect(Page.Request.Url.ToString());
-    }
-    protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
-    {
-        if (e.Row.RowType == DataControlRowType.DataRow)
-        {
-            DateTime recordtime = Convert.ToDateTime(e.Row.Cells[1].Text);
-            TimeSpan timespan1 = new TimeSpan(0, 1, 0);
-            bool current = true;
-            string lat = e.Row.Cells[4].Text;
-            double dlat = double.Parse(lat);
-            string lng = e.Row.Cells[5].Text;
-            double dlng = double.Parse(lng);
-            LatLong latlong = new LatLong();
-            latlong.Latitude = dlat;
-            latlong.Longitude = dlng;
-            string latlong2 = String.Concat("Lat: ", lat, " Lng: ", lng);
-
-
-            if ((recordtime < (DateTime)System.DateTime.Now.Subtract(timespan1)))
-            {
-                e.Row.Visible = false;
-                current = false;
-            }
-            if (current == true)
-            {
-                try
-                {
-                    int bearing = Convert.ToInt32(e.Row.Cells[7].Text);
-                    if ((bearing >= 20) && (bearing <= 65))
-                    {
-                        e.Row.Cells[6].Text = "NE";
-                    }
-                    else if ((bearing > 65) && (bearing <= 110))
-                    {
-                        e.Row.Cells[6].Text = "E";
-                    }
-                    else if ((bearing > 110) && (bearing <= 155))
-                    {
-                        e.Row.Cells[6].Text = "SE";
-                    }
-                    else if ((bearing > 155) && (bearing <= 200))
-                    {
-                        e.Row.Cells[6].Text = "S";
-                    }
-                    else if ((bearing > 200) && (bearing <= 245))
-                    {
-                        e.Row.Cells[6].Text = "SW";
-                    }
-                    else if ((bearing > 245) && (bearing <= 290))
-                    {
-                        e.Row.Cells[6].Text = "W";
-                    }
-                    else if ((bearing > 290) && (bearing <= 335))
-                    {
-                        e.Row.Cells[6].Text = "NW";
-                    }
-                    else if ((bearing > 335) && (bearing <= 360))
-                    {
-                        e.Row.Cells[6].Text = "N";
-                    }
-                    else if ((bearing >= 0) && (bearing < 20))
-                    {
-                        e.Row.Cells[6].Text = "N";
-                    }
-                }
-                catch (Exception f)
-                {
-                    e.Row.Cells[6].Text = "Null";
-                }
-
-
-
-
-                //Define get info options object
-                GetInfoOptions options = new GetInfoOptions();
-                //I'm looking only for cities
-                options.IncludeAllEntityTypes = false;
-                options.EntityTypesToReturn = new string[] { "PopulatedPlace" };
-
-
-                //Define a field to hold returned locations
-                //Location[] returnedLocations;
-                ReverseGeo.SingleReverseGeoCode returnedLocations;
-                //Call GetLocationInfo with "MapPoint.NA" data source
-                try
-                {
-                    //MAPPOINT CALL
-                    //returnedLocations = global.FindService.GetLocationInfo(latlong, "MapPoint.NA", options);
-                    //e.Row.Cells[4].Text = returnedLocations[0].Entity.DisplayName;
-                    // e.Row.Cells[4].Text = latlong2;
-                    returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(dlat, dlng);
-                    String result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.placename, " ,", returnedLocations.address.adminCode1, " ", returnedLocations.address.postalcode);
-
-                    e.Row.Cells[4].Text = result;
-                }
-                catch (Exception f)
-                {
-                    e.Row.Cells[4].Text = latlong2;
-                }
-
-                e.Row.Cells[4].Visible = false;
-                e.Row.Cells[5].Visible = false;
-                e.Row.Cells[7].Visible = false;
-            }
-        }
     }
 }

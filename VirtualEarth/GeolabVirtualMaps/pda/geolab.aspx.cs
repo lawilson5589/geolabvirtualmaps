@@ -17,8 +17,12 @@ using Geolab;
         {
             InfoRetrieved.Text = System.DateTime.Now.ToString();
             Geolab.PDAData p1 = new Geolab.PDAData();
-            p1.RetreivePDATable("Bridgew", ref Table1);
+            Geolab.PDAData p2 = new Geolab.PDAData();
+            p1.RetreivePDATable("GeoLab", ref Table1);
+            p2.RetreivePDATable("GeoLabParatransit", ref Table2);
             Table1.Visible = true;
+            Table2.Visible = true;
+
         }
         protected void Refresher_Click(object sender, EventArgs e)
         {
