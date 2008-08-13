@@ -1,5 +1,6 @@
 ﻿/* Author: JBaltikauskas, D. Fitch */
 var GeolabMap = {
+
     GetMap : function()
     {
         map = new VEMap("geoMap");

@@ -185,7 +185,7 @@ namespace Geolab
                     if (containsbusid)
                         cells[1].Text = sr[AGPS_DbColumnNames.Busid].ToString();
                     else
-                        cells[1].Text = sr[AGPS_DbColumnNames.GeolabID].ToString().Remove(0,3);
+                        cells[1].Text = sr[AGPS_DbColumnNames.GeolabID].ToString().Remove(0,4);
                     cells[2].Text = dtstring;
                     String speed = sr[AGPS_DbColumnNames.PositionSpeed].ToString();
                     cells[3].Text = !(String.IsNullOrEmpty(sr[AGPS_DbColumnNames.PositionSpeed].ToString())) ? String.Format("{0} MPH", sr[AGPS_DbColumnNames.PositionSpeed].ToString()) : " ";

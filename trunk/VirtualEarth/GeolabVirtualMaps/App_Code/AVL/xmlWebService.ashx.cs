@@ -84,6 +84,21 @@ namespace Geolab
                             this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
                             this.info.Title = "BusyBeeMWRTA";
                             break;
+                        case "NorthernTier":
+                            this.storedProcedureName = "sp_SelectAVL_NorthernTier";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
+                            this.info.Title = "Northern Tier Transportation";
+                            break;
+                        case "RailsMWRTA":
+                            this.storedProcedureName = "sp_SelectAVL_RailsMWRTA";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
+                            this.info.Title = "MetroWest Commuter Rail";
+                            break;
+                        case "SouthPortland":
+                            this.storedProcedureName = "sp_SelectAVL_SouthPortland";
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
+                            this.info.Title = "South Portland Transportation";
+                            break;
                         default:
                             break;
                     }
