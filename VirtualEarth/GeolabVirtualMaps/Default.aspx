@@ -55,8 +55,8 @@
                         Northern (MA) Transportation Tier Mobility Manager&nbsp;</h2>
                     <h3>
                         <a href="NorthernTier.aspx">Microsoft Virtual Earth</a></h3>
-                    <%--<h3>
-                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/metrowest.xml">Google Mapplets</a></h3>--%>
+                    <h3>
+                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/northerntier.xml">Google Mapplets</a></h3>
                     <h3>
                         <a href="pda/northerntier.aspx">PDA Display</a></h3>
                     <h3>
@@ -83,7 +83,7 @@
                 <td style="text-indent:135px; width: 843px; height: 42px;">
 
                     <h2 class="links">
-                        GeoGraphics Lab R&amp;D AVL</h2>
+                        Northern New England R&amp;D AVL</h2>
                     <h3> <a href="GeoGraphicsLab.aspx">Microsoft Virtual Earth</a></h3>
                     <h3> <a href="pda/geolab.aspx">PDA Display</a></h3>
                     <h3> </h3>

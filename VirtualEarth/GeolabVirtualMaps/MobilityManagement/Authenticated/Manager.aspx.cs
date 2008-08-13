@@ -25,6 +25,14 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         {
             Label3.Text = "CCRTA MDT";
         }
+        else if (User.IsInRole("SouthPortland"))
+        {
+            Label3.Text = "SouthPortland";
+        }
+        else if (User.IsInRole("NorthernTier"))
+        {
+            Label3.Text = "NorthernTier";
+        }
         else if (User.IsInRole("BusyBeeMWRTA"))
         {
             Label3.Text = "BusyBeeMWRTA";
@@ -64,7 +72,8 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         GridView gv1 = (GridView)LoginView1.FindControl("GridView1");
         String test = gv1.SelectedRow.Cells[1].Text.ToString();
         Label labl = (Label)LoginView1.FindControl("Label2");
-        TextBox text1 = (TextBox)LoginView1.FindControl("textbox1");
+        TextBox text1 = new TextBox();
+        text1 = (TextBox)LoginView1.FindControl("textbox1");
         DropDownList dd1 = (DropDownList)LoginView1.FindControl("DropDownList1");
         if (gv1.SelectedRow.Cells[2].Text != "&nbsp;")
         {
@@ -92,7 +101,7 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         Label labl = (Label)LoginView1.FindControl("Label2");
         SqlDataSource sql1 = (SqlDataSource)LoginView1.FindControl("SqlDataSource1");
         TextBox text1 = null;
-        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")) || (User.IsInRole("BAT")))
+        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")) || (User.IsInRole("BAT")) || (User.IsInRole("NorthernTier")) || (User.IsInRole("SouthPortland")))
         {
             text1 = (TextBox)LoginView1.FindControl("Textbox1");
         }
@@ -106,7 +115,7 @@ public partial class MobilityMangement_Authenticated_Manager : System.Web.UI.Pag
         sql1.UpdateParameters.Add("GeolabID", labl.Text);
         sql1.UpdateParameters.Add("Routename", route);
         sql1.UpdateParameters.Add("Date", null);
-        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA"))  || (User.IsInRole("BAT")))
+        if ((User.IsInRole("MetroWest")) || (User.IsInRole("BusyBeeMWRTA")) || (User.IsInRole("BAT")) || (User.IsInRole("NorthernTier")) || (User.IsInRole("SouthPortland")))
         {
             sql1.UpdateParameters.Add("BusID", text1.Text);
         }

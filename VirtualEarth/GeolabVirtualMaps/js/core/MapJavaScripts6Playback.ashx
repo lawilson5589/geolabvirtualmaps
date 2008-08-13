@@ -1,0 +1,1 @@
+<%@ WebHandler Language="C#" CodeBehind="MapJavascripts6Playback.ashx.cs" Class="Geolab.MapJavaScripts6Playback" %>

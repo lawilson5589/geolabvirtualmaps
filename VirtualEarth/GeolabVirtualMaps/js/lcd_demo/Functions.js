@@ -5,6 +5,10 @@
 
 var shape;
 var haynnislatlon = new VELatLong(41.65588797740388,-70.28833866119386);
+function Start()
+{
+    setTimeout("step1()", 1000);
+}
 function AddPin(lat, longitude, title, description)
 {
     var pinlatlong = new VELatLong(lat, longitude);
