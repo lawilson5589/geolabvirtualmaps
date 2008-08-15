@@ -83,7 +83,7 @@
                 <td style="text-indent:135px; width: 843px; height: 42px;">
 
                     <h2 class="links">
-                        Northern New England R&amp;D AVL</h2>
+                        New England R&amp;D AVL</h2>
                     <h3> <a href="GeoGraphicsLab.aspx">Microsoft Virtual Earth</a></h3>
                     <h3> <a href="pda/geolab.aspx">PDA Display</a></h3>
                     <h3> </h3>

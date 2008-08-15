@@ -73,7 +73,7 @@ namespace Geolab
                     sqlreader = sqlcomd1.ExecuteReader(CommandBehavior.CloseConnection);
                     this.StoredProcedureName = AntiXss.UrlEncode(context.Request.QueryString["ID"]);
                     StringBuilder sb = new StringBuilder("collection=new Array();");
-                    SqlVECollectionReader.RetrieveVehicleData(ref sqlreader, ref sb, this.info);
+                    SqlVECollectionReader.RetrieveVehicleData(ref sqlreader, ref sb, this.info, true);
 
                     context.Response.Write(sb.ToString());
                 }

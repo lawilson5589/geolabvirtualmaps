@@ -17,7 +17,7 @@ function GetData()
     var starttimeminutes = parseInt(document.formMain.DropDownList3[dd3].value);
     var duration = parseInt(document.formMain.DropDownList4[dd4].value);
     var date = document.formMain.TextBox1.value;
-    var addday = false;
+    window.addday = false;
     var timeofdaystart = "AM";
     if (date.length == 8)
     {
@@ -27,14 +27,19 @@ function GetData()
         if (starttimehours > 12)
         {
             starttimehours = starttimehours - 12;
-            timeofdaystart = "PM"
+            timeofdaystart = "PM";
+        }
+        if (starttimehours == 12)
+        {
+            timeofdaystart = "PM";
         }
         var startdate = date.substring(0,2) + "/" + date.substring(2,4) + "/" + date.substring(4,9) + " " + starttimehours + ":" + starttimeminutes + ":00 " + timeofdaystart;
 
-        if (addday == false)
+        if (window.addday == false)
         {
             document.formMain.StartButton.disabled = true;
             document.formMain.ResetButton.disabled = false;
+            document.getElementById("LoadingLabel").innerText = "Loading...."
             MakeRequest(startdate, day.enddate);
         }
         else
@@ -75,7 +80,11 @@ function CalculateTiming(starttimehours, starttimeminutes, duration, date, day)
    if (endtimehours >= 24)
    {
        endtimehours = endtimehours - 24;
-       this.addday = true;
+       window.addday = true;
+   }
+   if (endtimehours == 12)
+   {
+       day.timeofday = "PM";
    }
    if (endtimeminutes == 0)
    {
@@ -99,6 +108,7 @@ var self = this;
                 {
                     try{
                     
+                        
                         var collection = new Array;
 
                         eval(executor.get_responseData());
@@ -106,13 +116,15 @@ var self = this;
                         var i = 0;
                         if (collection.length > 0)
                         {
-                            setTimeout(String.format("AddPin({0},{1},'Test', \"Date:{2} Time: {3}\");map.ShowInfoBox(shape, map.PixelToLatLong(new VEPixel(map.GetLeft() + 25, map.GetTop() + 50 )));", collection[i].Latitude, collection[i].Longitude, collection[i].Date, collection[i].Time),time)
+                            setTimeout(String.format("AddPin({0},{1},'Test', \"Date:{2} Time: {3}\");map.ShowInfoBox(shape, map.PixelToLatLong(new VEPixel(map.GetLeft() + 25, map.GetTop() + 50 )));map.SetCenter(new VELatLong({0},{1}));", collection[i].Latitude, collection[i].Longitude, collection[i].Date, collection[i].Time),time)
                             time = time + 250;
                             i++;
                         }
                         else 
                         {
                             var center = map.GetCenter();
+                            document.formMain.StartButton.disabled = false;
+                            document.formMain.ResetButton.disabled = true;
                             AddPin(center.Latitude, center.Longitude, "No Results Found!");
                             map.ShowInfoBox(shape);
                         }
@@ -123,10 +135,15 @@ var self = this;
                             var playbackdelayduration = parseInt(document.formMain.PlaybackSpeedDropDown[playbackspeedindex].value);
                             for(i in collection)
                             {
-                                var javascriptcommand = String.format("map.DeleteShape(shape);AddPin({0},{1},'Test', \"Date:{2} Time: {3} <br />GPS Info: <img alt='Sattelite' src='images/map_icons/sat_{4}.gif'></img> <img alt='Signal' src='images/map_icons/sig_{5}.gif'> </img><img alt='Battery' src='images/map_icons/batt_{6}.gif'></img><br /><br />Speed: {7} MPH   Heading: {8} &deg\");map.ShowInfoBox(shape, map.PixelToLatLong(new VEPixel(map.GetLeft() + 25, map.GetTop() + 70 )));", collection[i].Latitude, collection[i].Longitude, collection[i].Date, collection[i].Time, collection[i].SatelliteNumber, collection[i].SignalStrength, collection[i].BatteryLevel, collection[i].Speed, collection[i].Heading);
+                                var javascriptcommand = String.format("map.DeleteShape(shape);AddPin({0},{1},'{9}', \"Date:{2} Time: {3} <br />GPS Info: <img alt='Sattelite' src='images/map_icons/sat_{4}.gif'></img> <img alt='Signal' src='images/map_icons/sig_{5}.gif'> </img><img alt='Battery' src='images/map_icons/batt_{6}.gif'></img><br /><br />Speed: {7} MPH   Heading: {8} &deg\");map.ShowInfoBox(shape, map.PixelToLatLong(new VEPixel(map.GetLeft() + 25, map.GetTop() + 70 )));", collection[i].Latitude, collection[i].Longitude, collection[i].Date, collection[i].Time, collection[i].SatelliteNumber, collection[i].SignalStrength, collection[i].BatteryLevel, collection[i].Speed, collection[i].Heading, collection[i].GeolabID);
                                 window.t[i] = setTimeout(javascriptcommand,time);
                                 time = time + playbackdelayduration;
                             }
+                        }
+                        else
+                        {
+                            document.formMain.StartButton.disabled = false;
+                            document.formMain.ResetButton.disabled = true;
                         }
                         collection = null;
                     }catch(e){
@@ -144,6 +161,7 @@ var self = this;
                         }
                     }
                 }
+                document.getElementById("LoadingLabel").innerText = "";
             };
         
         try{
