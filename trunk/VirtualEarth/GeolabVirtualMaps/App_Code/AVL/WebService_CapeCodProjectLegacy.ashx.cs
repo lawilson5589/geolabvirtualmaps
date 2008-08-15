@@ -124,7 +124,7 @@ namespace Geolab
                 sqlconnection.Open();
 
                 SqlDataReader sqldatareader = sqlcommand.ExecuteReader();
-                SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader, ref sb, this.info);
+                SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader, ref sb, this.info, false);
             }
 
             catch (SqlException sqlex)

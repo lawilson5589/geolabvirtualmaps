@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head" runat="server">
-    <title>GeoGraphics Lab - Haynnis Demo </title>
+    <title>GeoGraphics Lab - Playback Service</title>
 
      <script type="text/javascript">
         this.__reverseGeoCoding = true;
@@ -102,7 +102,9 @@
         &nbsp;
         <input id="StartButton" type="button" value="Start" onclick="GetData()"/>&nbsp;
         <input id="ResetButton" type="button" value="Reset" onclick="CancelRequest()" 
-            disabled="disabled"/></td></tr></table>
+            disabled="disabled"/>
+        <asp:Label ID="LoadingLabel" runat="server"></asp:Label>
+                </td></tr></table>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>" 
             

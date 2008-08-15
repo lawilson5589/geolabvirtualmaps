@@ -2,6 +2,7 @@
 var GeolabMap = {
     GetMap : function()
     {
+    
         DialogBox.Show(false, 5000);
         map = new VEMap("geoMap");
         map.onLoadMap = function()
@@ -27,7 +28,9 @@ var GeolabMap = {
             el = null;
             window.setTimeout('map.AttachEvent("onkeydown", mapNav.KeyboardHandler)', 5000);
         };
-        map.LoadMap(new VELatLong(Settings.Lat, Settings.Lon), Settings.MapZoom, Settings.MapStyle , false);
+        var birdseyeoptions = new VEMapOptions();
+        birdseyeoptions.EnableBirdseye = false;
+        map.LoadMap(new VELatLong(Settings.Lat, Settings.Lon), Settings.MapZoom, Settings.MapStyle , false, VEMapMode.Mode2D, true, 0, birdseyeoptions);
         map.SetCenter(new VELatLong(Settings.Lat, Settings.Lon));
         MapNav = new Geolab.MapNav('MapNav');
         window.setTimeout("MapNav.SetNavControl()", 4000);

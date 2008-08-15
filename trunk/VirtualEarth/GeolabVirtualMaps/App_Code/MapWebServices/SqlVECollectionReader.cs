@@ -156,13 +156,15 @@ namespace Geolab
         /// <param name="output">StringBuilder reference to put output</param>
         /// <param name="flags">Vehicle info like pop-up title, Icon</param>
         /// <returns>true if method executed ok</returns>
-        public static bool RetrieveVehicleData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags)
+        public static bool RetrieveVehicleData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags, bool historic)
         {
             TimeSpan timespan1 = new TimeSpan(0,5,0);
             if (sqldatareader.HasRows)
             {
+                bool busplotted = false;
                 while (sqldatareader.Read())
                 {
+                    bool display = true;
                     VEVehicle vehicle = new VEVehicle(flags);
                     if (sqldatareader[AGPS_DbColumnNames.TimetoGrey].ToString() != "")
                     {
@@ -184,7 +186,10 @@ namespace Geolab
                         //Turns Bus Grey When Record not received for period of time
                         //Currently, lowerbound is defaulted at 5 sec, read from database if exists on geolab_mdt2_cape.dbo.PhoneRoutes
                         //Upperbound is set at 3 days from the timeselection on the stored procedure selecting data (Filters out all GPS older than three days)
-                        vehicle.CustomIcon = "images/map_vehicles/Bus_20_grey.png";
+
+                        //Disabled per larry request. To reenable, uncomment line below and comment out display = false line.
+                        //vehicle.CustomIcon = "images/map_vehicles/Bus_20_grey.png";
+                        display = false;
                     }
                     vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
                     vehicle.Latitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Latitude].ToString());
@@ -220,9 +225,14 @@ namespace Geolab
                     {
                         Convert.ToString(sqlex);
                     }
-
-                    output.AppendFormat("Array.add(collection, {0});", vehicle.ToJson());
+                    if ((display) || (historic))
+                    {
+                        output.AppendFormat("Array.add(collection, {0});", vehicle.ToJson());
+                        busplotted = true;
+                    }
                 }
+                if(busplotted == false)
+                    output.Append("/*Empty*/");
             }
             else
             {

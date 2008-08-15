@@ -137,7 +137,7 @@ namespace Geolab
                     String url = context.Request.RawUrl;
                     this.info.GeoCoding = url.Contains("GeoCoding=true");
                     this.info.OnlyFirstAddress = url.Contains("OnlyFirstAddress=true");
-                    SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader, ref sb, this.info);
+                    SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader, ref sb, this.info, false);
                     sqlconnection.Close();
 
                     if (this.StoredProcedureName.Equals("sp_SelectAVL_Framingham"))
@@ -147,7 +147,7 @@ namespace Geolab
                         sqlcommand2.CommandType = CommandType.StoredProcedure;
                         sqlconnection.Open();
                         SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
-                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info, false);
                         this.StoredProcedureName = String.Empty;
                         sqlconnection.Close();
 
@@ -156,7 +156,7 @@ namespace Geolab
                         sqlcommand3.CommandType = CommandType.StoredProcedure;
                         sqlconnection.Open();
                         SqlDataReader sqldatareader3 = sqlcommand3.ExecuteReader();
-                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader3, ref sb, this.info);
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader3, ref sb, this.info, false);
                         this.StoredProcedureName = String.Empty;
                         sqlconnection.Close();
 
@@ -170,7 +170,7 @@ namespace Geolab
                         sqlcommand2.CommandType = CommandType.StoredProcedure;
                         sqlconnection.Open();
                         SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
-                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info, false);
                         this.StoredProcedureName = String.Empty;
                         sqlconnection.Close();
                     }
@@ -182,7 +182,7 @@ namespace Geolab
                         sqlcommand2.CommandType = CommandType.StoredProcedure;
                         sqlconnection.Open();
                         SqlDataReader sqldatareader2 = sqlcommand2.ExecuteReader();
-                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info);
+                        SqlVECollectionReader.RetrieveVehicleData(ref sqldatareader2, ref sb, this.info, false);
                         this.StoredProcedureName = String.Empty;
                         sqlconnection.Close();
                     }
