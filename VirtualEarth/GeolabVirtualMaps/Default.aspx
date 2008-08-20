@@ -1,5 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPages/MasterPage2.master" AutoEventWireup="true" CodeFile="Default.aspx.cs"
-    Inherits="DefaultMain" Title="GeoGraphics Lab Virtual Maps" StylesheetTheme="Main" Theme="Main" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPages/MasterPage2.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="DefaultMain" Title="GeoGraphics Lab Virtual Maps" StylesheetTheme="Main" Theme="Main" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
     <div style="margin:0 auto 0 auto;width:100%; padding-left:50px;">
@@ -68,10 +67,10 @@
                 <td style="text-indent:135px; width: 843px; height: 42px;">
                     <h2 class="links">
                         South Portland (ME) Mobility Manager&nbsp;</h2>
-                    <%-- %><h3>
+                    <%-- <h3>
                         <a href="NorthernTier.aspx">Microsoft Virtual Earth</a></h3> --%>
-                    <%--<h3>
-                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/metrowest.xml">Google Mapplets</a></h3>--%>
+                    <h3>
+                        <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/southportland.xml">Google Mapplets</a></h3>
                     <h3>
                         <a href="pda/southportland.aspx">PDA Display</a></h3>
                     <h3>
