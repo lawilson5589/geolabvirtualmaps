@@ -289,7 +289,7 @@
                             SelectCommand="SelectCurrentPhones" SelectCommandType="StoredProcedure" 
                             UpdateCommand="sp_UpdateRouteInfo" UpdateCommandType="StoredProcedure">
                             <SelectParameters>
-                                <asp:ControlParameter ControlID="Label3" DefaultValue="" Name="Carrier" 
+                                <asp:ControlParameter ControlID="Label3" DefaultValue="SouthPortland" Name="Carrier" 
                                     PropertyName="Text" Type="String" />
                             </SelectParameters>
                             <UpdateParameters>
@@ -320,7 +320,7 @@
                             ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>" 
                             SelectCommand="sp_SelectAvailableRoutes" SelectCommandType="StoredProcedure">
                             <SelectParameters>
-                                <asp:ControlParameter ControlID="Label3" DefaultValue="" Name="Carrier" 
+                                <asp:ControlParameter ControlID="Label3" DefaultValue="SouthPortland" Name="Carrier" 
                                     PropertyName="Text" Type="String" />
                             </SelectParameters>
                         </asp:SqlDataSource>
