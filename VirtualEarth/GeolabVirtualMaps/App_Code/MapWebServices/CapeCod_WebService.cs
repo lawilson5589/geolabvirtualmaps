@@ -71,6 +71,8 @@ namespace Geolab
                 case "GLinkRoute2":
                 case "GLinkRoute3":
                 case "SPRoute1":
+                case "SPRoute3":
+                case "SPRoute4":
 
                     SqlVECollectionReader.RetrievePushPinCollection(ConnectionString.CapeCod, "sp_SelectVEPushPins", mapID, ref sb);
                     break;
@@ -121,6 +123,8 @@ namespace Geolab
                 case "GLinkRoute2":
                 case "GLinkRoute3":
                 case "SPRoute1":
+                case "SPRoute3":
+                case "SPRoute4":
 
 
                     SqlVECollectionReader.RetrievePolyLine(ConnectionString.CapeCod, "sp_SelectVEPolyLines", mapID, ref sb);

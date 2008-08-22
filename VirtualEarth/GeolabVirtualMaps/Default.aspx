@@ -67,8 +67,8 @@
                 <td style="text-indent:135px; width: 843px; height: 42px;">
                     <h2 class="links">
                         South Portland (ME) Mobility Manager&nbsp;</h2>
-                    <%--<h3>
-                        <a href="SouthPortland.aspx">Microsoft Virtual Earth</a></h3>--%>
+                    <h3>
+                        <a href="SouthPortland.aspx">Microsoft Virtual Earth</a></h3>
                     <h3>
                         <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=http://www.geographicslab.org/southportland.xml">Google Mapplets</a></h3>
                     <h3>

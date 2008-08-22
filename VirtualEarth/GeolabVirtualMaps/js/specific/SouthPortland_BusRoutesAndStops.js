@@ -12,6 +12,10 @@ if(Dashboard){
         // Stops and Routes begin
         SouthPortlandStops['SPRoute1'] = new Geolab.PushPinLayer('SPRoute1');
         SouthPortlandStops['SPRoute1'].SetWebService(wbs);
+        SouthPortlandStops['SPRoute3'] = new Geolab.PushPinLayer('SPRoute3');
+        SouthPortlandStops['SPRoute3'].SetWebService(wbs);
+        SouthPortlandStops['SPRoute4'] = new Geolab.PushPinLayer('SPRoute4');
+        SouthPortlandStops['SPRoute4'].SetWebService(wbs);
         this.CreateElement('Routes', 'Routes');
          
         // END
@@ -20,6 +24,8 @@ if(Dashboard){
         
         //SouthPortlandRoutes.{Function} =  function(){SouthPortlandRoutes.Invoke('{MapID}');
         SouthPortlandRoutes.SPRoute1 =  function(){SouthPortlandStops['SPRoute1'].Invoke('SPRoute1');SouthPortlandRoutes.Invoke('SPRoute1'); }
+        SouthPortlandRoutes.SPRoute3 =  function(){SouthPortlandStops['SPRoute3'].Invoke('SPRoute3');SouthPortlandRoutes.Invoke('SPRoute3'); }
+        SouthPortlandRoutes.SPRoute4 =  function(){SouthPortlandStops['SPRoute4'].Invoke('SPRoute4');SouthPortlandRoutes.Invoke('SPRoute4'); }
 
     
 
@@ -27,6 +33,8 @@ if(Dashboard){
         // Dashboard.CreateElement('{ID}', '{Title}', SouthPortlandRoutes.{Function});
         // this.CreateElement('Jim', 'Jim', SouthPortlandRoutes.Flex, 'Jimbo', img);
         this.CreateElement('SPRoute1', 'Willard Square', SouthPortlandRoutes.SPRoute1, 'Willard Square', img);
+        this.CreateElement('SPRoute3', 'Crosstown', SouthPortlandRoutes.SPRoute3, 'Crosstown', img);
+        this.CreateElement('SPRoute4', 'Maine Mall', SouthPortlandRoutes.SPRoute4, 'Maine Mall', img);
 
         img = null;
     }
