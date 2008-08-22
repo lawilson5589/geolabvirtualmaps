@@ -96,6 +96,12 @@ namespace Geolab
                             this.storedProcedureName = "sp_SelectAVL_NorthernTier";
                             break;
 
+                        case "SouthPortland":
+                            this.info.CustomIcon = "images/map_vehicles/bus_024.gif";
+                            this.info.Title = "South Portland Bus Service";
+                            this.storedProcedureName = "sp_SelectAVL_SouthPortland";
+                            break;
+
                         default:
                             break;
                     }
