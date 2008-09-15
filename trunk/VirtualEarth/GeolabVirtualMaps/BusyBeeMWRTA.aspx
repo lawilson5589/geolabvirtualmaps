@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BusyBee.aspx.cs" debug = "true" Inherits="Framingham" EnableEventValidation="false" StylesheetTheme="VE_Theme" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BusyBeeMWRTA.aspx.cs" debug = "true" Inherits="Framingham" EnableEventValidation="false" StylesheetTheme="VE_Theme" %>
 <%@ Register Src="WebControls/WebUserControl_ToolBarList.ascx" TagName="WebUserControl_ToolBarList" TagPrefix="geo" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -17,7 +17,7 @@
             ,"MapStyle" : 'r'
             ,"MapZoom" : 11
             ,"VehicleIcon" : 'images/map_vehicles/Bus_20_Blue.png'
-            ,"VehicleWebServicePath" : 'AVL_webservices/LiveData.ashx?ID=BusyBee'
+            ,"VehicleWebServicePath" : 'AVL_webservices/LiveData.ashx?ID=BusyBeeMWRTA'
             ,"VehiclePinTitles" : 'Framingham'
             ,"DataRefreshRate" : 5000
             ,"GeoCoding" : true
@@ -47,7 +47,7 @@
 
                 <%--Map Specific JS--%>
                 <%--<asp:ScriptReference Path="~/js/specific/Framingham.js" />--%>
-                <asp:ScriptReference Path="~/js/specific/BusyBee_BusRoutesAndStops.js" />
+                <asp:ScriptReference Path="~/js/specific/BusyBeeMWRTA_BusRoutesAndStops.js" />
             </Scripts>
 			<services>	
 			    <%--Map Specific WebService --%>
