@@ -1,8 +1,8 @@
 ﻿/* Author: JBaltikauskas */
 
-var BusyBeeRoutes = new Geolab.PolyLineLayer('BusyBee_Routes');
-BusyBeeRoutes.SetWebService('Geolab.CapeCod_WebService.BusLine');
-var BusyBeeStops = new Array;
+var BusyBeeMWRTARoutes = new Geolab.PolyLineLayer('BusyBeeMWRTA_Routes');
+BusyBeeMWRTARoutes.SetWebService('Geolab.CapeCod_WebService.BusLine');
+var BusyBeeMWRTAStops = new Array;
 
 if(Dashboard){
     Dashboard.Init = function(){
@@ -10,23 +10,23 @@ if(Dashboard){
 
         var wbs = 'Geolab.CapeCod_WebService.BusStops';
         // Stops and Routes begin
-        //BusyBeeStops['LIFT2'] = new Geolab.PushPinLayer('LIFT2');
-        //BusyBeeStops['LIFT2'].SetWebService(wbs);
+        //BusyBeeMWRTAStops['LIFT2'] = new Geolab.PushPinLayer('LIFT2');
+        //BusyBeeMWRTAStops['LIFT2'].SetWebService(wbs);
         this.CreateElement('Routes', 'Routes');
          
         // END
         // Clean up 
         wbs = null;
         
-        //BusyBeeRoutes.{Function} =  function(){BusyBeeRoutes.Invoke('{MapID}');
-        //BusyBeeRoutes.LIFT2 =  function(){BusyBeeStops['LIFT2'].Invoke('LIFT2');BusyBeeRoutes.Invoke('LIFT2'); }
+        //BusyBeeMWRTARoutes.{Function} =  function(){BusyBeeMWRTARoutes.Invoke('{MapID}');
+        //BusyBeeMWRTARoutes.LIFT2 =  function(){BusyBeeMWRTAStops['LIFT2'].Invoke('LIFT2');BusyBeeMWRTARoutes.Invoke('LIFT2'); }
 
     
 
         var img = "images/map_vehicles/bus_024.gif";
-        // Dashboard.CreateElement('{ID}', '{Title}', BusyBeeRoutes.{Function});
-        // this.CreateElement('Jim', 'Jim', BusyBeeRoutes.Flex, 'Jimbo', img);
-        //this.CreateElement('LIFT2', 'Route 2', BusyBeeRoutes.LIFT2, 'Route 2', img);
+        // Dashboard.CreateElement('{ID}', '{Title}', BusyBeeMWRTARoutes.{Function});
+        // this.CreateElement('Jim', 'Jim', BusyBeeMWRTARoutes.Flex, 'Jimbo', img);
+        //this.CreateElement('LIFT2', 'Route 2', BusyBeeMWRTARoutes.LIFT2, 'Route 2', img);
 
         img = null;
     }
