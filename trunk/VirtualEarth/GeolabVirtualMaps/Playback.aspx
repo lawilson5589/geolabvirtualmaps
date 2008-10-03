@@ -104,7 +104,7 @@
         <input id="ResetButton" type="button" value="Reset" onclick="CancelRequest()" 
             disabled="disabled"/>
         <asp:Label ID="LoadingLabel" runat="server"></asp:Label>
-                </td></tr></table>
+        </td></tr></table>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>" 
             
