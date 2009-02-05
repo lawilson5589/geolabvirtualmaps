@@ -57,6 +57,7 @@ namespace Geolab
                 case "BSCRoute2":
                 case "BSCRoute28":
                 case "SL_winter":
+                case "ROUTE1":
                 case "LIFT2":
                 case "LIFT3":
                 case "LIFT4":
@@ -109,6 +110,7 @@ namespace Geolab
                 case "BSCRoute2":
                 case "BSCRoute28":
                 case "SL_winter":
+                case "ROUTE1":
                 case "LIFT2":
                 case "LIFT3":
                 case "LIFT4":
