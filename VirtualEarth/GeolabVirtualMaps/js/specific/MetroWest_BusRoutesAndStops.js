@@ -10,6 +10,8 @@ if(Dashboard){
 
         var wbs = 'Geolab.CapeCod_WebService.BusStops';
         // Stops and Routes begin
+        MetroWestStops['ROUTE1'] = new Geolab.PushPinLayer('ROUTE1');
+        MetroWestStops['ROUTE1'].SetWebService(wbs);
         MetroWestStops['LIFT2'] = new Geolab.PushPinLayer('LIFT2');
         MetroWestStops['LIFT2'].SetWebService(wbs);
         MetroWestStops['LIFT3'] = new Geolab.PushPinLayer('LIFT3');
@@ -37,6 +39,7 @@ if(Dashboard){
         wbs = null;
         
         //MetroWestRoutes.{Function} =  function(){MetroWestRoutes.Invoke('{MapID}');
+        MetroWestRoutes.ROUTE1 =  function(){MetroWestStops['ROUTE1'].Invoke('ROUTE1');MetroWestRoutes.Invoke('ROUTE1'); }
         MetroWestRoutes.LIFT2 =  function(){MetroWestStops['LIFT2'].Invoke('LIFT2');MetroWestRoutes.Invoke('LIFT2'); }
         MetroWestRoutes.LIFT3 =  function(){MetroWestStops['LIFT3'].Invoke('LIFT3');MetroWestRoutes.Invoke('LIFT3');}
         MetroWestRoutes.LIFT4 =  function(){MetroWestStops['LIFT4'].Invoke('LIFT4');MetroWestRoutes.Invoke('LIFT4');}
@@ -47,12 +50,13 @@ if(Dashboard){
         MetroWestRoutes.ROUTE10 = function() {MetroWestStops['Route10'].Invoke('ROUTE10');MetroWestRoutes.Invoke('ROUTE10');}
         MetroWestRoutes.ROUTE11 =  function(){MetroWestStops['ROUTE11'].Invoke('ROUTE11');MetroWestRoutes.Invoke('ROUTE11');}
         MetroWestRoutes.NatickCBus =  function(){MetroWestStops['NatickCBus'].Invoke('NatickCBus');MetroWestRoutes.Invoke('NatickCBus');}
-
+        
     
 
         var img = "images/map_vehicles/bus_024.gif";
         // Dashboard.CreateElement('{ID}', '{Title}', MetroWestRoutes.{Function});
         // this.CreateElement('Jim', 'Jim', MetroWestRoutes.Flex, 'Jimbo', img);
+        this.CreateElement('ROUTE1', 'Route 1', MetroWestRoutes.ROUTE1, 'Route 1', img);        
         this.CreateElement('LIFT2', 'Route 2', MetroWestRoutes.LIFT2, 'Route 2', img);
         this.CreateElement('LIFT3', 'Route 3', MetroWestRoutes.LIFT3, 'Route 3', img);
         this.CreateElement('LIFT4', 'Route 4', MetroWestRoutes.LIFT4, 'Route 4', img);
