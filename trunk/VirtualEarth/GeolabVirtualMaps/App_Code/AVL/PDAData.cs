@@ -176,11 +176,18 @@ namespace Geolab
                     
 
                     String result;
-                    returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(Convert.ToDouble(sr[AGPS_DbColumnNames.Latitude].ToString()), Convert.ToDouble(sr[AGPS_DbColumnNames.Longitude].ToString()));
-                    if (returnedLocations.address != null || returnedLocations.address.ToString() != "")
-                        result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.placename, ",", returnedLocations.address.adminCode1, " ", returnedLocations.address.postalcode);
-                    else
+                    try
+                    {
+                        returnedLocations = ReverseGeo.GeoNamesAddress.GetAddress(Convert.ToDouble(sr[AGPS_DbColumnNames.Latitude].ToString()), Convert.ToDouble(sr[AGPS_DbColumnNames.Longitude].ToString()));
+                        if (returnedLocations.address != null || returnedLocations.address.ToString() != "")
+                            result = String.Concat(returnedLocations.address.streetNumber, " ", returnedLocations.address.street, " ", returnedLocations.address.placename, ",", returnedLocations.address.adminCode1, " ", returnedLocations.address.postalcode);
+                        else
+                            result = "";
+                    }
+                    catch
+                    {
                         result = "";
+                    }
                     cells[0].Text = sr[AGPS_DbColumnNames.Froutename].ToString();
                     if (containsbusid)
                         cells[1].Text = sr[AGPS_DbColumnNames.Busid].ToString();
