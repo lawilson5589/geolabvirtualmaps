@@ -15,8 +15,8 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>60A0E7BA90BAEFE450C69DAB22D71901A1B97149</ManifestCertificateThumbprint>
-    <ManifestKeyFile>VEDisplay_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>3E08C4F29CE5F48296B64FC98DD314D779031202</ManifestCertificateThumbprint>
+    <ManifestKeyFile>VEDisplay_1_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>true</SignManifests>
     <PublishUrl>http://localhost/VEDisplay/</PublishUrl>
@@ -29,11 +29,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://207.206.224.39/VEDisplay/</InstallUrl>
-    <UpdateUrl>http://207.206.224.39/VEDisplay/</UpdateUrl>
+    <InstallUrl>http://208.58.169.34/VEDisplay/</InstallUrl>
+    <UpdateUrl>http://208.58.169.34/VEDisplay/</UpdateUrl>
     <ProductName>VE Display</ProductName>
     <PublisherName>GeoGraphics Lab</PublisherName>
-    <MinimumRequiredVersion>1.0.0.7</MinimumRequiredVersion>
+    <MinimumRequiredVersion>1.0.0.10</MinimumRequiredVersion>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mapleft_panel_off.gif" />
+    <None Include="VEDisplay_1_TemporaryKey.pfx" />
     <None Include="VEDisplay_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
