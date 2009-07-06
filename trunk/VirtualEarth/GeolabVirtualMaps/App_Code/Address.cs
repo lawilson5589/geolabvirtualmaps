@@ -21,7 +21,7 @@ namespace ReverseGeo
     public class GeoNamesAddress
     {
         private readonly static string FindNearbyAddressUrl =
-            "http://ws.geonames.org/findNearestAddressJSON?lat={0}&lng={1}";
+            "http://ws5.geonames.org/findNearestAddressJSON?lat={0}&lng={1}";
 
         public static SingleReverseGeoCode GetAddress(double lat, double lng)
         {
