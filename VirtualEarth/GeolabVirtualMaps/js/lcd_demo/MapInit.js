@@ -12,7 +12,8 @@ var GeolabMap = {
             Vehicle.setPath(Settings.VehicleWebServicePath);
             Vehicle.setTitle(Settings.VehiclePinTitles);
             Vehicle.setGeoCoding(Settings.GeoCoding);
-            Vehicle.setInterval(Settings.DataRefreshRate); 
+            //Remove comment setInterval to allow auto refresh of vehicles. Replaced with specific calls to Vehicle.Invoke().
+            //Vehicle.setInterval(Settings.DataRefreshRate); 
 
         };
         map.LoadMap(new VELatLong(Settings.Lat, Settings.Lon), Settings.MapZoom, Settings.MapStyle , false);
