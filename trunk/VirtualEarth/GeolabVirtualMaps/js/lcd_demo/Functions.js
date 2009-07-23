@@ -11,6 +11,7 @@ function Start()
 }
 function AddPin(lat, longitude, title, description)
 {
+    Vehicle.invoke();
     var pinlatlong = new VELatLong(lat, longitude);
     shape = new VEShape(VEShapeType.Pushpin, pinlatlong);  
     shape.SetCustomIcon('images/bus_stop_icon.png');
@@ -28,12 +29,15 @@ function step1(){
     var t = 5000; // loading time
     map.SetMapStyle("r");
     AddPin( 41.65588797740388, -70.28833866119386, "Hyannis", "Hyannis Transportation Center");
+    map.Clear();
     map.SetCenterAndZoom(haynnislatlon, 9);
+    Vehicle.invoke();
     setTimeout("map.SetMapStyle('a')", 5000);
     setTimeout("map.SetMapStyle('h')", 10000);
     setTimeout("map.SetMapStyle('r')", 15000);
     setTimeout("map.ShowInfoBox(shape)",16000);
     setTimeout("map.HideInfoBox(shape);map.DeleteShape(shape);",21000);
+    setTimeout("map.Clear();",22500);
     setTimeout("step2()",23000);
 }
 function step2(){
