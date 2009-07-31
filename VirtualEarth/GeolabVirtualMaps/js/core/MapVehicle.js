@@ -11,6 +11,7 @@ Geolab.Vehicle = function(){
     this.timeoutID = null;
     this.refreshTime = 30000; //miliseconds
     map.AddShapeLayer(this.__layer);
+    
     this.valueLabelID = null;
 
     
@@ -104,6 +105,10 @@ Geolab.Vehicle.prototype = {
     },
     setGeoCoding: function(bool){
         this.__reverseGeoCoding = bool;
+    },
+    deleteShapes: function(){
+        var self = this;
+        self.__layer.DeleteAllShapes();
     },
     invoke: function(){
         var self = this;
