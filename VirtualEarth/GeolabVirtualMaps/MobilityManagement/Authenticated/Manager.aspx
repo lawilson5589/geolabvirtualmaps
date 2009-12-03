@@ -152,7 +152,18 @@
                         <span style="width: 100%; font-family: Arial">Available phones for CapeCod Transportation:
                             <br />
                             <br />
-
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="GeolabID" OnSelectedIndexChanged ="IndexChange">
+                            <Columns>
+                                <asp:CommandField ShowSelectButton="True" />
+                                <asp:BoundField DataField="GeolabID" HeaderText="GeolabID" SortExpression="GeolabID" />
+                                <asp:BoundField DataField="BusID" HeaderText="Bus ID" SortExpression="BusID" />
+                                <asp:BoundField DataField="Device Serial Number" HeaderText="Device Serial Number"
+                                        SortExpression="Device Serial Number" />
+                                <asp:BoundField DataField="RouteName" HeaderText="RouteName" SortExpression="RouteName" />
+                                <asp:BoundField DataField="ModifiedLast" HeaderText="ModifiedLast" SortExpression="ModifiedLast" />
+                                <asp:BoundField DataField="DateModified" HeaderText="DateModified" SortExpression="DateModified" />
+                            </Columns>
+                        </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="SelectCurrentPhones" SelectCommandType="StoredProcedure" UpdateCommand="sp_UpdateRouteInfo" UpdateCommandType="StoredProcedure">
                                 <UpdateParameters>
@@ -170,12 +181,15 @@
                             Phone:
                             <asp:Label ID="Label2" runat="server" Text="None Selected"></asp:Label><br />
                             <br />
+                            Bus ID:
+                            <asp:TextBox ID="TextBox1" runat="server" MaxLength="7"></asp:TextBox><br />
+                            <br />
                             Route:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
                                 DataTextField="Route" DataValueField="Route">
                             </asp:DropDownList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:geolab_mdt2_capeConnectionString %>"
                                 SelectCommand="sp_SelectAvailableRoutes" SelectCommandType="StoredProcedure">
                                 <SelectParameters>
-                                    <asp:Parameter DefaultValue="Metrowest" Name="Carrier" Type="String" />
+                                    <asp:Parameter DefaultValue="CapeCod MDT" Name="Carrier" Type="String" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" /><br />
@@ -185,6 +199,9 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/MobilityManagement/Authenticated/ChangePassword.aspx">Change Password</asp:HyperLink></span>
                     </ContentTemplate>
                 </asp:RoleGroup>
+                
+                
+                
                 <asp:RoleGroup Roles="Administrator">
                     <ContentTemplate>
                         <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Font-Names="Arial">

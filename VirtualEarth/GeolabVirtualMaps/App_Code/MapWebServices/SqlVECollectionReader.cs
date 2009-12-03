@@ -212,14 +212,13 @@ namespace Geolab
                     }
                     try
                     {
-                        if (sqldatareader.VisibleFieldCount == 16)
+
+                        String bid = sqldatareader[AGPS_DbColumnNames.Busid].ToString();
+                        if (bid != "")
                         {
-                            String bid = sqldatareader[AGPS_DbColumnNames.Busid].ToString();
-                            if (bid != "")
-                            {
-                                vehicle.Busid = bid;
-                            }
+                            vehicle.Busid = bid;
                         }
+                        
                     }
                     catch (SqlException sqlex)
                     {
@@ -232,6 +231,106 @@ namespace Geolab
                     }
                 }
                 if(busplotted == false)
+                    output.Append("/*Empty*/");
+            }
+            else
+            {
+                output.Append("/*Empty*/");
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// The method to formats VE Puship object (Vehicle type) from SQL Server
+        /// </summary>
+        /// <param name="sqldatareader">The sqlreader after SqlDataReader sqldatareader = sqlcommand.ExecuteReader();</param>
+        /// <param name="output">StringBuilder reference to put output</param>
+        /// <param name="flags">Vehicle info like pop-up title, Icon</param>
+        /// <returns>true if method executed ok</returns>
+        public static bool RetrieveVehicleData(ref SqlDataReader sqldatareader, ref StringBuilder output, VEVehicleInfoFlags flags, bool historic, String[] routearray)
+        {
+            TimeSpan timespan1 = new TimeSpan(0, 5, 0);
+            if (sqldatareader.HasRows)
+            {
+
+                bool busplotted = false;
+                while (sqldatareader.Read())
+                {
+                    for (int i = 0; i < routearray.Length; i++)
+                    {
+                        if (routearray[i].CompareTo(sqldatareader[AGPS_DbColumnNames.Froutename].ToString()) == 0)
+                        {
+                            bool display = true;
+                            VEVehicle vehicle = new VEVehicle(flags);
+                            if (sqldatareader[AGPS_DbColumnNames.TimetoGrey].ToString() != "")
+                            {
+                                timespan1 = RetreiveTimespan(sqldatareader[AGPS_DbColumnNames.TimetoGrey].ToString());
+                            }
+
+                            if (sqldatareader[AGPS_DbColumnNames.CustomIcon].ToString() != "")
+                            {
+                                vehicle.CustomIcon = sqldatareader[AGPS_DbColumnNames.CustomIcon].ToString();
+                            }
+
+                            DateTime dt1 = Convert.ToDateTime(sqldatareader[AGPS_DbColumnNames.Datetime]);
+                            DateTime dt2 = System.DateTime.Now.Subtract(timespan1);
+                            String[] datetime = sqldatareader[AGPS_DbColumnNames.Datetime].ToString().Split(' ');
+                            vehicle.Date = datetime[0];
+                            if ((DateTime)dt1 < System.DateTime.Now.Subtract(timespan1))
+                            {
+                                //Timespan Variable sets the lowerbound, Stored Procedure Sets the UpperBound
+                                //Turns Bus Grey When Record not received for period of time
+                                //Currently, lowerbound is defaulted at 5 sec, read from database if exists on geolab_mdt2_cape.dbo.PhoneRoutes
+                                //Upperbound is set at 3 days from the timeselection on the stored procedure selecting data (Filters out all GPS older than three days)
+
+                                //Disabled per larry request. To reenable, uncomment line below and comment out display = false line.
+                                //vehicle.CustomIcon = "images/map_vehicles/Bus_20_grey.png";
+                                display = false;
+                            }
+                            vehicle.Time = String.Format("{0} {1}", datetime[1], datetime[2]);
+                            vehicle.Latitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Latitude].ToString());
+                            vehicle.Longitude = Convert.ToDouble(sqldatareader[AGPS_DbColumnNames.Longitude].ToString());
+                            vehicle.Accuracy = sqldatareader[AGPS_DbColumnNames.LatLonAccuracy].ToString();
+                            vehicle.Speed = sqldatareader[AGPS_DbColumnNames.PositionSpeed].ToString();
+                            vehicle.Heading = sqldatareader[AGPS_DbColumnNames.PositionHeading].ToString();
+                            vehicle.SatelliteNumber = VEVehicle.GetSatteliteBars(sqldatareader[AGPS_DbColumnNames.SatelliteNumber].ToString());
+                            vehicle.BatteryLevel = sqldatareader[AGPS_DbColumnNames.BatteryLevel].ToString();
+                            vehicle.SignalStrength = sqldatareader[AGPS_DbColumnNames.SignalStrength].ToString();
+                            vehicle.GeolabID = sqldatareader["GeolabID"].ToString().Trim();
+                            vehicle.LocationInfo = vehicle.GeoCoding ? vehicle.GetLocationInfo() : "";
+                            try
+                            {
+                                vehicle.Froute = sqldatareader[AGPS_DbColumnNames.Froutename].ToString();
+                            }
+                            catch (SqlException sqlex)
+                            {
+                                Convert.ToString(sqlex);
+                            }
+                            try
+                            {
+
+                                String bid = sqldatareader[AGPS_DbColumnNames.Busid].ToString();
+                                if (bid != "")
+                                {
+                                    vehicle.Busid = bid;
+                                }
+
+                            }
+                            catch (SqlException sqlex)
+                            {
+                                Convert.ToString(sqlex);
+                            }
+                            if ((display) || (historic))
+                            {
+                                output.AppendFormat("Array.add(collection, {0});", vehicle.ToJson());
+                                busplotted = true;
+                            }
+                        }
+                    }
+                    
+
+                }
+                if (busplotted == false)
                     output.Append("/*Empty*/");
             }
             else
