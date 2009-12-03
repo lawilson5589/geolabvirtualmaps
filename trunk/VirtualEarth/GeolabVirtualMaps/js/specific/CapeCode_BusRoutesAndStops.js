@@ -63,7 +63,7 @@ if(Dashboard){
         this.CreateElement('Sealine', 'Sealine', CapeCodeRoutes.Sealine, 'Sealine route', img);
         //this.CreateElement('Villager', 'Villager', CapeCodeRoutes.Villager, 'Villager route', img);
         this.CreateElement('Whoosh', 'Whoosh', CapeCodeRoutes.Woosh, 'Whoosh route', img);
-        this.CreateElement('Yarmouth', 'Yarmouth', CapeCodeRoutes.Yarmouth, 'Yarmouth route', img);
+
         img = null;
     }
 }

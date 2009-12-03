@@ -20,8 +20,6 @@
             CellSpacing="0" GridLines="Both">
         </asp:Table>
         <br />
-        <p>
-            Legacy Devices</p>
        
             <asp:Table ID="Table2" runat="server" BorderStyle="Solid" CellPadding="0" 
             CellSpacing="0" GridLines="Both">
